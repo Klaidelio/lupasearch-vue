@@ -3203,7 +3203,7 @@ const useSearchBoxStore = defineStore("searchBox", () => {
   };
 });
 const _hoisted_1$1c = { id: "lupa-search-box-input-container" };
-const _hoisted_2$O = { class: "lupa-input-clear" };
+const _hoisted_2$P = { class: "lupa-input-clear" };
 const _hoisted_3$A = { id: "lupa-search-box-input" };
 const _hoisted_4$s = ["value"];
 const _hoisted_5$g = ["aria-label", "placeholder"];
@@ -3294,7 +3294,7 @@ const _sfc_main$1k = /* @__PURE__ */ vue.defineComponent({
     __expose({ focus });
     return (_ctx, _cache) => {
       return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$1c, [
-        vue.createElementVNode("div", _hoisted_2$O, [
+        vue.createElementVNode("div", _hoisted_2$P, [
           vue.createElementVNode("div", {
             class: vue.normalizeClass(["lupa-input-clear-content", { "lupa-input-clear-filled": inputValue.value }]),
             onClick: clear
@@ -3369,7 +3369,7 @@ const _sfc_main$1j = /* @__PURE__ */ vue.defineComponent({
   }
 });
 const _hoisted_1$1b = { class: "lupa-search-box-history-item" };
-const _hoisted_2$N = { class: "lupa-search-box-history-item-content" };
+const _hoisted_2$O = { class: "lupa-search-box-history-item-content" };
 const _sfc_main$1i = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxHistoryItem",
   props: {
@@ -3388,7 +3388,7 @@ const _sfc_main$1i = /* @__PURE__ */ vue.defineComponent({
     };
     return (_ctx, _cache) => {
       return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$1b, [
-        vue.createElementVNode("div", _hoisted_2$N, [
+        vue.createElementVNode("div", _hoisted_2$O, [
           vue.createElementVNode("div", {
             class: vue.normalizeClass(["lupa-search-box-history-item-text", { "lupa-search-box-history-item-highlighted": _ctx.highlighted }]),
             onClick: click2
@@ -3479,7 +3479,7 @@ const _sfc_main$1g = /* @__PURE__ */ vue.defineComponent({
   }
 });
 const _hoisted_1$18 = ["innerHTML"];
-const _hoisted_2$M = {
+const _hoisted_2$N = {
   key: 1,
   "data-cy": "lupa-suggestion-value",
   class: "lupa-suggestion-value"
@@ -3534,7 +3534,7 @@ const _sfc_main$1f = /* @__PURE__ */ vue.defineComponent({
           class: "lupa-suggestion-value",
           "data-cy": "lupa-suggestion-value",
           innerHTML: _ctx.suggestion.displayHighlight
-        }, null, 8, _hoisted_1$18)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$M, vue.toDisplayString(_ctx.suggestion.display), 1)),
+        }, null, 8, _hoisted_1$18)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$N, vue.toDisplayString(_ctx.suggestion.display), 1)),
         _ctx.suggestion.facet ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$z, [
           vue.createElementVNode("span", _hoisted_4$r, vue.toDisplayString(facetLabel.value), 1),
           vue.createElementVNode("span", _hoisted_5$f, vue.toDisplayString(_ctx.suggestion.facet.title), 1)
@@ -3765,7 +3765,8 @@ const joinUrlParts = (...parts) => {
   }
   return (_c = (_b = (_a = parts == null ? void 0 : parts.map((part) => part.replace(/(^\/+|\/+$)/g, ""))) == null ? void 0 : _a.filter((part) => part !== "")) == null ? void 0 : _b.join("/")) != null ? _c : "";
 };
-const _hoisted_1$16 = ["src"];
+const _hoisted_1$16 = /* @__PURE__ */ vue.createElementVNode("div", null, "Testas Paveiksliukas", -1);
+const _hoisted_2$M = ["src"];
 const _sfc_main$1c = /* @__PURE__ */ vue.defineComponent({
   __name: "ProductImage",
   props: {
@@ -3813,14 +3814,17 @@ const _sfc_main$1c = /* @__PURE__ */ vue.defineComponent({
     });
     return (_ctx, _cache) => {
       var _a, _b;
-      return vue.openBlock(), vue.createElementBlock("div", {
-        class: vue.normalizeClass((_a = _ctx.wrapperClass) != null ? _a : "")
-      }, [
-        vue.createElementVNode("img", vue.mergeProps({
-          class: (_b = _ctx.imageClass) != null ? _b : "",
-          src: finalUrl.value
-        }, { alt: imageAlt.value ? imageAlt.value : void 0 }, { onError: replaceWithPlaceholder }), null, 16, _hoisted_1$16)
-      ], 2);
+      return vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
+        _hoisted_1$16,
+        vue.createElementVNode("div", {
+          class: vue.normalizeClass((_a = _ctx.wrapperClass) != null ? _a : "")
+        }, [
+          vue.createElementVNode("img", vue.mergeProps({
+            class: (_b = _ctx.imageClass) != null ? _b : "",
+            src: finalUrl.value
+          }, { alt: imageAlt.value ? imageAlt.value : void 0 }, { onError: replaceWithPlaceholder }), null, 16, _hoisted_2$M)
+        ], 2)
+      ], 64);
     };
   }
 });
@@ -7478,7 +7482,7 @@ const _sfc_main$u = /* @__PURE__ */ vue.defineComponent({
         style: vue.normalizeStyle(`-webkit-line-clamp: ${maxLines.value}`),
         title: title.value
       }, [
-        !_ctx.options.link ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$e, vue.toDisplayString(title.value), 1)) : vue.createCommentVNode("", true),
+        !_ctx.options.link ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$e, "Testas Dievas: " + vue.toDisplayString(title.value), 1)) : vue.createCommentVNode("", true),
         _ctx.options.link ? (vue.openBlock(), vue.createElementBlock("a", {
           key: 1,
           href: _ctx.link,

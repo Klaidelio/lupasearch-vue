@@ -49,7 +49,7 @@ const handleNavigation = (event?: Event): void => {
     :style="`-webkit-line-clamp: ${maxLines}`"
     :title="title"
   >
-    <span v-if="!options.link" class="lupa-search-results-product-title-text">{{ title }}</span>
+    <span v-if="!options.link" class="lupa-search-results-product-title-text">Testas Dievas: {{ title }}</span>
     <a
       v-if="options.link"
       :href="link"
