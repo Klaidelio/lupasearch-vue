@@ -181,6 +181,7 @@ if (ssr.value) {
   checkIfIsInStock()
 }
 </script>
+<!-- cia -->
 <template>
   <div
     id="lupa-search-result-product-card"

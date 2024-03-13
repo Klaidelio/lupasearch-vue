@@ -1,0 +1,12 @@
+import type { Document } from '@getlupa/client-sdk/Types';
+export declare const getNormalizedString: (str?: string | number) => string;
+export declare const capitalize: (str?: string) => string;
+export declare const addParamsToLabel: (label: string, ...params: unknown[]) => string;
+export declare const getRandomString: (length: number) => string;
+export declare const getDisplayValue: (value?: string | number) => string;
+export declare const getProductKey: (index: string, product: Document, idKey: string | undefined) => string;
+export declare const normalizeFloat: (value?: string) => number;
+export declare const escapeHtml: (value?: string) => string;
+export declare const inputMatches: (input: string, possibleValues: string[]) => boolean;
+export declare const inputsAreEqual: (input: string, possibleValues: string[]) => boolean;
+export declare const findClosestStringValue: <T>(input: string, possibleValues: T[], key: keyof T) => T;

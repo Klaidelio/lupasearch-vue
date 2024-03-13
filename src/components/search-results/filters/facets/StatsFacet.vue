@@ -8,7 +8,6 @@ import { normalizeFloat } from '@/utils/string.utils'
 import type { FacetGroupTypeStats, FilterGroupItemTypeRange } from '@getlupa/client-sdk/Types'
 import { storeToRefs } from 'pinia'
 import { computed, ref, watch } from 'vue'
-import Slider from '@vueform/slider'
 
 const props = defineProps<{
   options: ResultFacetOptions
@@ -244,7 +243,7 @@ const handleDragging = (value: number[]): void => {
       </div>
     </div>
     <div class="lupa-stats-slider-wrapper" v-if="isSliderVisible">
-      <Slider
+      <!-- <Slider
         class="slider"
         :tooltips="false"
         :min="facetMin"
@@ -256,7 +255,7 @@ const handleDragging = (value: number[]): void => {
         @slide="handleDragging"
         @end="handleChange"
       >
-      </Slider>
+      </Slider> -->
     </div>
   </div>
 </template>
