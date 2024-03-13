@@ -1526,7 +1526,6 @@ const CURRENCY_KEY_INDICATOR = "price";
 const DEFAULT_PAGE_SIZE = 12;
 const DEFAULT_PAGE_SIZE_SELECTION = [12, 24, 36, 60];
 const LUPA_ROUTING_EVENT = "lupaRedirect";
-const RATING_STAR_HTML = "&#x2606;";
 const RESULT_ROOT_SELECTOR = "#lupa-search-results";
 const production = "https://api.lupasearch.com/v1/";
 const staging = "https://api.staging.lupasearch.com/v1/";
@@ -3200,16 +3199,16 @@ const useSearchBoxStore = defineStore("searchBox", () => {
     resetHighlightIndex
   };
 });
-const _hoisted_1$1c = { id: "lupa-search-box-input-container" };
-const _hoisted_2$P = { class: "lupa-input-clear" };
-const _hoisted_3$A = { id: "lupa-search-box-input" };
-const _hoisted_4$s = ["value"];
-const _hoisted_5$g = ["aria-label", "placeholder"];
-const _hoisted_6$9 = {
+const _hoisted_1$Z = { id: "lupa-search-box-input-container" };
+const _hoisted_2$I = { class: "lupa-input-clear" };
+const _hoisted_3$u = { id: "lupa-search-box-input" };
+const _hoisted_4$n = ["value"];
+const _hoisted_5$e = ["aria-label", "placeholder"];
+const _hoisted_6$8 = {
   key: 0,
   class: "lupa-close-label"
 };
-const _sfc_main$1k = /* @__PURE__ */ defineComponent({
+const _sfc_main$13 = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxInput",
   props: {
     options: {},
@@ -3291,20 +3290,20 @@ const _sfc_main$1k = /* @__PURE__ */ defineComponent({
     };
     __expose({ focus });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$1c, [
-        createElementVNode("div", _hoisted_2$P, [
+      return openBlock(), createElementBlock("div", _hoisted_1$Z, [
+        createElementVNode("div", _hoisted_2$I, [
           createElementVNode("div", {
             class: normalizeClass(["lupa-input-clear-content", { "lupa-input-clear-filled": inputValue.value }]),
             onClick: clear
           }, null, 2)
         ]),
-        createElementVNode("div", _hoisted_3$A, [
+        createElementVNode("div", _hoisted_3$u, [
           createElementVNode("input", {
             class: "lupa-hint",
             "aria-hidden": "true",
             value: showHint.value ? suggestedValue.value.item.suggestion : "",
             disabled: ""
-          }, null, 8, _hoisted_4$s),
+          }, null, 8, _hoisted_4$n),
           withDirectives(createElementVNode("input", mergeProps({
             "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => inputValue.value = $event)
           }, inputAttributes.value, {
@@ -3318,7 +3317,7 @@ const _sfc_main$1k = /* @__PURE__ */ defineComponent({
             placeholder: labels.value.placeholder,
             onInput: handleInput,
             onFocus: handleFocus
-          }), null, 16, _hoisted_5$g), [
+          }), null, 16, _hoisted_5$e), [
             [vModelText, inputValue.value]
           ])
         ]),
@@ -3327,13 +3326,13 @@ const _sfc_main$1k = /* @__PURE__ */ defineComponent({
           class: "lupa-close-search-container",
           onClick: _cache[1] || (_cache[1] = ($event) => _ctx.$emit("close"))
         }, [
-          labels.value.close ? (openBlock(), createElementBlock("span", _hoisted_6$9, toDisplayString(labels.value.close), 1)) : createCommentVNode("", true)
+          labels.value.close ? (openBlock(), createElementBlock("span", _hoisted_6$8, toDisplayString(labels.value.close), 1)) : createCommentVNode("", true)
         ])) : createCommentVNode("", true)
       ]);
     };
   }
 });
-const _sfc_main$1j = /* @__PURE__ */ defineComponent({
+const _sfc_main$12 = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxMoreResults",
   props: {
     labels: {},
@@ -3366,9 +3365,9 @@ const _sfc_main$1j = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$1b = { class: "lupa-search-box-history-item" };
-const _hoisted_2$O = { class: "lupa-search-box-history-item-content" };
-const _sfc_main$1i = /* @__PURE__ */ defineComponent({
+const _hoisted_1$Y = { class: "lupa-search-box-history-item" };
+const _hoisted_2$H = { class: "lupa-search-box-history-item-content" };
+const _sfc_main$11 = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxHistoryItem",
   props: {
     item: {},
@@ -3385,8 +3384,8 @@ const _sfc_main$1i = /* @__PURE__ */ defineComponent({
       emit("click", { query: props.item });
     };
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$1b, [
-        createElementVNode("div", _hoisted_2$O, [
+      return openBlock(), createElementBlock("div", _hoisted_1$Y, [
+        createElementVNode("div", _hoisted_2$H, [
           createElementVNode("div", {
             class: normalizeClass(["lupa-search-box-history-item-text", { "lupa-search-box-history-item-highlighted": _ctx.highlighted }]),
             onClick: click2
@@ -3400,11 +3399,11 @@ const _sfc_main$1i = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$1a = {
+const _hoisted_1$X = {
   key: 0,
   class: "lupa-search-box-history-panel"
 };
-const _sfc_main$1h = /* @__PURE__ */ defineComponent({
+const _sfc_main$10 = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxHistoryPanel",
   props: {
     options: {}
@@ -3446,9 +3445,9 @@ const _sfc_main$1h = /* @__PURE__ */ defineComponent({
       }
     };
     return (_ctx, _cache) => {
-      return hasHistory.value ? (openBlock(), createElementBlock("div", _hoisted_1$1a, [
+      return hasHistory.value ? (openBlock(), createElementBlock("div", _hoisted_1$X, [
         (openBlock(true), createElementBlock(Fragment, null, renderList(unref(history), (item, index) => {
-          return openBlock(), createBlock(_sfc_main$1i, {
+          return openBlock(), createBlock(_sfc_main$11, {
             key: item,
             item,
             highlighted: index === highlightIndex.value,
@@ -3464,38 +3463,38 @@ const _sfc_main$1h = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$19 = { class: "lupa-search-box-no-results" };
-const _sfc_main$1g = /* @__PURE__ */ defineComponent({
+const _hoisted_1$W = { class: "lupa-search-box-no-results" };
+const _sfc_main$$ = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxNoResults",
   props: {
     labels: {}
   },
   setup(__props) {
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("p", _hoisted_1$19, toDisplayString(_ctx.labels.noResults), 1);
+      return openBlock(), createElementBlock("p", _hoisted_1$W, toDisplayString(_ctx.labels.noResults), 1);
     };
   }
 });
-const _hoisted_1$18 = ["innerHTML"];
-const _hoisted_2$N = {
+const _hoisted_1$V = ["innerHTML"];
+const _hoisted_2$G = {
   key: 1,
   "data-cy": "lupa-suggestion-value",
   class: "lupa-suggestion-value"
 };
-const _hoisted_3$z = {
+const _hoisted_3$t = {
   key: 2,
   class: "lupa-suggestion-facet",
   "data-cy": "lupa-suggestion-facet"
 };
-const _hoisted_4$r = {
+const _hoisted_4$m = {
   class: "lupa-suggestion-facet-label",
   "data-cy": "lupa-suggestion-facet-label"
 };
-const _hoisted_5$f = {
+const _hoisted_5$d = {
   class: "lupa-suggestion-facet-value",
   "data-cy": "lupa-suggestion-facet-value"
 };
-const _sfc_main$1f = /* @__PURE__ */ defineComponent({
+const _sfc_main$_ = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxSuggestion",
   props: {
     suggestion: {},
@@ -3532,20 +3531,20 @@ const _sfc_main$1f = /* @__PURE__ */ defineComponent({
           class: "lupa-suggestion-value",
           "data-cy": "lupa-suggestion-value",
           innerHTML: _ctx.suggestion.displayHighlight
-        }, null, 8, _hoisted_1$18)) : (openBlock(), createElementBlock("div", _hoisted_2$N, toDisplayString(_ctx.suggestion.display), 1)),
-        _ctx.suggestion.facet ? (openBlock(), createElementBlock("div", _hoisted_3$z, [
-          createElementVNode("span", _hoisted_4$r, toDisplayString(facetLabel.value), 1),
-          createElementVNode("span", _hoisted_5$f, toDisplayString(_ctx.suggestion.facet.title), 1)
+        }, null, 8, _hoisted_1$V)) : (openBlock(), createElementBlock("div", _hoisted_2$G, toDisplayString(_ctx.suggestion.display), 1)),
+        _ctx.suggestion.facet ? (openBlock(), createElementBlock("div", _hoisted_3$t, [
+          createElementVNode("span", _hoisted_4$m, toDisplayString(facetLabel.value), 1),
+          createElementVNode("span", _hoisted_5$d, toDisplayString(_ctx.suggestion.facet.title), 1)
         ])) : createCommentVNode("", true)
       ]);
     };
   }
 });
-const _hoisted_1$17 = {
+const _hoisted_1$U = {
   id: "lupa-search-box-suggestions",
   "data-cy": "lupa-search-box-suggestions"
 };
-const _sfc_main$1e = /* @__PURE__ */ defineComponent({
+const _sfc_main$Z = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxSuggestions",
   props: {
     items: {},
@@ -3606,9 +3605,9 @@ const _sfc_main$1e = /* @__PURE__ */ defineComponent({
       });
     });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$17, [
+      return openBlock(), createElementBlock("div", _hoisted_1$U, [
         (openBlock(true), createElementBlock(Fragment, null, renderList(items.value, (item, index) => {
-          return openBlock(), createBlock(_sfc_main$1f, {
+          return openBlock(), createBlock(_sfc_main$_, {
             key: getSuggestionKey(item),
             class: normalizeClass(["lupa-suggestion", index === highlightedIndex.value ? "lupa-suggestion-highlighted" : ""]),
             suggestion: item,
@@ -3636,7 +3635,7 @@ const debounce$1 = (func, timeout) => {
     }, timeout);
   };
 };
-const _sfc_main$1d = /* @__PURE__ */ defineComponent({
+const _sfc_main$Y = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxSuggestionsWrapper",
   props: {
     panel: {},
@@ -3678,7 +3677,7 @@ const _sfc_main$1d = /* @__PURE__ */ defineComponent({
     };
     const getSuggestionsDebounced = debounce$1(getSuggestions, props.debounce);
     return (_ctx, _cache) => {
-      return openBlock(), createBlock(_sfc_main$1e, {
+      return openBlock(), createBlock(_sfc_main$Z, {
         items: searchResult.value,
         highlight: _ctx.panel.highlight,
         queryKey: _ctx.panel.queryKey,
@@ -3763,9 +3762,9 @@ const joinUrlParts = (...parts) => {
   }
   return (_c = (_b = (_a = parts == null ? void 0 : parts.map((part) => part.replace(/(^\/+|\/+$)/g, ""))) == null ? void 0 : _a.filter((part) => part !== "")) == null ? void 0 : _b.join("/")) != null ? _c : "";
 };
-const _hoisted_1$16 = /* @__PURE__ */ createElementVNode("div", null, "Testas Paveiksliukas", -1);
-const _hoisted_2$M = ["src"];
-const _sfc_main$1c = /* @__PURE__ */ defineComponent({
+const _hoisted_1$T = /* @__PURE__ */ createElementVNode("div", null, "Testas Paveiksliukas", -1);
+const _hoisted_2$F = ["src"];
+const _sfc_main$X = /* @__PURE__ */ defineComponent({
   __name: "ProductImage",
   props: {
     item: {},
@@ -3813,20 +3812,20 @@ const _sfc_main$1c = /* @__PURE__ */ defineComponent({
     return (_ctx, _cache) => {
       var _a, _b;
       return openBlock(), createElementBlock(Fragment, null, [
-        _hoisted_1$16,
+        _hoisted_1$T,
         createElementVNode("div", {
           class: normalizeClass((_a = _ctx.wrapperClass) != null ? _a : "")
         }, [
           createElementVNode("img", mergeProps({
             class: (_b = _ctx.imageClass) != null ? _b : "",
             src: finalUrl.value
-          }, { alt: imageAlt.value ? imageAlt.value : void 0 }, { onError: replaceWithPlaceholder }), null, 16, _hoisted_2$M)
+          }, { alt: imageAlt.value ? imageAlt.value : void 0 }, { onError: replaceWithPlaceholder }), null, 16, _hoisted_2$F)
         ], 2)
       ], 64);
     };
   }
 });
-const _sfc_main$1b = /* @__PURE__ */ defineComponent({
+const _sfc_main$W = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxProductImage",
   props: {
     item: {},
@@ -3834,7 +3833,7 @@ const _sfc_main$1b = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     return (_ctx, _cache) => {
-      return openBlock(), createBlock(_sfc_main$1c, {
+      return openBlock(), createBlock(_sfc_main$X, {
         item: _ctx.item,
         options: _ctx.options,
         "wrapper-class": "lupa-search-box-image-wrapper",
@@ -3843,12 +3842,12 @@ const _sfc_main$1b = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$15 = ["innerHTML"];
-const _hoisted_2$L = {
+const _hoisted_1$S = ["innerHTML"];
+const _hoisted_2$E = {
   key: 1,
   class: "lupa-search-box-product-title"
 };
-const _sfc_main$1a = /* @__PURE__ */ defineComponent({
+const _sfc_main$V = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxProductTitle",
   props: {
     item: {},
@@ -3868,18 +3867,18 @@ const _sfc_main$1a = /* @__PURE__ */ defineComponent({
         key: 0,
         class: "lupa-search-box-product-title",
         innerHTML: title.value
-      }, null, 8, _hoisted_1$15)) : (openBlock(), createElementBlock("div", _hoisted_2$L, [
+      }, null, 8, _hoisted_1$S)) : (openBlock(), createElementBlock("div", _hoisted_2$E, [
         createElementVNode("strong", null, toDisplayString(title.value), 1)
       ]));
     };
   }
 });
-const _hoisted_1$14 = ["innerHTML"];
-const _hoisted_2$K = {
+const _hoisted_1$R = ["innerHTML"];
+const _hoisted_2$D = {
   key: 1,
   class: "lupa-search-box-product-description"
 };
-const _sfc_main$19 = /* @__PURE__ */ defineComponent({
+const _sfc_main$U = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxProductDescription",
   props: {
     item: {},
@@ -3899,12 +3898,12 @@ const _sfc_main$19 = /* @__PURE__ */ defineComponent({
         key: 0,
         class: "lupa-search-box-product-description",
         innerHTML: description.value
-      }, null, 8, _hoisted_1$14)) : (openBlock(), createElementBlock("div", _hoisted_2$K, toDisplayString(description.value), 1));
+      }, null, 8, _hoisted_1$R)) : (openBlock(), createElementBlock("div", _hoisted_2$D, toDisplayString(description.value), 1));
     };
   }
 });
-const _hoisted_1$13 = { class: "lupa-search-box-product-price" };
-const _sfc_main$18 = /* @__PURE__ */ defineComponent({
+const _hoisted_1$Q = { class: "lupa-search-box-product-price" };
+const _sfc_main$T = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxProductPrice",
   props: {
     item: {},
@@ -3922,14 +3921,14 @@ const _sfc_main$18 = /* @__PURE__ */ defineComponent({
       );
     });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$13, [
+      return openBlock(), createElementBlock("div", _hoisted_1$Q, [
         createElementVNode("strong", null, toDisplayString(price.value), 1)
       ]);
     };
   }
 });
-const _hoisted_1$12 = { class: "lupa-search-box-product-regular-price" };
-const _sfc_main$17 = /* @__PURE__ */ defineComponent({
+const _hoisted_1$P = { class: "lupa-search-box-product-regular-price" };
+const _sfc_main$S = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxProductRegularPrice",
   props: {
     item: {},
@@ -3947,16 +3946,16 @@ const _sfc_main$17 = /* @__PURE__ */ defineComponent({
       );
     });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$12, toDisplayString(price.value), 1);
+      return openBlock(), createElementBlock("div", _hoisted_1$P, toDisplayString(price.value), 1);
     };
   }
 });
-const _hoisted_1$11 = ["innerHTML"];
-const _hoisted_2$J = { key: 0 };
-const _hoisted_3$y = { key: 1 };
-const _hoisted_4$q = { class: "lupa-search-box-custom-label" };
-const _hoisted_5$e = { class: "lupa-search-box-custom-text" };
-const _sfc_main$16 = /* @__PURE__ */ defineComponent({
+const _hoisted_1$O = ["innerHTML"];
+const _hoisted_2$C = { key: 0 };
+const _hoisted_3$s = { key: 1 };
+const _hoisted_4$l = { class: "lupa-search-box-custom-label" };
+const _hoisted_5$c = { class: "lupa-search-box-custom-text" };
+const _sfc_main$R = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxProductCustom",
   props: {
     item: {},
@@ -3982,20 +3981,20 @@ const _sfc_main$16 = /* @__PURE__ */ defineComponent({
         key: 0,
         class: [className.value, "lupa-search-box-product-custom"],
         innerHTML: text.value
-      }, toHandlers(_ctx.options.action ? { click: handleClick } : {}, true)), null, 16, _hoisted_1$11)) : (openBlock(), createElementBlock("div", mergeProps({
+      }, toHandlers(_ctx.options.action ? { click: handleClick } : {}, true)), null, 16, _hoisted_1$O)) : (openBlock(), createElementBlock("div", mergeProps({
         key: 1,
         class: [className.value, "lupa-search-box-product-custom"]
       }, toHandlers(_ctx.options.action ? { click: handleClick } : {}, true)), [
-        !label.value ? (openBlock(), createElementBlock("div", _hoisted_2$J, toDisplayString(text.value), 1)) : (openBlock(), createElementBlock("div", _hoisted_3$y, [
-          createElementVNode("div", _hoisted_4$q, toDisplayString(label.value), 1),
-          createElementVNode("div", _hoisted_5$e, toDisplayString(text.value), 1)
+        !label.value ? (openBlock(), createElementBlock("div", _hoisted_2$C, toDisplayString(text.value), 1)) : (openBlock(), createElementBlock("div", _hoisted_3$s, [
+          createElementVNode("div", _hoisted_4$l, toDisplayString(label.value), 1),
+          createElementVNode("div", _hoisted_5$c, toDisplayString(text.value), 1)
         ]))
       ], 16));
     };
   }
 });
-const _hoisted_1$10 = ["innerHTML"];
-const _sfc_main$15 = /* @__PURE__ */ defineComponent({
+const _hoisted_1$N = ["innerHTML"];
+const _sfc_main$Q = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxProductCustomHtml",
   props: {
     item: {},
@@ -4015,7 +4014,7 @@ const _sfc_main$15 = /* @__PURE__ */ defineComponent({
       return openBlock(), createElementBlock("div", mergeProps({
         class: className.value,
         innerHTML: text.value
-      }, toHandlers(_ctx.options.action ? { click: handleClick } : {}, true)), null, 16, _hoisted_1$10);
+      }, toHandlers(_ctx.options.action ? { click: handleClick } : {}, true)), null, 16, _hoisted_1$N);
     };
   }
 });
@@ -4209,10 +4208,10 @@ const useSearchResultStore = defineStore("searchResult", () => {
     setLoading
   };
 });
-const _hoisted_1$$ = { class: "lupa-search-box-add-to-cart-wrapper" };
-const _hoisted_2$I = { class: "lupa-search-box-product-addtocart" };
-const _hoisted_3$x = ["disabled"];
-const _sfc_main$14 = /* @__PURE__ */ defineComponent({
+const _hoisted_1$M = { class: "lupa-search-box-add-to-cart-wrapper" };
+const _hoisted_2$B = { class: "lupa-search-box-product-addtocart" };
+const _hoisted_3$r = ["disabled"];
+const _sfc_main$P = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxProductAddToCart",
   props: {
     item: {},
@@ -4240,33 +4239,33 @@ const _sfc_main$14 = /* @__PURE__ */ defineComponent({
       loading.value = false;
     });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$$, [
-        createElementVNode("div", _hoisted_2$I, [
+      return openBlock(), createElementBlock("div", _hoisted_1$M, [
+        createElementVNode("div", _hoisted_2$B, [
           createElementVNode("button", {
             onClick: withModifiers(handleClick, ["stop", "prevent"]),
             class: normalizeClass(loading.value ? "lupa-add-to-cart-loading" : "lupa-add-to-cart"),
             "data-cy": "lupa-add-to-cart",
             type: "button",
             disabled: !inStockValue.value || loading.value
-          }, toDisplayString(label.value), 11, _hoisted_3$x)
+          }, toDisplayString(label.value), 11, _hoisted_3$r)
         ])
       ]);
     };
   }
 });
-const __default__$4 = {
+const __default__$2 = {
   components: {
-    SearchBoxProductImage: _sfc_main$1b,
-    SearchBoxProductTitle: _sfc_main$1a,
-    SearchBoxProductDescription: _sfc_main$19,
-    SearchBoxProductPrice: _sfc_main$18,
-    SearchBoxProductRegularPrice: _sfc_main$17,
-    SearchBoxProductCustom: _sfc_main$16,
-    SearchBoxProductCustomHtml: _sfc_main$15,
-    SearchBoxProductAddToCart: _sfc_main$14
+    SearchBoxProductImage: _sfc_main$W,
+    SearchBoxProductTitle: _sfc_main$V,
+    SearchBoxProductDescription: _sfc_main$U,
+    SearchBoxProductPrice: _sfc_main$T,
+    SearchBoxProductRegularPrice: _sfc_main$S,
+    SearchBoxProductCustom: _sfc_main$R,
+    SearchBoxProductCustomHtml: _sfc_main$Q,
+    SearchBoxProductAddToCart: _sfc_main$P
   }
 };
-const _sfc_main$13 = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues({}, __default__$4), {
+const _sfc_main$O = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues({}, __default__$2), {
   __name: "SearchBoxProductElement",
   props: {
     item: {},
@@ -4325,14 +4324,14 @@ const _sfc_main$13 = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValue
     };
   }
 }));
-const _hoisted_1$_ = ["href"];
-const _hoisted_2$H = { class: "lupa-search-box-product-image-section" };
-const _hoisted_3$w = { class: "lupa-search-box-product-details-section" };
-const _hoisted_4$p = {
+const _hoisted_1$L = ["href"];
+const _hoisted_2$A = { class: "lupa-search-box-product-image-section" };
+const _hoisted_3$q = { class: "lupa-search-box-product-details-section" };
+const _hoisted_4$k = {
   key: 0,
   class: "lupa-search-box-product-add-to-cart-section"
 };
-const _sfc_main$12 = /* @__PURE__ */ defineComponent({
+const _sfc_main$N = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxProduct",
   props: {
     item: {},
@@ -4389,9 +4388,9 @@ const _sfc_main$12 = /* @__PURE__ */ defineComponent({
         "data-cy": "lupa-search-box-product",
         onClick: handleClick
       }), [
-        createElementVNode("div", _hoisted_2$H, [
+        createElementVNode("div", _hoisted_2$A, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(imageElements.value, (element) => {
-            return openBlock(), createBlock(_sfc_main$13, {
+            return openBlock(), createBlock(_sfc_main$O, {
               class: "lupa-search-box-product-element",
               item: _ctx.item,
               element,
@@ -4401,9 +4400,9 @@ const _sfc_main$12 = /* @__PURE__ */ defineComponent({
             }, null, 8, ["item", "element", "labels", "link"]);
           }), 128))
         ]),
-        createElementVNode("div", _hoisted_3$w, [
+        createElementVNode("div", _hoisted_3$q, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(detailElements.value, (element) => {
-            return openBlock(), createBlock(_sfc_main$13, {
+            return openBlock(), createBlock(_sfc_main$O, {
               class: "lupa-search-box-product-element",
               item: _ctx.item,
               element,
@@ -4413,8 +4412,8 @@ const _sfc_main$12 = /* @__PURE__ */ defineComponent({
             }, null, 8, ["item", "element", "labels", "link"]);
           }), 128))
         ]),
-        addToCartElement.value ? (openBlock(), createElementBlock("div", _hoisted_4$p, [
-          createVNode(_sfc_main$13, {
+        addToCartElement.value ? (openBlock(), createElementBlock("div", _hoisted_4$k, [
+          createVNode(_sfc_main$O, {
             class: "lupa-search-box-product-element",
             item: _ctx.item,
             element: addToCartElement.value,
@@ -4423,7 +4422,7 @@ const _sfc_main$12 = /* @__PURE__ */ defineComponent({
             isInStock: isInStock.value
           }, null, 8, ["item", "element", "labels", "link", "isInStock"])
         ])) : createCommentVNode("", true)
-      ], 16, _hoisted_1$_);
+      ], 16, _hoisted_1$L);
     };
   }
 });
@@ -4482,8 +4481,8 @@ const useTrackingStore = defineStore("tracking", () => {
   };
   return { trackSearch, trackResults, trackEvent };
 });
-const _hoisted_1$Z = { id: "lupa-search-box-products" };
-const _sfc_main$11 = /* @__PURE__ */ defineComponent({
+const _hoisted_1$K = { id: "lupa-search-box-products" };
+const _sfc_main$M = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxProducts",
   props: {
     items: {},
@@ -4545,7 +4544,7 @@ const _sfc_main$11 = /* @__PURE__ */ defineComponent({
       handleRoutingEvent(link, event, boxRoutingBehavior.value === "event");
     };
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$Z, [
+      return openBlock(), createElementBlock("div", _hoisted_1$K, [
         _ctx.$slots.productCard ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList(_ctx.items, (item, index) => {
           return renderSlot(_ctx.$slots, "productCard", {
             key: index,
@@ -4557,7 +4556,7 @@ const _sfc_main$11 = /* @__PURE__ */ defineComponent({
             itemClicked: handleProductClick
           });
         }), 128)) : (openBlock(true), createElementBlock(Fragment, { key: 1 }, renderList(_ctx.items, (item, index) => {
-          return openBlock(), createBlock(_sfc_main$12, {
+          return openBlock(), createBlock(_sfc_main$N, {
             key: index,
             item,
             panelOptions: _ctx.panelOptions,
@@ -4571,7 +4570,7 @@ const _sfc_main$11 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_main$10 = /* @__PURE__ */ defineComponent({
+const _sfc_main$L = /* @__PURE__ */ defineComponent({
   __name: "SearchBoxProductsWrapper",
   props: {
     panel: {},
@@ -4624,7 +4623,7 @@ const _sfc_main$10 = /* @__PURE__ */ defineComponent({
     const getItemsDebounced = debounce$1(getItems, props.debounce);
     return (_ctx, _cache) => {
       var _a, _b;
-      return openBlock(), createBlock(_sfc_main$11, {
+      return openBlock(), createBlock(_sfc_main$M, {
         items: (_b = (_a = searchResult.value) == null ? void 0 : _a.items) != null ? _b : [],
         panelOptions: _ctx.panel,
         labels: _ctx.labels,
@@ -4642,26 +4641,26 @@ const _sfc_main$10 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$Y = {
+const _hoisted_1$J = {
   key: 0,
   id: "lupa-search-box-panel"
 };
-const _hoisted_2$G = ["data-cy"];
-const _hoisted_3$v = {
+const _hoisted_2$z = ["data-cy"];
+const _hoisted_3$p = {
   key: 0,
   class: "lupa-panel-title"
 };
-const _hoisted_4$o = {
+const _hoisted_4$j = {
   key: 1,
   id: "lupa-search-box-panel"
 };
-const __default__$3 = {
+const __default__$1 = {
   components: {
-    SearchBoxSuggestionsWrapper: _sfc_main$1d,
-    SearchBoxProductsWrapper: _sfc_main$10
+    SearchBoxSuggestionsWrapper: _sfc_main$Y,
+    SearchBoxProductsWrapper: _sfc_main$L
   }
 };
-const _sfc_main$$ = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues({}, __default__$3), {
+const _sfc_main$K = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues({}, __default__$1), {
   __name: "SearchBoxMainPanel",
   props: {
     options: {},
@@ -4784,7 +4783,7 @@ const _sfc_main$$ = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues
         ref_key: "panelContainer",
         ref: panelContainer
       }, [
-        displayResults.value ? (openBlock(), createElementBlock("div", _hoisted_1$Y, [
+        displayResults.value ? (openBlock(), createElementBlock("div", _hoisted_1$J, [
           createElementVNode("div", {
             class: "lupa-main-panel",
             style: normalizeStyle(expandOnSinglePanel.value ? { display: "block" } : {}),
@@ -4800,7 +4799,7 @@ const _sfc_main$$ = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues
                 ]),
                 "data-cy": "lupa-panel-" + panel.type + "-index"
               }, [
-                ((_a2 = panel.labels) == null ? void 0 : _a2.topResultsTitle) && showTopResultsPanelTitle(panel.queryKey) ? (openBlock(), createElementBlock("div", _hoisted_3$v, toDisplayString((_b = panel.labels) == null ? void 0 : _b.topResultsTitle), 1)) : createCommentVNode("", true),
+                ((_a2 = panel.labels) == null ? void 0 : _a2.topResultsTitle) && showTopResultsPanelTitle(panel.queryKey) ? (openBlock(), createElementBlock("div", _hoisted_3$p, toDisplayString((_b = panel.labels) == null ? void 0 : _b.topResultsTitle), 1)) : createCommentVNode("", true),
                 panel.queryKey ? (openBlock(), createBlock(resolveDynamicComponent(getComponent(panel.type)), {
                   key: 1,
                   panel,
@@ -4820,21 +4819,21 @@ const _sfc_main$$ = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues
                     key: "0"
                   } : void 0
                 ]), 1064, ["panel", "options", "debounce", "inputValue", "labels"])) : createCommentVNode("", true)
-              ], 10, _hoisted_2$G);
+              ], 10, _hoisted_2$z);
             }), 128))
           ], 4),
-          !unref(hasAnyResults) && _ctx.options.showNoResultsPanel ? (openBlock(), createBlock(_sfc_main$1g, {
+          !unref(hasAnyResults) && _ctx.options.showNoResultsPanel ? (openBlock(), createBlock(_sfc_main$$, {
             key: 0,
             labels: labels.value
           }, null, 8, ["labels"])) : createCommentVNode("", true),
-          unref(hasAnyResults) || !_ctx.options.hideMoreResultsButtonOnNoResults ? (openBlock(), createBlock(_sfc_main$1j, {
+          unref(hasAnyResults) || !_ctx.options.hideMoreResultsButtonOnNoResults ? (openBlock(), createBlock(_sfc_main$12, {
             key: 1,
             labels: labels.value,
             showTotalCount: (_a = _ctx.options.showTotalCount) != null ? _a : false,
             onGoToResults: _cache[3] || (_cache[3] = ($event) => _ctx.$emit("go-to-results"))
           }, null, 8, ["labels", "showTotalCount"])) : createCommentVNode("", true)
-        ])) : displayHistory.value ? (openBlock(), createElementBlock("div", _hoisted_4$o, [
-          createVNode(_sfc_main$1h, {
+        ])) : displayHistory.value ? (openBlock(), createElementBlock("div", _hoisted_4$j, [
+          createVNode(_sfc_main$10, {
             options: _ctx.options.history,
             history: history.value,
             onGoToResults: handleGoToResults,
@@ -4859,9 +4858,9 @@ const unbindSearchTriggers = (triggers = [], event) => {
   const elements = getElements(triggers);
   elements.forEach((e) => e == null ? void 0 : e.removeEventListener(BIND_EVENT, event));
 };
-const _hoisted_1$X = { id: "lupa-search-box" };
-const _hoisted_2$F = { class: "lupa-search-box-wrapper" };
-const _sfc_main$_ = /* @__PURE__ */ defineComponent({
+const _hoisted_1$I = { id: "lupa-search-box" };
+const _hoisted_2$y = { class: "lupa-search-box-wrapper" };
+const _sfc_main$J = /* @__PURE__ */ defineComponent({
   __name: "SearchBox",
   props: {
     options: {},
@@ -5099,9 +5098,9 @@ const _sfc_main$_ = /* @__PURE__ */ defineComponent({
     };
     return (_ctx, _cache) => {
       var _a2;
-      return openBlock(), createElementBlock("div", _hoisted_1$X, [
-        createElementVNode("div", _hoisted_2$F, [
-          createVNode(_sfc_main$1k, {
+      return openBlock(), createElementBlock("div", _hoisted_1$I, [
+        createElementVNode("div", _hoisted_2$y, [
+          createVNode(_sfc_main$13, {
             options: inputOptions.value,
             suggestedValue: suggestedValue.value,
             "can-close": (_a2 = _ctx.isSearchContainer) != null ? _a2 : false,
@@ -5112,7 +5111,7 @@ const _sfc_main$_ = /* @__PURE__ */ defineComponent({
             onFocus: _cache[0] || (_cache[0] = ($event) => opened.value = true),
             onClose: _cache[1] || (_cache[1] = ($event) => _ctx.$emit("close"))
           }, null, 8, ["options", "suggestedValue", "can-close", "emit-input-on-focus"]),
-          opened.value || _ctx.isSearchContainer ? (openBlock(), createBlock(_sfc_main$$, {
+          opened.value || _ctx.isSearchContainer ? (openBlock(), createBlock(_sfc_main$K, {
             key: 0,
             options: panelOptions.value,
             inputValue: inputValue.value,
@@ -5215,20 +5214,20 @@ const getInitialSearchResults = (options, defaultData) => __async(void 0, null, 
     options.options.onError(e);
   }
 });
-const _hoisted_1$W = {
+const _hoisted_1$H = {
   key: 0,
   id: "lupa-search-results-did-you-mean"
 };
-const _hoisted_2$E = {
+const _hoisted_2$x = {
   key: 0,
   "data-cy": "suggested-search-text-label"
 };
-const _hoisted_3$u = {
+const _hoisted_3$o = {
   key: 1,
   "data-cy": "did-you-mean-label"
 };
-const _hoisted_4$n = { key: 1 };
-const _sfc_main$Z = /* @__PURE__ */ defineComponent({
+const _hoisted_4$i = { key: 1 };
+const _sfc_main$I = /* @__PURE__ */ defineComponent({
   __name: "SearchResultsDidYouMean",
   props: {
     labels: {}
@@ -5260,8 +5259,8 @@ const _sfc_main$Z = /* @__PURE__ */ defineComponent({
       paramStore.goToResults({ searchText, facet });
     };
     return (_ctx, _cache) => {
-      return unref(searchResult).suggestedSearchText || didYouMeanValue.value ? (openBlock(), createElementBlock("div", _hoisted_1$W, [
-        unref(searchResult).suggestedSearchText ? (openBlock(), createElementBlock("div", _hoisted_2$E, [
+      return unref(searchResult).suggestedSearchText || didYouMeanValue.value ? (openBlock(), createElementBlock("div", _hoisted_1$H, [
+        unref(searchResult).suggestedSearchText ? (openBlock(), createElementBlock("div", _hoisted_2$x, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.labels.noResultsSuggestion.split(" "), (label, index) => {
             return openBlock(), createElementBlock("span", { key: index }, [
               createElementVNode("span", {
@@ -5270,7 +5269,7 @@ const _sfc_main$Z = /* @__PURE__ */ defineComponent({
             ]);
           }), 128))
         ])) : createCommentVNode("", true),
-        didYouMeanValue.value ? (openBlock(), createElementBlock("div", _hoisted_3$u, [
+        didYouMeanValue.value ? (openBlock(), createElementBlock("div", _hoisted_3$o, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.labels.didYouMean.split(" "), (label, index) => {
             return openBlock(), createElementBlock("span", { key: index }, [
               label.includes("{1}") ? (openBlock(), createElementBlock("span", {
@@ -5278,7 +5277,7 @@ const _sfc_main$Z = /* @__PURE__ */ defineComponent({
                 class: "lupa-did-you-mean lupa-highlighted-search-text",
                 "data-cy": "did-you-mean-value",
                 onClick: _cache[0] || (_cache[0] = ($event) => goToResults({ searchText: didYouMeanValue.value }))
-              }, toDisplayString(didYouMeanValue.value) + " ", 1)) : (openBlock(), createElementBlock("span", _hoisted_4$n, toDisplayString(label) + " ", 1))
+              }, toDisplayString(didYouMeanValue.value) + " ", 1)) : (openBlock(), createElementBlock("span", _hoisted_4$i, toDisplayString(label) + " ", 1))
             ]);
           }), 128))
         ])) : createCommentVNode("", true)
@@ -5286,12 +5285,12 @@ const _sfc_main$Z = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$V = {
+const _hoisted_1$G = {
   key: 0,
   class: "lupa-search-results-summary"
 };
-const _hoisted_2$D = ["innerHTML"];
-const _sfc_main$Y = /* @__PURE__ */ defineComponent({
+const _hoisted_2$w = ["innerHTML"];
+const _sfc_main$H = /* @__PURE__ */ defineComponent({
   __name: "SearchResultsSummary",
   props: {
     label: {},
@@ -5306,8 +5305,8 @@ const _sfc_main$Y = /* @__PURE__ */ defineComponent({
       return addParamsToLabel(props.label, range, `<span>${totalItems.value}</span>`);
     });
     return (_ctx, _cache) => {
-      return unref(totalItems) > 0 ? (openBlock(), createElementBlock("div", _hoisted_1$V, [
-        createElementVNode("div", { innerHTML: summaryLabel.value }, null, 8, _hoisted_2$D),
+      return unref(totalItems) > 0 ? (openBlock(), createElementBlock("div", _hoisted_1$G, [
+        createElementVNode("div", { innerHTML: summaryLabel.value }, null, 8, _hoisted_2$w),
         _ctx.clearable ? (openBlock(), createElementBlock("span", {
           key: 0,
           class: "lupa-filter-clear",
@@ -5318,18 +5317,18 @@ const _sfc_main$Y = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$U = {
+const _hoisted_1$F = {
   key: 0,
   class: "lupa-result-page-title",
   "data-cy": "lupa-result-page-title"
 };
-const _hoisted_2$C = { key: 0 };
-const _hoisted_3$t = {
+const _hoisted_2$v = { key: 0 };
+const _hoisted_3$n = {
   key: 1,
   class: "lupa-results-total-count"
 };
-const _hoisted_4$m = ["innerHTML"];
-const _sfc_main$X = /* @__PURE__ */ defineComponent({
+const _hoisted_4$h = ["innerHTML"];
+const _sfc_main$G = /* @__PURE__ */ defineComponent({
   __name: "SearchResultsTitle",
   props: {
     options: {},
@@ -5364,12 +5363,12 @@ const _sfc_main$X = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", null, [
-        showSearchTitle.value ? (openBlock(), createElementBlock("h1", _hoisted_1$U, [
+        showSearchTitle.value ? (openBlock(), createElementBlock("h1", _hoisted_1$F, [
           createTextVNode(toDisplayString(_ctx.options.labels.searchResults), 1),
-          queryText.value ? (openBlock(), createElementBlock("span", _hoisted_2$C, "'" + toDisplayString(queryText.value) + "'", 1)) : createCommentVNode("", true),
-          showProductCount.value ? (openBlock(), createElementBlock("span", _hoisted_3$t, "(" + toDisplayString(unref(totalItems)) + ")", 1)) : createCommentVNode("", true)
+          queryText.value ? (openBlock(), createElementBlock("span", _hoisted_2$v, "'" + toDisplayString(queryText.value) + "'", 1)) : createCommentVNode("", true),
+          showProductCount.value ? (openBlock(), createElementBlock("span", _hoisted_3$n, "(" + toDisplayString(unref(totalItems)) + ")", 1)) : createCommentVNode("", true)
         ])) : createCommentVNode("", true),
-        _ctx.showSummary ? (openBlock(), createBlock(_sfc_main$Y, {
+        _ctx.showSummary ? (openBlock(), createBlock(_sfc_main$H, {
           key: 1,
           label: summaryLabel.value
         }, null, 8, ["label"])) : createCommentVNode("", true),
@@ -5377,21 +5376,21 @@ const _sfc_main$X = /* @__PURE__ */ defineComponent({
           key: 2,
           class: "lupa-result-page-description-top",
           innerHTML: descriptionTop.value
-        }, null, 8, _hoisted_4$m)) : createCommentVNode("", true)
+        }, null, 8, _hoisted_4$h)) : createCommentVNode("", true)
       ]);
     };
   }
 });
-const _hoisted_1$T = { class: "lupa-search-result-filter-value" };
-const _hoisted_2$B = {
+const _hoisted_1$E = { class: "lupa-search-result-filter-value" };
+const _hoisted_2$u = {
   class: "lupa-current-filter-label",
   "data-cy": "lupa-current-filter-label"
 };
-const _hoisted_3$s = {
+const _hoisted_3$m = {
   class: "lupa-current-filter-value",
   "data-cy": "lupa-current-filter-value"
 };
-const _sfc_main$W = /* @__PURE__ */ defineComponent({
+const _sfc_main$F = /* @__PURE__ */ defineComponent({
   __name: "CurrentFilterDisplay",
   props: {
     filter: {}
@@ -5404,28 +5403,28 @@ const _sfc_main$W = /* @__PURE__ */ defineComponent({
       emit("remove", { filter: props.filter });
     };
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$T, [
+      return openBlock(), createElementBlock("div", _hoisted_1$E, [
         createElementVNode("div", {
           class: "lupa-current-filter-action",
           onClick: handleClick
         }, "⨉"),
-        createElementVNode("div", _hoisted_2$B, toDisplayString(_ctx.filter.label) + ": ", 1),
-        createElementVNode("div", _hoisted_3$s, toDisplayString(_ctx.filter.value), 1)
+        createElementVNode("div", _hoisted_2$u, toDisplayString(_ctx.filter.label) + ": ", 1),
+        createElementVNode("div", _hoisted_3$m, toDisplayString(_ctx.filter.value), 1)
       ]);
     };
   }
 });
-const _hoisted_1$S = { class: "lupa-filter-title-text" };
-const _hoisted_2$A = {
+const _hoisted_1$D = { class: "lupa-filter-title-text" };
+const _hoisted_2$t = {
   key: 0,
   class: "lupa-filter-count"
 };
-const _hoisted_3$r = {
+const _hoisted_3$l = {
   key: 0,
   class: "filter-values"
 };
-const _hoisted_4$l = { class: "lupa-current-filter-list" };
-const _sfc_main$V = /* @__PURE__ */ defineComponent({
+const _hoisted_4$g = { class: "lupa-current-filter-list" };
+const _sfc_main$E = /* @__PURE__ */ defineComponent({
   __name: "CurrentFilters",
   props: {
     options: {},
@@ -5480,19 +5479,19 @@ const _sfc_main$V = /* @__PURE__ */ defineComponent({
           class: "lupa-current-filter-title",
           onClick: _cache[0] || (_cache[0] = ($event) => isOpen.value = !isOpen.value)
         }, [
-          createElementVNode("div", _hoisted_1$S, [
+          createElementVNode("div", _hoisted_1$D, [
             createTextVNode(toDisplayString((_c = (_b = (_a = _ctx.options) == null ? void 0 : _a.labels) == null ? void 0 : _b.title) != null ? _c : "") + " ", 1),
-            _ctx.expandable ? (openBlock(), createElementBlock("span", _hoisted_2$A, " (" + toDisplayString(unref(currentFilterCount)) + ") ", 1)) : createCommentVNode("", true)
+            _ctx.expandable ? (openBlock(), createElementBlock("span", _hoisted_2$t, " (" + toDisplayString(unref(currentFilterCount)) + ") ", 1)) : createCommentVNode("", true)
           ]),
           _ctx.expandable ? (openBlock(), createElementBlock("div", {
             key: 0,
             class: normalizeClass(["lupa-filter-title-caret", isOpen.value && "open"])
           }, null, 2)) : createCommentVNode("", true)
         ]),
-        !_ctx.expandable || isOpen.value ? (openBlock(), createElementBlock("div", _hoisted_3$r, [
-          createElementVNode("div", _hoisted_4$l, [
+        !_ctx.expandable || isOpen.value ? (openBlock(), createElementBlock("div", _hoisted_3$l, [
+          createElementVNode("div", _hoisted_4$g, [
             (openBlock(true), createElementBlock(Fragment, null, renderList(unref(displayFilters), (filter) => {
-              return openBlock(), createBlock(_sfc_main$W, {
+              return openBlock(), createBlock(_sfc_main$F, {
                 key: filter.key + "_" + filter.value,
                 filter,
                 onRemove: handleRemove
@@ -5509,8 +5508,8 @@ const _sfc_main$V = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$R = ["href"];
-const _sfc_main$U = /* @__PURE__ */ defineComponent({
+const _hoisted_1$C = ["href"];
+const _sfc_main$D = /* @__PURE__ */ defineComponent({
   __name: "CategoryFilterItem",
   props: {
     options: {},
@@ -5547,20 +5546,20 @@ const _sfc_main$U = /* @__PURE__ */ defineComponent({
           "data-cy": "lupa-child-category-item",
           href: urlLink.value,
           onClick: handleNavigation
-        }, toDisplayString(title.value), 9, _hoisted_1$R)
+        }, toDisplayString(title.value), 9, _hoisted_1$C)
       ], 2);
     };
   }
 });
-const _hoisted_1$Q = {
+const _hoisted_1$B = {
   class: "lupa-category-filter",
   "data-cy": "lupa-category-filter"
 };
-const _hoisted_2$z = { class: "lupa-category-back" };
-const _hoisted_3$q = ["href"];
-const _hoisted_4$k = ["href"];
-const _hoisted_5$d = { class: "lupa-child-category-list" };
-const _sfc_main$T = /* @__PURE__ */ defineComponent({
+const _hoisted_2$s = { class: "lupa-category-back" };
+const _hoisted_3$k = ["href"];
+const _hoisted_4$f = ["href"];
+const _hoisted_5$b = { class: "lupa-child-category-list" };
+const _sfc_main$C = /* @__PURE__ */ defineComponent({
   __name: "CategoryFilter",
   props: {
     options: {}
@@ -5646,14 +5645,14 @@ const _sfc_main$T = /* @__PURE__ */ defineComponent({
     };
     __expose({ fetch: fetch2 });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$Q, [
-        createElementVNode("div", _hoisted_2$z, [
+      return openBlock(), createElementBlock("div", _hoisted_1$B, [
+        createElementVNode("div", _hoisted_2$s, [
           hasBackButton.value ? (openBlock(), createElementBlock("a", {
             key: 0,
             "data-cy": "lupa-category-back",
             href: backUrlLink.value,
             onClick: handleNavigationBack
-          }, toDisplayString(backTitle.value), 9, _hoisted_3$q)) : createCommentVNode("", true)
+          }, toDisplayString(backTitle.value), 9, _hoisted_3$k)) : createCommentVNode("", true)
         ]),
         createElementVNode("div", {
           class: normalizeClass(["lupa-current-category", { "lupa-current-category-active": isActive }])
@@ -5663,11 +5662,11 @@ const _sfc_main$T = /* @__PURE__ */ defineComponent({
             href: parentUrlLink.value,
             class: normalizeClass({ "lupa-title-category": !hasBackButton.value }),
             onClick: handleNavigationParent
-          }, toDisplayString(parentTitle.value), 11, _hoisted_4$k)
+          }, toDisplayString(parentTitle.value), 11, _hoisted_4$f)
         ], 2),
-        createElementVNode("div", _hoisted_5$d, [
+        createElementVNode("div", _hoisted_5$b, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(categoryChildren.value, (child) => {
-            return openBlock(), createBlock(_sfc_main$U, {
+            return openBlock(), createBlock(_sfc_main$D, {
               key: getCategoryKey(child),
               item: child,
               options: _ctx.options
@@ -5678,23 +5677,23 @@ const _sfc_main$T = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$P = {
+const _hoisted_1$A = {
   class: "lupa-search-result-facet-term-values",
   "data-cy": "lupa-search-result-facet-term-values"
 };
-const _hoisted_2$y = ["placeholder"];
-const _hoisted_3$p = { class: "lupa-terms-list" };
-const _hoisted_4$j = ["onClick"];
-const _hoisted_5$c = { class: "lupa-term-checkbox-wrapper" };
-const _hoisted_6$8 = { class: "lupa-term-checkbox-label" };
-const _hoisted_7$5 = { class: "lupa-term-label" };
+const _hoisted_2$r = ["placeholder"];
+const _hoisted_3$j = { class: "lupa-terms-list" };
+const _hoisted_4$e = ["onClick"];
+const _hoisted_5$a = { class: "lupa-term-checkbox-wrapper" };
+const _hoisted_6$7 = { class: "lupa-term-checkbox-label" };
+const _hoisted_7$4 = { class: "lupa-term-label" };
 const _hoisted_8$1 = {
   key: 0,
   class: "lupa-term-count"
 };
 const _hoisted_9$1 = { key: 0 };
 const _hoisted_10$1 = { key: 1 };
-const _sfc_main$S = /* @__PURE__ */ defineComponent({
+const _sfc_main$B = /* @__PURE__ */ defineComponent({
   __name: "TermFacet",
   props: {
     options: {},
@@ -5764,17 +5763,17 @@ const _sfc_main$S = /* @__PURE__ */ defineComponent({
       return selectedItems == null ? void 0 : selectedItems.includes((_b = item.title) == null ? void 0 : _b.toString());
     };
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$P, [
+      return openBlock(), createElementBlock("div", _hoisted_1$A, [
         isFilterable.value ? withDirectives((openBlock(), createElementBlock("input", {
           key: 0,
           class: "lupa-term-filter",
           "data-cy": "lupa-term-filter",
           "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => termFilter.value = $event),
           placeholder: _ctx.options.labels.facetFilter
-        }, null, 8, _hoisted_2$y)), [
+        }, null, 8, _hoisted_2$r)), [
           [vModelText, termFilter.value]
         ]) : createCommentVNode("", true),
-        createElementVNode("div", _hoisted_3$p, [
+        createElementVNode("div", _hoisted_3$j, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(displayValues.value, (item) => {
             return openBlock(), createElementBlock("div", {
               class: normalizeClass(["lupa-facet-term", { checked: isChecked(item) }]),
@@ -5782,16 +5781,16 @@ const _sfc_main$S = /* @__PURE__ */ defineComponent({
               key: item.title,
               onClick: ($event) => handleFacetClick(item)
             }, [
-              createElementVNode("div", _hoisted_5$c, [
+              createElementVNode("div", _hoisted_5$a, [
                 createElementVNode("span", {
                   class: normalizeClass(["lupa-term-checkbox", { checked: isChecked(item) }])
                 }, null, 2)
               ]),
-              createElementVNode("div", _hoisted_6$8, [
-                createElementVNode("span", _hoisted_7$5, toDisplayString(item.title), 1),
+              createElementVNode("div", _hoisted_6$7, [
+                createElementVNode("span", _hoisted_7$4, toDisplayString(item.title), 1),
                 _ctx.options.showDocumentCount ? (openBlock(), createElementBlock("span", _hoisted_8$1, "(" + toDisplayString(item.count) + ")", 1)) : createCommentVNode("", true)
               ])
-            ], 10, _hoisted_4$j);
+            ], 10, _hoisted_4$e);
           }), 128))
         ]),
         displayShowMore.value ? (openBlock(), createElementBlock("div", {
@@ -5806,22 +5805,22 @@ const _sfc_main$S = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$O = { class: "lupa-search-result-facet-stats-values" };
-const _hoisted_2$x = {
+const _hoisted_1$z = { class: "lupa-search-result-facet-stats-values" };
+const _hoisted_2$q = {
   key: 0,
   class: "lupa-stats-facet-summary"
 };
-const _hoisted_3$o = {
+const _hoisted_3$i = {
   key: 1,
   class: "lupa-stats-facet-summary-input"
 };
-const _hoisted_4$i = {
+const _hoisted_4$d = {
   key: 0,
   class: "lupa-stats-range-label"
 };
-const _hoisted_5$b = { class: "lupa-stats-from" };
-const _hoisted_6$7 = ["max", "min", "pattern", "aria-label"];
-const _hoisted_7$4 = { key: 0 };
+const _hoisted_5$9 = { class: "lupa-stats-from" };
+const _hoisted_6$6 = ["max", "min", "pattern", "aria-label"];
+const _hoisted_7$3 = { key: 0 };
 const _hoisted_8 = /* @__PURE__ */ createElementVNode("div", { class: "lupa-stats-separator" }, null, -1);
 const _hoisted_9 = {
   key: 0,
@@ -5834,7 +5833,7 @@ const _hoisted_13 = {
   key: 2,
   class: "lupa-stats-slider-wrapper"
 };
-const _sfc_main$R = /* @__PURE__ */ defineComponent({
+const _sfc_main$A = /* @__PURE__ */ defineComponent({
   __name: "StatsFacet",
   props: {
     options: {},
@@ -5994,11 +5993,11 @@ const _sfc_main$R = /* @__PURE__ */ defineComponent({
       });
     };
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$O, [
-        !isInputVisible.value ? (openBlock(), createElementBlock("div", _hoisted_2$x, toDisplayString(statsSummary.value), 1)) : (openBlock(), createElementBlock("div", _hoisted_3$o, [
+      return openBlock(), createElementBlock("div", _hoisted_1$z, [
+        !isInputVisible.value ? (openBlock(), createElementBlock("div", _hoisted_2$q, toDisplayString(statsSummary.value), 1)) : (openBlock(), createElementBlock("div", _hoisted_3$i, [
           createElementVNode("div", null, [
-            rangeLabelFrom.value ? (openBlock(), createElementBlock("div", _hoisted_4$i, toDisplayString(rangeLabelFrom.value), 1)) : createCommentVNode("", true),
-            createElementVNode("div", _hoisted_5$b, [
+            rangeLabelFrom.value ? (openBlock(), createElementBlock("div", _hoisted_4$d, toDisplayString(rangeLabelFrom.value), 1)) : createCommentVNode("", true),
+            createElementVNode("div", _hoisted_5$9, [
               withDirectives(createElementVNode("input", {
                 "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => fromValue.value = $event),
                 type: "text",
@@ -6007,7 +6006,7 @@ const _sfc_main$R = /* @__PURE__ */ defineComponent({
                 min: facetMin.value,
                 pattern: sliderInputFormat.value,
                 "aria-label": ariaLabelFrom.value
-              }, null, 8, _hoisted_6$7), [
+              }, null, 8, _hoisted_6$6), [
                 [
                   vModelText,
                   fromValue.value,
@@ -6015,7 +6014,7 @@ const _sfc_main$R = /* @__PURE__ */ defineComponent({
                   { lazy: true }
                 ]
               ]),
-              isPrice.value ? (openBlock(), createElementBlock("span", _hoisted_7$4, toDisplayString(currency.value), 1)) : createCommentVNode("", true)
+              isPrice.value ? (openBlock(), createElementBlock("span", _hoisted_7$3, toDisplayString(currency.value), 1)) : createCommentVNode("", true)
             ])
           ]),
           _hoisted_8,
@@ -6047,18 +6046,18 @@ const _sfc_main$R = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$N = { class: "lupa-term-checkbox-wrapper" };
-const _hoisted_2$w = { class: "lupa-term-checkbox-label" };
-const _hoisted_3$n = { class: "lupa-term-label" };
-const _hoisted_4$h = {
+const _hoisted_1$y = { class: "lupa-term-checkbox-wrapper" };
+const _hoisted_2$p = { class: "lupa-term-checkbox-label" };
+const _hoisted_3$h = { class: "lupa-term-label" };
+const _hoisted_4$c = {
   key: 0,
   class: "lupa-term-count"
 };
-const _hoisted_5$a = {
+const _hoisted_5$8 = {
   key: 0,
   class: "lupa-facet-level"
 };
-const _sfc_main$Q = /* @__PURE__ */ defineComponent({
+const _sfc_main$z = /* @__PURE__ */ defineComponent({
   __name: "HierarchyFacetLevel",
   props: {
     options: {},
@@ -6105,17 +6104,17 @@ const _sfc_main$Q = /* @__PURE__ */ defineComponent({
           "data-cy": "lupa-facet-term",
           onClick: _cache[0] || (_cache[0] = ($event) => handleFacetClick(_ctx.item))
         }, [
-          createElementVNode("div", _hoisted_1$N, [
+          createElementVNode("div", _hoisted_1$y, [
             createElementVNode("span", {
               class: normalizeClass(["lupa-term-checkbox", { checked: isChecked.value }])
             }, null, 2)
           ]),
-          createElementVNode("div", _hoisted_2$w, [
-            createElementVNode("span", _hoisted_3$n, toDisplayString(_ctx.item.title) + toDisplayString(" "), 1),
-            _ctx.options.showDocumentCount ? (openBlock(), createElementBlock("span", _hoisted_4$h, "(" + toDisplayString(_ctx.item.count) + ")", 1)) : createCommentVNode("", true)
+          createElementVNode("div", _hoisted_2$p, [
+            createElementVNode("span", _hoisted_3$h, toDisplayString(_ctx.item.title) + toDisplayString(" "), 1),
+            _ctx.options.showDocumentCount ? (openBlock(), createElementBlock("span", _hoisted_4$c, "(" + toDisplayString(_ctx.item.count) + ")", 1)) : createCommentVNode("", true)
           ])
         ]),
-        showChildren.value ? (openBlock(), createElementBlock("div", _hoisted_5$a, [
+        showChildren.value ? (openBlock(), createElementBlock("div", _hoisted_5$8, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(treeItem.value.children, (itemChild) => {
             return openBlock(), createBlock(_component_HierarchyFacetLevel, {
               key: itemChild.title,
@@ -6131,13 +6130,13 @@ const _sfc_main$Q = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$M = {
+const _hoisted_1$x = {
   class: "lupa-search-result-facet-term-values lupa-search-result-facet-hierarchy-values",
   "data-cy": "lupa-search-result-facet-term-values"
 };
-const _hoisted_2$v = { key: 0 };
-const _hoisted_3$m = ["placeholder"];
-const _sfc_main$P = /* @__PURE__ */ defineComponent({
+const _hoisted_2$o = { key: 0 };
+const _hoisted_3$g = ["placeholder"];
+const _sfc_main$y = /* @__PURE__ */ defineComponent({
   __name: "HierarchyFacet",
   props: {
     options: {},
@@ -6188,19 +6187,19 @@ const _sfc_main$P = /* @__PURE__ */ defineComponent({
       showAll.value = true;
     };
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$M, [
-        isFilterable.value ? (openBlock(), createElementBlock("div", _hoisted_2$v, [
+      return openBlock(), createElementBlock("div", _hoisted_1$x, [
+        isFilterable.value ? (openBlock(), createElementBlock("div", _hoisted_2$o, [
           withDirectives(createElementVNode("input", {
             class: "lupa-term-filter",
             "data-cy": "lupa-term-filter",
             "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => termFilter.value = $event),
             placeholder: _ctx.options.labels.facetFilter
-          }, null, 8, _hoisted_3$m), [
+          }, null, 8, _hoisted_3$g), [
             [vModelText, termFilter.value]
           ])
         ])) : createCommentVNode("", true),
         (openBlock(true), createElementBlock(Fragment, null, renderList(displayValues.value, (item) => {
-          return openBlock(), createBlock(_sfc_main$Q, {
+          return openBlock(), createBlock(_sfc_main$z, {
             key: item.title,
             options: _ctx.options,
             item,
@@ -6220,20 +6219,20 @@ const _sfc_main$P = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$L = { class: "lupa-facet-label-text" };
-const _hoisted_2$u = {
+const _hoisted_1$w = { class: "lupa-facet-label-text" };
+const _hoisted_2$n = {
   key: 0,
   class: "lupa-facet-content",
   "data-cy": "lupa-facet-content"
 };
-const __default__$2 = {
+const __default__ = {
   components: {
-    TermFacet: _sfc_main$S,
-    StatsFacet: _sfc_main$R,
-    HierarchyFacet: _sfc_main$P
+    TermFacet: _sfc_main$B,
+    StatsFacet: _sfc_main$A,
+    HierarchyFacet: _sfc_main$y
   }
 };
-const _sfc_main$O = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues({}, __default__$2), {
+const _sfc_main$x = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues({}, __default__), {
   __name: "FacetDisplay",
   props: {
     options: {},
@@ -6345,12 +6344,12 @@ const _sfc_main$O = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues
           "data-cy": "lupa-search-result-facet-label",
           onClick: toggleFacet
         }, [
-          createElementVNode("div", _hoisted_1$L, toDisplayString(facet.value.label), 1),
+          createElementVNode("div", _hoisted_1$w, toDisplayString(facet.value.label), 1),
           createElementVNode("div", {
             class: normalizeClass(["lupa-facet-label-caret", isOpen.value && "open"])
           }, null, 2)
         ], 2),
-        isOpen.value ? (openBlock(), createElementBlock("div", _hoisted_2$u, [
+        isOpen.value ? (openBlock(), createElementBlock("div", _hoisted_2$n, [
           (openBlock(), createBlock(resolveDynamicComponent(facetType.value), {
             facet: facet.value,
             currentFilters: currentFilters.value[facet.value.key],
@@ -6368,12 +6367,12 @@ const _sfc_main$O = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues
     };
   }
 }));
-const _hoisted_1$K = { class: "lupa-search-result-facet-section" };
-const _hoisted_2$t = {
+const _hoisted_1$v = { class: "lupa-search-result-facet-section" };
+const _hoisted_2$m = {
   key: 0,
   class: "lupa-facets-title"
 };
-const _sfc_main$N = /* @__PURE__ */ defineComponent({
+const _sfc_main$w = /* @__PURE__ */ defineComponent({
   __name: "FacetList",
   props: {
     options: {},
@@ -6408,14 +6407,14 @@ const _sfc_main$N = /* @__PURE__ */ defineComponent({
     };
     return (_ctx, _cache) => {
       var _a;
-      return openBlock(), createElementBlock("div", _hoisted_1$K, [
-        _ctx.options.labels.title ? (openBlock(), createElementBlock("div", _hoisted_2$t, toDisplayString(_ctx.options.labels.title), 1)) : createCommentVNode("", true),
+      return openBlock(), createElementBlock("div", _hoisted_1$v, [
+        _ctx.options.labels.title ? (openBlock(), createElementBlock("div", _hoisted_2$m, toDisplayString(_ctx.options.labels.title), 1)) : createCommentVNode("", true),
         createElementVNode("div", {
           class: normalizeClass(["lupa-search-result-facet-list", "lupa-" + ((_a = _ctx.facetStyle) != null ? _a : "")])
         }, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(displayFacets.value, (facet) => {
             var _a2;
-            return openBlock(), createBlock(_sfc_main$O, {
+            return openBlock(), createBlock(_sfc_main$x, {
               key: facet.key,
               facet,
               currentFilters: currentFiltersValue.value,
@@ -6430,8 +6429,8 @@ const _sfc_main$N = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$J = { class: "lupa-search-result-facets" };
-const _sfc_main$M = /* @__PURE__ */ defineComponent({
+const _hoisted_1$u = { class: "lupa-search-result-facets" };
+const _sfc_main$v = /* @__PURE__ */ defineComponent({
   __name: "Facets",
   props: {
     options: {},
@@ -6492,8 +6491,8 @@ const _sfc_main$M = /* @__PURE__ */ defineComponent({
       paramStore.removeParameters({ paramsToRemove: [param] });
     };
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$J, [
-        regularFacets.value ? (openBlock(), createBlock(_sfc_main$N, {
+      return openBlock(), createElementBlock("div", _hoisted_1$u, [
+        regularFacets.value ? (openBlock(), createBlock(_sfc_main$w, {
           key: 0,
           options: _ctx.options,
           facets: regularFacets.value,
@@ -6507,11 +6506,11 @@ const _sfc_main$M = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$I = {
+const _hoisted_1$t = {
   id: "lupa-search-result-filters",
   class: "lupa-search-result-filters"
 };
-const _sfc_main$L = /* @__PURE__ */ defineComponent({
+const _sfc_main$u = /* @__PURE__ */ defineComponent({
   __name: "SearchResultsFilters",
   props: {
     options: {},
@@ -6540,19 +6539,19 @@ const _sfc_main$L = /* @__PURE__ */ defineComponent({
     __expose({ fetch: fetch2 });
     return (_ctx, _cache) => {
       var _a;
-      return openBlock(), createElementBlock("div", _hoisted_1$I, [
-        showCurrentFilters.value ? (openBlock(), createBlock(_sfc_main$V, {
+      return openBlock(), createElementBlock("div", _hoisted_1$t, [
+        showCurrentFilters.value ? (openBlock(), createBlock(_sfc_main$E, {
           key: 0,
           options: _ctx.options.currentFilters,
           expandable: (_a = _ctx.expandable) != null ? _a : false
         }, null, 8, ["options", "expandable"])) : createCommentVNode("", true),
-        _ctx.options.categories ? (openBlock(), createBlock(_sfc_main$T, {
+        _ctx.options.categories ? (openBlock(), createBlock(_sfc_main$C, {
           key: 1,
           options: _ctx.options.categories,
           ref_key: "categoryFilters",
           ref: categoryFilters
         }, null, 8, ["options"])) : createCommentVNode("", true),
-        _ctx.options.facets ? (openBlock(), createBlock(_sfc_main$M, {
+        _ctx.options.facets ? (openBlock(), createBlock(_sfc_main$v, {
           key: 2,
           options: _ctx.options.facets
         }, null, 8, ["options"])) : createCommentVNode("", true)
@@ -6560,19 +6559,19 @@ const _sfc_main$L = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$H = {
+const _hoisted_1$s = {
   key: 0,
   class: "lupa-mobile-filter-sidebar"
 };
-const _hoisted_2$s = { class: "lupa-mobile-sidebar-content" };
-const _hoisted_3$l = { class: "lupa-sidebar-top" };
-const _hoisted_4$g = { class: "lupa-sidebar-title" };
-const _hoisted_5$9 = {
+const _hoisted_2$l = { class: "lupa-mobile-sidebar-content" };
+const _hoisted_3$f = { class: "lupa-sidebar-top" };
+const _hoisted_4$b = { class: "lupa-sidebar-title" };
+const _hoisted_5$7 = {
   key: 0,
   class: "lupa-sidebar-filter-count"
 };
-const _hoisted_6$6 = { class: "lupa-sidebar-filter-options" };
-const _sfc_main$K = /* @__PURE__ */ defineComponent({
+const _hoisted_6$5 = { class: "lupa-sidebar-filter-options" };
+const _sfc_main$t = /* @__PURE__ */ defineComponent({
   __name: "MobileFilterSidebar",
   props: {
     options: {}
@@ -6598,24 +6597,24 @@ const _sfc_main$K = /* @__PURE__ */ defineComponent({
       searchResultStore.setSidebarState({ visible: false });
     };
     return (_ctx, _cache) => {
-      return isMobileSidebarVisible.value ? (openBlock(), createElementBlock("div", _hoisted_1$H, [
+      return isMobileSidebarVisible.value ? (openBlock(), createElementBlock("div", _hoisted_1$s, [
         createElementVNode("div", {
           class: "lupa-sidebar-close",
           onClick: withModifiers(handleMobileToggle, ["stop"])
         }),
-        createElementVNode("div", _hoisted_2$s, [
-          createElementVNode("div", _hoisted_3$l, [
-            createElementVNode("div", _hoisted_4$g, [
+        createElementVNode("div", _hoisted_2$l, [
+          createElementVNode("div", _hoisted_3$f, [
+            createElementVNode("div", _hoisted_4$b, [
               createTextVNode(toDisplayString(sidebarTitle.value) + " ", 1),
-              isFilterCountVisible.value ? (openBlock(), createElementBlock("span", _hoisted_5$9, toDisplayString(unref(currentFilterCount)), 1)) : createCommentVNode("", true)
+              isFilterCountVisible.value ? (openBlock(), createElementBlock("span", _hoisted_5$7, toDisplayString(unref(currentFilterCount)), 1)) : createCommentVNode("", true)
             ]),
             createElementVNode("div", {
               class: "lupa-filter-toggle-mobile",
               onClick: handleMobileToggle
             })
           ]),
-          createElementVNode("div", _hoisted_6$6, [
-            createVNode(_sfc_main$L, {
+          createElementVNode("div", _hoisted_6$5, [
+            createVNode(_sfc_main$u, {
               options: _ctx.options,
               expandable: isActiveFiltersExpanded.value
             }, null, 8, ["options", "expandable"])
@@ -6625,14 +6624,14 @@ const _sfc_main$K = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$G = { id: "lupa-search-results-breadcrumbs" };
-const _hoisted_2$r = ["href", "onClick"];
-const _hoisted_3$k = {
+const _hoisted_1$r = { id: "lupa-search-results-breadcrumbs" };
+const _hoisted_2$k = ["href", "onClick"];
+const _hoisted_3$e = {
   key: 1,
   class: "lupa-search-results-breadcrumb-text"
 };
-const _hoisted_4$f = { key: 2 };
-const _sfc_main$J = /* @__PURE__ */ defineComponent({
+const _hoisted_4$a = { key: 2 };
+const _sfc_main$s = /* @__PURE__ */ defineComponent({
   __name: "SearchResultsBreadcrumbs",
   props: {
     breadcrumbs: {}
@@ -6657,7 +6656,7 @@ const _sfc_main$J = /* @__PURE__ */ defineComponent({
       handleRoutingEvent(link, event, hasEventRouting.value);
     };
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$G, [
+      return openBlock(), createElementBlock("div", _hoisted_1$r, [
         (openBlock(true), createElementBlock(Fragment, null, renderList(breadcrumbsValue.value, (breadcrumb, index) => {
           return openBlock(), createElementBlock("span", {
             class: "lupa-search-results-breadcrumb",
@@ -6671,19 +6670,19 @@ const _sfc_main$J = /* @__PURE__ */ defineComponent({
                 var _a;
                 return handleNavigation(e, (_a = breadcrumb == null ? void 0 : breadcrumb.link) != null ? _a : "");
               }
-            }, toDisplayString(getLabel(breadcrumb.label)), 9, _hoisted_2$r)) : (openBlock(), createElementBlock("span", _hoisted_3$k, toDisplayString(getLabel(breadcrumb.label)), 1)),
-            index < breadcrumbsValue.value.length - 1 ? (openBlock(), createElementBlock("span", _hoisted_4$f, " / ")) : createCommentVNode("", true)
+            }, toDisplayString(getLabel(breadcrumb.label)), 9, _hoisted_2$k)) : (openBlock(), createElementBlock("span", _hoisted_3$e, toDisplayString(getLabel(breadcrumb.label)), 1)),
+            index < breadcrumbsValue.value.length - 1 ? (openBlock(), createElementBlock("span", _hoisted_4$a, " / ")) : createCommentVNode("", true)
           ]);
         }), 128))
       ]);
     };
   }
 });
-const _hoisted_1$F = {
+const _hoisted_1$q = {
   id: "lupa-search-result-filters",
   class: "lupa-search-result-filters"
 };
-const _sfc_main$I = /* @__PURE__ */ defineComponent({
+const _sfc_main$r = /* @__PURE__ */ defineComponent({
   __name: "FiltersTopDropdown",
   props: {
     options: {}
@@ -6691,8 +6690,8 @@ const _sfc_main$I = /* @__PURE__ */ defineComponent({
   setup(__props) {
     return (_ctx, _cache) => {
       var _a;
-      return openBlock(), createElementBlock("div", _hoisted_1$F, [
-        _ctx.options.facets ? (openBlock(), createBlock(_sfc_main$M, {
+      return openBlock(), createElementBlock("div", _hoisted_1$q, [
+        _ctx.options.facets ? (openBlock(), createBlock(_sfc_main$v, {
           key: 0,
           options: _ctx.options.facets,
           "facet-style": (_a = _ctx.options.facets.style) == null ? void 0 : _a.type,
@@ -6702,8 +6701,8 @@ const _sfc_main$I = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$E = { id: "lupa-search-results-layout-selection" };
-const _sfc_main$H = /* @__PURE__ */ defineComponent({
+const _hoisted_1$p = { id: "lupa-search-results-layout-selection" };
+const _sfc_main$q = /* @__PURE__ */ defineComponent({
   __name: "SearchResultsLayoutSelection",
   setup(__props) {
     const searchResultStore = useSearchResultStore();
@@ -6714,7 +6713,7 @@ const _sfc_main$H = /* @__PURE__ */ defineComponent({
       searchResultStore.setLayout(layout2);
     };
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$E, [
+      return openBlock(), createElementBlock("div", _hoisted_1$p, [
         createElementVNode("div", {
           class: normalizeClass([
             "lupa-layout-selection-grid",
@@ -6736,11 +6735,11 @@ const _sfc_main$H = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$D = {
+const _hoisted_1$o = {
   key: 0,
   class: "lupa-mobile-toggle-filter-count"
 };
-const _sfc_main$G = /* @__PURE__ */ defineComponent({
+const _sfc_main$p = /* @__PURE__ */ defineComponent({
   __name: "SearchResultsMobileToggle",
   props: {
     label: {},
@@ -6758,26 +6757,26 @@ const _sfc_main$G = /* @__PURE__ */ defineComponent({
         onClick: handleMobileToggle
       }, [
         createTextVNode(toDisplayString(_ctx.label) + " ", 1),
-        _ctx.showFilterCount && unref(currentFilterCount) > 0 ? (openBlock(), createElementBlock("span", _hoisted_1$D, toDisplayString(unref(currentFilterCount)), 1)) : createCommentVNode("", true)
+        _ctx.showFilterCount && unref(currentFilterCount) > 0 ? (openBlock(), createElementBlock("span", _hoisted_1$o, toDisplayString(unref(currentFilterCount)), 1)) : createCommentVNode("", true)
       ], 2);
     };
   }
 });
-const _hoisted_1$C = {
+const _hoisted_1$n = {
   key: 0,
   id: "lupa-search-results-page-select",
   "data-cy": "lupa-search-results-page-select"
 };
-const _hoisted_2$q = {
+const _hoisted_2$j = {
   key: 0,
   class: "lupa-page-number-separator"
 };
-const _hoisted_3$j = ["onClick"];
-const _hoisted_4$e = {
+const _hoisted_3$d = ["onClick"];
+const _hoisted_4$9 = {
   key: 0,
   class: "lupa-page-number-separator"
 };
-const _sfc_main$F = /* @__PURE__ */ defineComponent({
+const _sfc_main$o = /* @__PURE__ */ defineComponent({
   __name: "SearchResultsPageSelect",
   props: {
     lastPageLabel: {},
@@ -6854,7 +6853,7 @@ const _sfc_main$F = /* @__PURE__ */ defineComponent({
       }
     };
     return (_ctx, _cache) => {
-      return showPagination.value ? (openBlock(), createElementBlock("div", _hoisted_1$C, [
+      return showPagination.value ? (openBlock(), createElementBlock("div", _hoisted_1$n, [
         showBack.value ? (openBlock(), createElementBlock("div", {
           key: 0,
           class: normalizeClass(firstPageLabel.value === "<" ? "lupa-page-arrow" : "lupa-show-less"),
@@ -6865,7 +6864,7 @@ const _sfc_main$F = /* @__PURE__ */ defineComponent({
             class: "lupa-page-number lupa-page-number-first",
             onClick: _cache[1] || (_cache[1] = () => handlePageChange(1))
           }, " 1 "),
-          showFirstPageSeparator.value ? (openBlock(), createElementBlock("div", _hoisted_2$q, "...")) : createCommentVNode("", true)
+          showFirstPageSeparator.value ? (openBlock(), createElementBlock("div", _hoisted_2$j, "...")) : createCommentVNode("", true)
         ], 64)) : createCommentVNode("", true),
         (openBlock(true), createElementBlock(Fragment, null, renderList(pages.value, (page) => {
           return openBlock(), createElementBlock("div", {
@@ -6876,10 +6875,10 @@ const _sfc_main$F = /* @__PURE__ */ defineComponent({
               page === _ctx.options.selectedPage ? "lupa-page-number-selected" : ""
             ]),
             "data-cy": "lupa-page-number"
-          }, toDisplayString(page), 11, _hoisted_3$j);
+          }, toDisplayString(page), 11, _hoisted_3$d);
         }), 128)),
         showLastPage.value ? (openBlock(), createElementBlock(Fragment, { key: 2 }, [
-          showLastPageSeparator.value ? (openBlock(), createElementBlock("div", _hoisted_4$e, "...")) : createCommentVNode("", true),
+          showLastPageSeparator.value ? (openBlock(), createElementBlock("div", _hoisted_4$9, "...")) : createCommentVNode("", true),
           createElementVNode("div", {
             class: "lupa-page-number lupa-page-number-last",
             onClick: _cache[2] || (_cache[2] = () => {
@@ -6898,14 +6897,14 @@ const _sfc_main$F = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$B = {
+const _hoisted_1$m = {
   id: "lupa-search-results-page-size",
   "data-cy": "lupa-search-results-page-size"
 };
-const _hoisted_2$p = { id: "lupa-select" };
-const _hoisted_3$i = { class: "lupa-select-label" };
-const _hoisted_4$d = ["aria-label"];
-const _sfc_main$E = /* @__PURE__ */ defineComponent({
+const _hoisted_2$i = { id: "lupa-select" };
+const _hoisted_3$c = { class: "lupa-select-label" };
+const _hoisted_4$8 = ["aria-label"];
+const _sfc_main$n = /* @__PURE__ */ defineComponent({
   __name: "SearchResultsPageSize",
   props: {
     label: {},
@@ -6922,9 +6921,9 @@ const _sfc_main$E = /* @__PURE__ */ defineComponent({
       });
     };
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$B, [
-        createElementVNode("div", _hoisted_2$p, [
-          createElementVNode("label", _hoisted_3$i, toDisplayString(_ctx.label), 1),
+      return openBlock(), createElementBlock("div", _hoisted_1$m, [
+        createElementVNode("div", _hoisted_2$i, [
+          createElementVNode("label", _hoisted_3$c, toDisplayString(_ctx.label), 1),
           createElementVNode("select", {
             class: "lupa-select-dropdown",
             "aria-label": _ctx.label,
@@ -6936,21 +6935,21 @@ const _sfc_main$E = /* @__PURE__ */ defineComponent({
             (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.options.sizes, (option) => {
               return openBlock(), createElementBlock("option", { key: option }, toDisplayString(option), 1);
             }), 128))
-          ], 40, _hoisted_4$d)
+          ], 40, _hoisted_4$8)
         ])
       ]);
     };
   }
 });
-const _hoisted_1$A = {
+const _hoisted_1$l = {
   id: "lupa-search-results-sort",
   class: "lupa-search-results-sort"
 };
-const _hoisted_2$o = { id: "lupa-select" };
-const _hoisted_3$h = { class: "lupa-select-label" };
-const _hoisted_4$c = ["aria-label"];
-const _hoisted_5$8 = ["value"];
-const _sfc_main$D = /* @__PURE__ */ defineComponent({
+const _hoisted_2$h = { id: "lupa-select" };
+const _hoisted_3$b = { class: "lupa-select-label" };
+const _hoisted_4$7 = ["aria-label"];
+const _hoisted_5$6 = ["value"];
+const _sfc_main$m = /* @__PURE__ */ defineComponent({
   __name: "SearchResultsSort",
   props: {
     options: {},
@@ -6998,9 +6997,9 @@ const _sfc_main$D = /* @__PURE__ */ defineComponent({
       previousKey.value = selectedKey.value;
     };
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$A, [
-        createElementVNode("div", _hoisted_2$o, [
-          createElementVNode("label", _hoisted_3$h, toDisplayString(_ctx.options.label), 1),
+      return openBlock(), createElementBlock("div", _hoisted_1$l, [
+        createElementVNode("div", _hoisted_2$h, [
+          createElementVNode("label", _hoisted_3$b, toDisplayString(_ctx.options.label), 1),
           withDirectives(createElementVNode("select", {
             class: "lupa-select-dropdown",
             "aria-label": _ctx.options.label,
@@ -7013,9 +7012,9 @@ const _sfc_main$D = /* @__PURE__ */ defineComponent({
               return openBlock(), createElementBlock("option", {
                 key: option.key,
                 value: option.key
-              }, toDisplayString(option.label), 9, _hoisted_5$8);
+              }, toDisplayString(option.label), 9, _hoisted_5$6);
             }), 128))
-          ], 40, _hoisted_4$c), [
+          ], 40, _hoisted_4$7), [
             [vModelSelect, selectedKey.value]
           ])
         ])
@@ -7023,14 +7022,14 @@ const _sfc_main$D = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$z = { class: "lupa-toolbar-left" };
-const _hoisted_2$n = { key: 1 };
-const _hoisted_3$g = { key: 3 };
-const _hoisted_4$b = { key: 5 };
-const _hoisted_5$7 = { class: "lupa-toolbar-right" };
-const _hoisted_6$5 = { key: 1 };
-const _hoisted_7$3 = { key: 3 };
-const _sfc_main$C = /* @__PURE__ */ defineComponent({
+const _hoisted_1$k = { class: "lupa-toolbar-left" };
+const _hoisted_2$g = { key: 1 };
+const _hoisted_3$a = { key: 3 };
+const _hoisted_4$6 = { key: 5 };
+const _hoisted_5$5 = { class: "lupa-toolbar-right" };
+const _hoisted_6$4 = { key: 1 };
+const _hoisted_7$2 = { key: 3 };
+const _sfc_main$l = /* @__PURE__ */ defineComponent({
   __name: "SearchResultsToolbar",
   props: {
     options: {},
@@ -7129,793 +7128,44 @@ const _sfc_main$C = /* @__PURE__ */ defineComponent({
         id: "lupa-search-results-toolbar",
         class: normalizeClass({ "lupa-filter-no-results": !hasResults.value })
       }, [
-        createElementVNode("div", _hoisted_1$z, [
-          showLayoutSelection.value ? (openBlock(), createBlock(_sfc_main$H, { key: 0 })) : (openBlock(), createElementBlock("div", _hoisted_2$n)),
-          showItemSummary.value ? (openBlock(), createBlock(_sfc_main$Y, {
+        createElementVNode("div", _hoisted_1$k, [
+          showLayoutSelection.value ? (openBlock(), createBlock(_sfc_main$q, { key: 0 })) : (openBlock(), createElementBlock("div", _hoisted_2$g)),
+          showItemSummary.value ? (openBlock(), createBlock(_sfc_main$H, {
             key: 2,
             label: searchSummaryLabel.value,
             clearable: unref(hasAnyFilter) && showFilterClear.value,
             onClear: handleClearAll
-          }, null, 8, ["label", "clearable"])) : (openBlock(), createElementBlock("div", _hoisted_3$g)),
-          displayPageSelect.value ? (openBlock(), createBlock(_sfc_main$F, {
+          }, null, 8, ["label", "clearable"])) : (openBlock(), createElementBlock("div", _hoisted_3$a)),
+          displayPageSelect.value ? (openBlock(), createBlock(_sfc_main$o, {
             key: 4,
             options: paginationOptions.value.pageSelect,
             "last-page-label": paginationOptions.value.labels.showMore,
             "first-page-label": paginationOptions.value.labels.showLess
-          }, null, 8, ["options", "last-page-label", "first-page-label"])) : (openBlock(), createElementBlock("div", _hoisted_4$b))
+          }, null, 8, ["options", "last-page-label", "first-page-label"])) : (openBlock(), createElementBlock("div", _hoisted_4$6))
         ]),
-        createElementVNode("div", _hoisted_5$7, [
-          createVNode(_sfc_main$G, {
+        createElementVNode("div", _hoisted_5$5, [
+          createVNode(_sfc_main$p, {
             label: optionsValue.value.labels.mobileFilterButton,
             "show-filter-count": showMobileFilterCount.value
           }, null, 8, ["label", "show-filter-count"]),
-          paginationDisplay.value.pageSize ? (openBlock(), createBlock(_sfc_main$E, {
+          paginationDisplay.value.pageSize ? (openBlock(), createBlock(_sfc_main$n, {
             key: 0,
             options: paginationOptions.value.pageSize,
             label: paginationOptions.value.labels.pageSize
-          }, null, 8, ["options", "label"])) : (openBlock(), createElementBlock("div", _hoisted_6$5)),
-          sortOptions.value ? (openBlock(), createBlock(_sfc_main$D, {
+          }, null, 8, ["options", "label"])) : (openBlock(), createElementBlock("div", _hoisted_6$4)),
+          sortOptions.value ? (openBlock(), createBlock(_sfc_main$m, {
             key: 2,
             options: sortOptions.value,
             callbacks: callbacks.value
-          }, null, 8, ["options", "callbacks"])) : (openBlock(), createElementBlock("div", _hoisted_7$3))
+          }, null, 8, ["options", "callbacks"])) : (openBlock(), createElementBlock("div", _hoisted_7$2))
         ])
       ], 2);
     };
   }
 });
-const _hoisted_1$y = { class: "lupa-badge-title" };
-const _hoisted_2$m = ["src"];
-const _hoisted_3$f = { key: 1 };
-const _hoisted_4$a = {
-  key: 0,
-  class: "lupa-badge-full-text"
-};
-const _sfc_main$B = /* @__PURE__ */ defineComponent({
-  __name: "SearchResultGeneratedBadge",
-  props: {
-    options: {},
-    badge: {}
-  },
-  setup(__props) {
-    const props = __props;
-    const image = computed(() => {
-      var _a, _b, _c;
-      return (_c = (_b = (_a = props.options.generate) == null ? void 0 : _a.image) == null ? void 0 : _b.call(_a, props.badge)) != null ? _c : "";
-    });
-    const showTitle = computed(() => {
-      var _a, _b, _c;
-      return (_c = (_b = (_a = props.options.generate) == null ? void 0 : _a.showTitle) == null ? void 0 : _b.call(_a, props.badge)) != null ? _c : true;
-    });
-    const hasAdditionalText = computed(() => {
-      var _a, _b;
-      return Boolean((_a = props.badge) == null ? void 0 : _a.additionalText) && typeof ((_b = props.badge) == null ? void 0 : _b.additionalText) === "string";
-    });
-    const hasTitleText = computed(() => {
-      var _a, _b;
-      return Boolean((_a = props.badge) == null ? void 0 : _a.titleText) && typeof ((_b = props.badge) == null ? void 0 : _b.titleText) === "string";
-    });
-    const customClassName = computed(() => {
-      var _a, _b, _c;
-      return (_c = (_b = (_a = props.options.generate) == null ? void 0 : _a.customClass) == null ? void 0 : _b.call(_a, props.badge)) != null ? _c : "";
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", {
-        class: normalizeClass(["lupa-dynamic-badge", customClassName.value]),
-        style: normalizeStyle({ background: _ctx.badge.backgroundColor, color: _ctx.badge.color })
-      }, [
-        createElementVNode("span", _hoisted_1$y, [
-          image.value ? (openBlock(), createElementBlock("img", {
-            key: 0,
-            src: image.value
-          }, null, 8, _hoisted_2$m)) : createCommentVNode("", true),
-          hasTitleText.value && showTitle.value ? (openBlock(), createElementBlock("span", _hoisted_3$f, toDisplayString(_ctx.badge.titleText), 1)) : createCommentVNode("", true)
-        ]),
-        hasAdditionalText.value ? (openBlock(), createElementBlock("span", _hoisted_4$a, toDisplayString(_ctx.badge.additionalText), 1)) : createCommentVNode("", true)
-      ], 6);
-    };
-  }
-});
-const _hoisted_1$x = { class: "lupa-generated-badges" };
-const _sfc_main$A = /* @__PURE__ */ defineComponent({
-  __name: "SearchResultGeneratedBadges",
-  props: {
-    options: {}
-  },
-  setup(__props) {
-    const props = __props;
-    const badgeField = computed(() => {
-      var _a, _b, _c, _d, _e, _f, _g;
-      const fieldHasBadges = ((_a = props.options.generate) == null ? void 0 : _a.key) && props.options.product[(_c = (_b = props.options.generate) == null ? void 0 : _b.key) != null ? _c : ""] && Array.isArray(props.options.product[(_e = (_d = props.options.generate) == null ? void 0 : _d.key) != null ? _e : ""]);
-      return fieldHasBadges ? props.options.product[(_g = (_f = props.options.generate) == null ? void 0 : _f.key) != null ? _g : ""] : [];
-    });
-    const keyMap = computed(() => {
-      var _a, _b;
-      return (_b = (_a = props.options.generate) == null ? void 0 : _a.keyMap) != null ? _b : {};
-    });
-    const badges = computed(() => {
-      return badgeField.value.filter((f) => Boolean(f)).map((f) => ({
-        backgroundColor: keyMap.value.backgroundColor ? f[keyMap.value.backgroundColor] : void 0,
-        color: keyMap.value.color ? f[keyMap.value.color] : void 0,
-        titleText: keyMap.value.titleText ? f[keyMap.value.titleText] : void 0,
-        additionalText: keyMap.value.additionalText ? f[keyMap.value.additionalText] : void 0,
-        id: keyMap.value.id ? f[keyMap.value.id] : void 0
-      })).filter((b) => Boolean(b.id));
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$x, [
-        (openBlock(true), createElementBlock(Fragment, null, renderList(badges.value, (badge) => {
-          return openBlock(), createBlock(_sfc_main$B, {
-            key: badge.id,
-            badge,
-            options: _ctx.options
-          }, null, 8, ["badge", "options"]);
-        }), 128))
-      ]);
-    };
-  }
-});
-const _hoisted_1$w = ["innerHTML"];
-const _sfc_main$z = /* @__PURE__ */ defineComponent({
-  __name: "CustomBadge",
-  props: {
-    badge: {}
-  },
-  setup(__props) {
-    const props = __props;
-    const text = computed(() => {
-      var _a, _b, _c;
-      return (_c = (_b = props.badge).html) == null ? void 0 : _c.call(_b, (_a = props.badge.product) != null ? _a : {});
-    });
-    const className = computed(() => {
-      var _a;
-      return (_a = props.badge.className) != null ? _a : "";
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", {
-        class: normalizeClass(className.value),
-        innerHTML: text.value
-      }, null, 10, _hoisted_1$w);
-    };
-  }
-});
-const _hoisted_1$v = { class: "lupa-text-badges" };
-const _sfc_main$y = /* @__PURE__ */ defineComponent({
-  __name: "TextBadge",
-  props: {
-    badge: {}
-  },
-  setup(__props) {
-    const props = __props;
-    const badges = computed(() => {
-      var _a, _b;
-      return (_b = (_a = props.badge) == null ? void 0 : _a.value) != null ? _b : [];
-    });
-    const displayBadges = computed(() => {
-      return badges.value.slice(0, props.badge.maxItems);
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$v, [
-        (openBlock(true), createElementBlock(Fragment, null, renderList(displayBadges.value, (item) => {
-          return openBlock(), createElementBlock("div", {
-            class: "lupa-badge lupa-text-badge",
-            key: item
-          }, toDisplayString(_ctx.badge.prefix) + toDisplayString(item), 1);
-        }), 128))
-      ]);
-    };
-  }
-});
-const _hoisted_1$u = { class: "lupa-image-badges" };
-const _hoisted_2$l = ["src"];
-const _sfc_main$x = /* @__PURE__ */ defineComponent({
-  __name: "ImageBadge",
-  props: {
-    badge: {}
-  },
-  setup(__props) {
-    const props = __props;
-    const badges = computed(() => {
-      return props.badge.value;
-    });
-    const displayBadges = computed(() => {
-      return badges.value.slice(0, props.badge.maxItems);
-    });
-    const getImageUrl = (src) => {
-      if (!props.badge.rootImageUrl) {
-        return src;
-      }
-      return `${props.badge.rootImageUrl}${src}`;
-    };
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$u, [
-        (openBlock(true), createElementBlock(Fragment, null, renderList(displayBadges.value, (item) => {
-          return openBlock(), createElementBlock("div", {
-            class: "lupa-badge lupa-image-badge",
-            key: item
-          }, [
-            createElementVNode("img", {
-              src: getImageUrl(item)
-            }, null, 8, _hoisted_2$l)
-          ]);
-        }), 128))
-      ]);
-    };
-  }
-});
-const _hoisted_1$t = { id: "lupa-search-results-badges" };
-const __default__$1 = {
-  components: {
-    CustomBadge: _sfc_main$z,
-    TextBadge: _sfc_main$y,
-    ImageBadge: _sfc_main$x
-  }
-};
-const _sfc_main$w = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues({}, __default__$1), {
-  __name: "SearchResultsBadgeWrapper",
-  props: {
-    position: {},
-    options: {}
-  },
-  setup(__props) {
-    const props = __props;
-    const positionValue = computed(() => {
-      var _a;
-      return (_a = props.position) != null ? _a : "card";
-    });
-    const anchorPosition = computed(() => {
-      return props.options.anchor;
-    });
-    const badges = computed(() => {
-      if (!props.options.elements) {
-        return [];
-      }
-      return props.options.elements.filter((e) => {
-        var _a;
-        return !e.display || e.display((_a = props.options.product) != null ? _a : {});
-      }).map((x) => {
-        var _a;
-        return __spreadProps(__spreadValues({}, x), {
-          value: ((_a = props.options.product) == null ? void 0 : _a[x.key]) || "badge",
-          product: props.options.product
-        });
-      });
-    });
-    const displayBadges = computed(() => {
-      return positionValue.value === "card" ? badges.value.filter((b) => !b.position || b.position === "card") : badges.value.filter((b) => b.position === "image");
-    });
-    const getBadgeComponent = (type) => {
-      switch (type) {
-        case BadgeType.TEXT:
-          return "TextBadge";
-        case BadgeType.IMAGE:
-          return "ImageBadge";
-        case BadgeType.CUSTOM_HTML:
-          return "CustomBadge";
-        default:
-          return "CustomBadge";
-      }
-    };
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$t, [
-        createElementVNode("div", {
-          id: "lupa-badges",
-          class: normalizeClass(anchorPosition.value)
-        }, [
-          (openBlock(true), createElementBlock(Fragment, null, renderList(displayBadges.value, (badge, index) => {
-            return openBlock(), createBlock(resolveDynamicComponent(getBadgeComponent(badge.type)), {
-              key: index,
-              badge
-            }, null, 8, ["badge"]);
-          }), 128)),
-          positionValue.value === "card" ? (openBlock(), createBlock(_sfc_main$A, {
-            key: 0,
-            options: _ctx.options
-          }, null, 8, ["options"])) : createCommentVNode("", true)
-        ], 2)
-      ]);
-    };
-  }
-}));
-const _sfc_main$v = /* @__PURE__ */ defineComponent({
-  __name: "SearchResultsProductImage",
-  props: {
-    item: {},
-    options: {}
-  },
-  setup(__props) {
-    return (_ctx, _cache) => {
-      return openBlock(), createBlock(_sfc_main$1c, {
-        item: _ctx.item,
-        options: _ctx.options,
-        "wrapper-class": "lupa-search-results-image-wrapper",
-        "image-class": "lupa-search-results-image"
-      }, null, 8, ["item", "options"]);
-    };
-  }
-});
-const _hoisted_1$s = ["innerHTML"];
-const _hoisted_2$k = ["title"];
-const _hoisted_3$e = {
-  key: 0,
-  class: "lupa-search-results-product-title-text"
-};
-const _hoisted_4$9 = ["href"];
-const _sfc_main$u = /* @__PURE__ */ defineComponent({
-  __name: "SearchResultsProductTitle",
-  props: {
-    item: {},
-    options: {},
-    link: {}
-  },
-  setup(__props) {
-    const props = __props;
-    const optionsStore = useOptionsStore();
-    const { searchResultOptions } = storeToRefs(optionsStore);
-    const title = computed(() => {
-      return props.item[props.options.key];
-    });
-    const isHtml = computed(() => {
-      var _a;
-      return (_a = props.options.isHtml) != null ? _a : false;
-    });
-    const maxLines = computed(() => {
-      return props.options.maxLines;
-    });
-    const hasEventRouting = computed(() => {
-      return searchResultOptions.value.routingBehavior === "event";
-    });
-    const handleNavigation = (event) => {
-      handleRoutingEvent(props.link, event, hasEventRouting.value);
-    };
-    return (_ctx, _cache) => {
-      return isHtml.value ? (openBlock(), createElementBlock("div", {
-        key: 0,
-        class: "lupa-search-results-product-title",
-        style: normalizeStyle(`-webkit-line-clamp: ${maxLines.value}`),
-        innerHTML: title.value
-      }, null, 12, _hoisted_1$s)) : (openBlock(), createElementBlock("div", {
-        key: 1,
-        class: "lupa-search-results-product-title",
-        style: normalizeStyle(`-webkit-line-clamp: ${maxLines.value}`),
-        title: title.value
-      }, [
-        !_ctx.options.link ? (openBlock(), createElementBlock("span", _hoisted_3$e, "Testas Dievas: " + toDisplayString(title.value), 1)) : createCommentVNode("", true),
-        _ctx.options.link ? (openBlock(), createElementBlock("a", {
-          key: 1,
-          href: _ctx.link,
-          class: "lupa-search-results-product-title-text lupa-title-link",
-          onClick: handleNavigation
-        }, toDisplayString(title.value), 9, _hoisted_4$9)) : createCommentVNode("", true)
-      ], 12, _hoisted_2$k));
-    };
-  }
-});
-const _hoisted_1$r = ["innerHTML"];
-const _sfc_main$t = /* @__PURE__ */ defineComponent({
-  __name: "SearchResultsProductDescription",
-  props: {
-    item: {},
-    options: {}
-  },
-  setup(__props) {
-    const props = __props;
-    const description = computed(() => {
-      return props.item[props.options.key];
-    });
-    const isHtml = computed(() => {
-      var _a;
-      return (_a = props.options.isHtml) != null ? _a : false;
-    });
-    const maxLines = computed(() => {
-      return props.options.maxLines;
-    });
-    return (_ctx, _cache) => {
-      return isHtml.value ? (openBlock(), createElementBlock("div", {
-        key: 0,
-        class: "lupa-search-results-product-description",
-        style: normalizeStyle(`-webkit-line-clamp: ${maxLines.value}`),
-        innerHTML: description.value
-      }, null, 12, _hoisted_1$r)) : (openBlock(), createElementBlock("div", {
-        key: 1,
-        class: "lupa-search-results-product-description",
-        style: normalizeStyle(`-webkit-line-clamp: ${maxLines.value}`)
-      }, toDisplayString(description.value), 5));
-    };
-  }
-});
-const _hoisted_1$q = { id: "lupa-search-results-rating" };
-const _hoisted_2$j = { class: "lupa-ratings" };
-const _hoisted_3$d = { class: "lupa-ratings-base" };
-const _hoisted_4$8 = ["innerHTML"];
-const _hoisted_5$6 = { class: "lupa-rating-wrapper" };
-const _hoisted_6$4 = ["innerHTML"];
-const _hoisted_7$2 = ["href"];
-const STAR_COUNT = 5;
-const _sfc_main$s = /* @__PURE__ */ defineComponent({
-  __name: "SearchResultsProductRating",
-  props: {
-    item: {},
-    options: {}
-  },
-  setup(__props) {
-    const props = __props;
-    const totalRatings = computed(() => {
-      return `(${props.options.labels.numberOfRatings}${props.item[props.options.totalKey] || 0})`;
-    });
-    const currentRating = computed(() => {
-      return Math.round(props.item[props.options.key] || 0);
-    });
-    const baseStars = computed(() => {
-      return new Array(STAR_COUNT).fill(RATING_STAR_HTML);
-    });
-    const highlightedStars = computed(() => {
-      return new Array(STAR_COUNT).fill(RATING_STAR_HTML);
-    });
-    const ratingPercentage = computed(() => {
-      return props.options.getRatingPercentage ? props.options.getRatingPercentage(props.item) : currentRating.value;
-    });
-    const ratingLink = computed(() => {
-      var _a;
-      if (!((_a = props.options.links) == null ? void 0 : _a.ratingDetails)) {
-        return "";
-      }
-      return generateLink(props.options.links.ratingDetails, props.item);
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$q, [
-        createElementVNode("div", _hoisted_2$j, [
-          createElementVNode("div", _hoisted_3$d, [
-            (openBlock(true), createElementBlock(Fragment, null, renderList(baseStars.value, (star, index) => {
-              return openBlock(), createElementBlock("div", {
-                key: index,
-                innerHTML: star,
-                class: "lupa-rating lupa-rating-not-highlighted"
-              }, null, 8, _hoisted_4$8);
-            }), 128))
-          ]),
-          createElementVNode("div", _hoisted_5$6, [
-            createElementVNode("div", {
-              class: "lupa-ratings-highlighted",
-              style: normalizeStyle({ width: ratingPercentage.value + "%" })
-            }, [
-              (openBlock(true), createElementBlock(Fragment, null, renderList(highlightedStars.value, (star, index) => {
-                return openBlock(), createElementBlock("div", {
-                  key: index,
-                  innerHTML: star,
-                  class: "lupa-rating lupa-rating-highlighted"
-                }, null, 8, _hoisted_6$4);
-              }), 128))
-            ], 4)
-          ])
-        ]),
-        createElementVNode("a", {
-          href: ratingLink.value,
-          class: "lupa-total-ratings"
-        }, toDisplayString(totalRatings.value), 9, _hoisted_7$2)
-      ]);
-    };
-  }
-});
-const _hoisted_1$p = {
-  class: "lupa-search-results-product-regular-price",
-  "data-cy": "lupa-search-results-product-regular-price"
-};
-const _sfc_main$r = /* @__PURE__ */ defineComponent({
-  __name: "SearchResultsProductRegularPrice",
-  props: {
-    item: {},
-    options: {},
-    labels: {}
-  },
-  setup(__props) {
-    const props = __props;
-    const price = computed(() => {
-      var _a, _b;
-      return formatPrice(
-        props.item[props.options.key],
-        (_a = props.labels) == null ? void 0 : _a.currency,
-        (_b = props.labels) == null ? void 0 : _b.priceSeparator
-      );
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$p, toDisplayString(price.value), 1);
-    };
-  }
-});
-const _hoisted_1$o = {
-  class: "lupa-search-results-product-price",
-  "data-cy": "lupa-search-results-product-price"
-};
-const _sfc_main$q = /* @__PURE__ */ defineComponent({
-  __name: "SearchResultsProductPrice",
-  props: {
-    item: {},
-    options: {},
-    labels: {}
-  },
-  setup(__props) {
-    const props = __props;
-    const price = computed(() => {
-      var _a, _b;
-      return formatPrice(
-        props.item[props.options.key],
-        (_a = props.labels) == null ? void 0 : _a.currency,
-        (_b = props.labels) == null ? void 0 : _b.priceSeparator
-      );
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$o, [
-        createElementVNode("strong", null, toDisplayString(price.value), 1)
-      ]);
-    };
-  }
-});
-const _hoisted_1$n = { class: "lupa-search-results-add-to-cart-wrapper" };
-const _hoisted_2$i = { class: "lupa-search-results-product-addtocart" };
-const _hoisted_3$c = ["disabled"];
-const _sfc_main$p = /* @__PURE__ */ defineComponent({
-  __name: "SearchResultsProductAddToCart",
-  props: {
-    item: {},
-    options: {},
-    inStock: { type: Boolean }
-  },
-  emits: ["productEvent"],
-  setup(__props, { emit: __emit }) {
-    const props = __props;
-    const inStockValue = computed(() => {
-      var _a;
-      return (_a = props.inStock) != null ? _a : true;
-    });
-    const searchResultStore = useSearchResultStore();
-    const { addToCartAmount } = storeToRefs(searchResultStore);
-    const emit = __emit;
-    const loading = ref(false);
-    const label = computed(() => {
-      return props.options.labels.addToCart;
-    });
-    const handleClick = () => __async(this, null, function* () {
-      loading.value = true;
-      yield props.options.action(props.item, addToCartAmount.value);
-      emit("productEvent", { type: "addToCart" });
-      loading.value = false;
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$n, [
-        createElementVNode("div", _hoisted_2$i, [
-          createElementVNode("button", {
-            onClick: withModifiers(handleClick, ["stop"]),
-            class: normalizeClass(loading.value ? "lupa-add-to-cart-loading" : "lupa-add-to-cart"),
-            "data-cy": "lupa-add-to-cart",
-            disabled: !inStockValue.value || loading.value
-          }, toDisplayString(label.value), 11, _hoisted_3$c)
-        ])
-      ]);
-    };
-  }
-});
-const _hoisted_1$m = ["innerHTML"];
-const _hoisted_2$h = { key: 0 };
-const _hoisted_3$b = { key: 1 };
-const _hoisted_4$7 = { class: "lupa-search-box-custom-label" };
-const _hoisted_5$5 = { class: "lupa-search-box-custom-text" };
-const _sfc_main$o = /* @__PURE__ */ defineComponent({
-  __name: "SearchResultsProductCustom",
-  props: {
-    item: {},
-    options: {}
-  },
-  setup(__props) {
-    const props = __props;
-    const value = computed(() => {
-      return props.item[props.options.key];
-    });
-    const isArray = computed(() => {
-      return Array.isArray(value.value);
-    });
-    const text = computed(() => {
-      return isArray.value ? props.item[props.options.key].join(", ") : props.item[props.options.key];
-    });
-    const className = computed(() => {
-      return props.options.className;
-    });
-    const label = computed(() => {
-      return props.options.label;
-    });
-    const isHtml = computed(() => {
-      var _a;
-      return (_a = props.options.isHtml) != null ? _a : false;
-    });
-    const handleClick = () => __async(this, null, function* () {
-      if (!props.options.action) {
-        return;
-      }
-      yield props.options.action(props.item);
-    });
-    return (_ctx, _cache) => {
-      return isHtml.value ? (openBlock(), createElementBlock("div", mergeProps({
-        key: 0,
-        class: className.value,
-        innerHTML: text.value
-      }, toHandlers(_ctx.options.action ? { click: handleClick } : {}, true)), null, 16, _hoisted_1$m)) : (openBlock(), createElementBlock("div", mergeProps({
-        key: 1,
-        class: className.value
-      }, toHandlers(_ctx.options.action ? { click: handleClick } : {}, true)), [
-        !label.value ? (openBlock(), createElementBlock("div", _hoisted_2$h, toDisplayString(text.value), 1)) : (openBlock(), createElementBlock("div", _hoisted_3$b, [
-          createElementVNode("div", _hoisted_4$7, toDisplayString(label.value), 1),
-          createElementVNode("div", _hoisted_5$5, toDisplayString(text.value), 1)
-        ]))
-      ], 16));
-    };
-  }
-});
-const _hoisted_1$l = ["innerHTML"];
-const _sfc_main$n = /* @__PURE__ */ defineComponent({
-  __name: "SearchResultsProductCustomHtmlElement",
-  props: {
-    item: {},
-    options: {}
-  },
-  setup(__props) {
-    const props = __props;
-    const text = computed(() => {
-      return props.options.html(props.item);
-    });
-    const className = computed(() => {
-      return props.options.className;
-    });
-    const handleClick = () => __async(this, null, function* () {
-      if (!props.options.action) {
-        return;
-      }
-      yield props.options.action(props.item);
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", mergeProps({
-        class: className.value,
-        innerHTML: text.value
-      }, toHandlers(_ctx.options.action ? { click: handleClick } : {}, true)), null, 16, _hoisted_1$l);
-    };
-  }
-});
-const _hoisted_1$k = { id: "lupa-search-results-rating" };
-const _hoisted_2$g = ["innerHTML"];
-const _hoisted_3$a = { class: "lupa-ratings" };
-const _hoisted_4$6 = ["href"];
-const _sfc_main$m = /* @__PURE__ */ defineComponent({
-  __name: "SearchResultsProductSingleStarRating",
-  props: {
-    item: {},
-    options: {}
-  },
-  setup(__props) {
-    const props = __props;
-    const totalRatings = computed(() => {
-      return `(${props.options.labels.numberOfRatings}${props.item[props.options.totalKey] || 0})`;
-    });
-    const ratingLink = computed(() => {
-      var _a;
-      if (!((_a = props.options.links) == null ? void 0 : _a.ratingDetails)) {
-        return "";
-      }
-      return generateLink(props.options.links.ratingDetails, props.item);
-    });
-    const rating = computed(() => {
-      if (!props.options.displayRating) {
-        return props.item[props.options.key];
-      }
-      return props.options.displayRating(props.item);
-    });
-    const star = computed(() => {
-      return RATING_STAR_HTML;
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$k, [
-        createElementVNode("div", {
-          innerHTML: star.value,
-          class: "lupa-rating lupa-rating-highlighted"
-        }, null, 8, _hoisted_2$g),
-        createElementVNode("div", _hoisted_3$a, toDisplayString(rating.value), 1),
-        createElementVNode("a", {
-          href: ratingLink.value,
-          class: "lupa-total-ratings"
-        }, toDisplayString(totalRatings.value), 9, _hoisted_4$6)
-      ]);
-    };
-  }
-});
-const __default__ = {
-  components: {
-    SearchResultsProductImage: _sfc_main$v,
-    SearchResultsProductTitle: _sfc_main$u,
-    SearchResultsProductDescription: _sfc_main$t,
-    SearchResultsProductRating: _sfc_main$s,
-    SearchResultsProductRegularPrice: _sfc_main$r,
-    SearchResultsProductPrice: _sfc_main$q,
-    SearchResultsProductAddToCart: _sfc_main$p,
-    SearchResultsProductCustom: _sfc_main$o,
-    SearchResultsProductCustomHtmlElement: _sfc_main$n,
-    SearchResultsProductSingleStarRating: _sfc_main$m
-  }
-};
-const _sfc_main$l = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues({}, __default__), {
-  __name: "SearchResultsProductCardElement",
-  props: {
-    item: {},
-    element: {},
-    labels: {},
-    inStock: { type: Boolean },
-    link: {}
-  },
-  emits: ["productEvent"],
-  setup(__props, { emit: __emit }) {
-    const props = __props;
-    const dynamicDataStore = useDynamicDataStore();
-    const { dynamicDataIdMap, loading } = storeToRefs(dynamicDataStore);
-    const emit = __emit;
-    const elementComponent = computed(() => {
-      switch (props.element.type) {
-        case DocumentElementType.IMAGE:
-          return "searchResultsProductImage";
-        case DocumentElementType.TITLE:
-          return "searchResultsProductTitle";
-        case DocumentElementType.DESCRIPTION:
-          return "searchResultsProductDescription";
-        case DocumentElementType.RATING:
-          return "searchResultsProductRating";
-        case DocumentElementType.SINGLE_STAR_RATING:
-          return "SearchResultsProductSingleStarRating";
-        case DocumentElementType.PRICE:
-          return "searchResultsProductPrice";
-        case DocumentElementType.REGULARPRICE:
-          return "searchResultsProductRegularPrice";
-        case DocumentElementType.ADDTOCART:
-          return "searchResultsProductAddToCart";
-        case DocumentElementType.CUSTOM:
-          return "searchResultsProductCustom";
-        case DocumentElementType.CUSTOM_HTML:
-          return "searchResultsProductCustomHtmlElement";
-      }
-      return "searchResultsProductTitle";
-    });
-    const isLoadingDynamicData = computed(() => {
-      return Boolean(props.element.dynamic && loading.value);
-    });
-    const enhancedItem = computed(() => {
-      var _a, _b, _c, _d;
-      if (!((_a = props.item) == null ? void 0 : _a.id)) {
-        return props.item;
-      }
-      const enhancementData = (_d = (_c = dynamicDataIdMap.value) == null ? void 0 : _c[(_b = props.item) == null ? void 0 : _b.id]) != null ? _d : {};
-      return __spreadValues(__spreadValues({}, props.item), enhancementData);
-    });
-    const displayElement = computed(() => {
-      return props.element.display ? props.element.display(enhancedItem.value) : true;
-    });
-    const handleProductEvent = (item) => {
-      emit("productEvent", item);
-    };
-    return (_ctx, _cache) => {
-      return displayElement.value ? (openBlock(), createBlock(resolveDynamicComponent(elementComponent.value), {
-        key: 0,
-        item: enhancedItem.value,
-        options: _ctx.element,
-        labels: _ctx.labels,
-        inStock: _ctx.inStock,
-        link: _ctx.link,
-        class: normalizeClass({ "lupa-loading-dynamic-data": isLoadingDynamicData.value }),
-        onProductEvent: handleProductEvent
-      }, null, 40, ["item", "options", "labels", "inStock", "link", "class"])) : createCommentVNode("", true);
-    };
-  }
-}));
-const _hoisted_1$j = ["href"];
-const _hoisted_2$f = {
-  key: 0,
-  class: "lupa-out-of-stock"
-};
-const _hoisted_3$9 = { class: "lupa-search-result-product-details-section" };
+const _hoisted_1$j = { key: 0 };
+const _hoisted_2$f = { key: 1 };
+const _hoisted_3$9 = ["innerHTML"];
 const _sfc_main$k = /* @__PURE__ */ defineComponent({
   __name: "SearchResultsProductCard",
   props: {
@@ -7926,206 +7176,39 @@ const _sfc_main$k = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const clickTrackingSettings = computed(() => {
-      var _a;
-      return (_a = props.clickTrackingSettings) != null ? _a : {};
-    });
-    const searchResultStore = useSearchResultStore();
     const optionsStore = useOptionsStore();
-    const paramsStore = useParamsStore();
-    const trackingStore = useTrackingStore();
-    const { layout } = storeToRefs(searchResultStore);
-    const { searchResultsRoutingBehavior, searchResultOptions, trackingOptions } = storeToRefs(optionsStore);
-    const { query } = storeToRefs(paramsStore);
     const isInStock = ref(true);
-    const listLayoutClass = computed(() => {
-      return layout.value === ResultsLayoutEnum.LIST && !props.isAdditionalPanel ? "lupa-search-result-product-contents-list" : "";
-    });
-    const badgesOptions = computed(() => {
-      return __spreadProps(__spreadValues({}, props.options.badges), { product: props.product });
-    });
-    const imageElements = computed(() => {
-      var _a, _b;
-      return (_b = (_a = props.options.elements) == null ? void 0 : _a.filter((e) => e.type === DocumentElementType.IMAGE && !e.group)) != null ? _b : [];
-    });
-    const detailElements = computed(() => {
-      var _a, _b;
-      return (_b = (_a = props.options.elements) == null ? void 0 : _a.filter((e) => e.type !== DocumentElementType.IMAGE && !e.group)) != null ? _b : [];
-    });
-    const labels = computed(() => {
-      return props.options.labels;
-    });
-    const link = computed(() => {
-      var _a, _b, _c;
-      if (!((_a = props.options.links) == null ? void 0 : _a.details)) {
-        return "";
-      }
-      return generateLink((_c = (_b = props.options.links) == null ? void 0 : _b.details) != null ? _c : "", props.product);
-    });
-    const hasEventRouting = computed(() => {
-      return searchResultsRoutingBehavior.value === "event";
-    });
-    const elementGroups = computed(() => {
-      var _a;
-      return [
-        ...Array.from(
-          new Set((_a = props.options.elements) == null ? void 0 : _a.map((e) => e.group).filter((g) => Boolean(g)))
-        )
-      ];
-    });
-    const id = computed(() => {
-      return props.options.idKey ? props.product[props.options.idKey] : "";
-    });
-    const title = computed(() => {
-      return props.options.titleKey ? props.product[props.options.titleKey] : "";
-    });
+    const loading = ref(true);
+    const error = ref("");
+    const responseData = ref("");
     const ssr = computed(() => Boolean(optionsStore.searchResultOptions.ssr));
-    const clickTrackingType = computed(() => {
-      if (clickTrackingSettings.value.eventType) {
-        return clickTrackingSettings.value.eventType;
+    onMounted(() => __async(this, null, function* () {
+      try {
+        console.log("product: => ", props.product);
+        const response = yield fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=1027573`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        const json = yield response.json();
+        console.log("json: ", json);
+      } catch (err) {
       }
-      return query.value ? "search_product_click" : "select_item";
-    });
-    const trackingLabel = computed(() => {
-      if (clickTrackingSettings.value.eventLabel) {
-        return clickTrackingSettings.value.eventLabel;
-      }
-      return title.value || id.value || link.value;
-    });
-    const trackingListLabel = computed(() => {
-      var _a, _b;
-      if (clickTrackingSettings.value.listLabel) {
-        return clickTrackingSettings.value.listLabel;
-      }
-      return (_b = (_a = props.options) == null ? void 0 : _a.labels) == null ? void 0 : _b.htmlTitleTemplate;
-    });
-    const customDocumentHtmlAttributes = computed(() => {
-      var _a, _b, _c;
-      return (_c = (_b = (_a = props.options).customDocumentHtmlAttributes) == null ? void 0 : _b.call(_a, props.product)) != null ? _c : {};
-    });
-    const getGroupElements = (group) => {
-      var _a, _b;
-      return (_b = (_a = props.options.elements) == null ? void 0 : _a.filter((e) => e.group === group)) != null ? _b : [];
-    };
-    onMounted(() => {
-      checkIfIsInStock();
-    });
+    }));
     const checkIfIsInStock = () => __async(this, null, function* () {
       isInStock.value = props.options.isInStock ? yield props.options.isInStock(props.product) : true;
     });
-    const handleClick = () => {
-      var _a, _b, _c;
-      trackingStore.trackEvent({
-        queryKey: props.options.queryKey,
-        data: {
-          itemId: id.value,
-          searchQuery: query.value,
-          type: "itemClick",
-          analytics: {
-            type: clickTrackingType.value,
-            label: (_a = trackingLabel.value) != null ? _a : "",
-            listLabel: trackingListLabel.value,
-            items: [props.product],
-            itemId: id.value
-          },
-          options: { allowEmptySearchQuery: true }
-        }
-      });
-      (_c = (_b = searchResultOptions.value.callbacks) == null ? void 0 : _b.onProductClick) == null ? void 0 : _c.call(_b, {
-        queryKey: query.value,
-        hasResults: true,
-        productId: id.value
-      });
-    };
-    const handleProductEvent = (item) => {
-      trackingStore.trackEvent({
-        queryKey: props.options.queryKey,
-        data: {
-          itemId: id.value,
-          searchQuery: query.value,
-          type: item.type,
-          analytics: item.type === "addToCart" ? {
-            type: "search_add_to_cart",
-            label: title.value || id.value || link.value
-          } : void 0
-        }
-      });
-    };
-    const handleNavigation = (event) => {
-      handleRoutingEvent(link.value, event, hasEventRouting.value);
-    };
     if (ssr.value) {
       checkIfIsInStock();
     }
     return (_ctx, _cache) => {
-      var _a;
-      return openBlock(), createElementBlock("div", mergeProps({
-        id: "lupa-search-result-product-card",
-        "data-cy": "lupa-search-result-product-card",
-        class: ["lupa-search-result-product-card", !isInStock.value ? "lupa-out-of-stock" : ""]
-      }, customDocumentHtmlAttributes.value, { onClick: handleClick }), [
-        createVNode(_sfc_main$w, { options: badgesOptions.value }, null, 8, ["options"]),
-        createElementVNode("div", {
-          class: normalizeClass(["lupa-search-result-product-contents", listLayoutClass.value])
-        }, [
-          createElementVNode("a", {
-            class: "lupa-search-result-product-image-section",
-            href: link.value,
-            onClick: handleNavigation
-          }, [
-            (openBlock(true), createElementBlock(Fragment, null, renderList(imageElements.value, (element) => {
-              return openBlock(), createBlock(_sfc_main$l, {
-                class: "lupa-search-results-product-element",
-                item: _ctx.product,
-                element,
-                key: element.key,
-                labels: labels.value,
-                inStock: isInStock.value,
-                link: link.value
-              }, null, 8, ["item", "element", "labels", "inStock", "link"]);
-            }), 128)),
-            createVNode(_sfc_main$w, {
-              options: badgesOptions.value,
-              position: "image",
-              class: "lupa-image-badges"
-            }, null, 8, ["options"]),
-            ((_a = labels.value) == null ? void 0 : _a.outOfStock) && !isInStock.value ? (openBlock(), createElementBlock("div", _hoisted_2$f, toDisplayString(labels.value.outOfStock), 1)) : createCommentVNode("", true)
-          ], 8, _hoisted_1$j),
-          createElementVNode("div", _hoisted_3$9, [
-            (openBlock(true), createElementBlock(Fragment, null, renderList(detailElements.value, (element) => {
-              return openBlock(), createBlock(_sfc_main$l, {
-                class: "lupa-search-results-product-element",
-                item: _ctx.product,
-                element,
-                key: element.key,
-                labels: labels.value,
-                inStock: isInStock.value,
-                link: link.value,
-                onProductEvent: handleProductEvent
-              }, null, 8, ["item", "element", "labels", "inStock", "link"]);
-            }), 128))
-          ]),
-          (openBlock(true), createElementBlock(Fragment, null, renderList(elementGroups.value, (group) => {
-            return openBlock(), createElementBlock("div", {
-              key: group,
-              class: normalizeClass("lupa-element-group-" + group)
-            }, [
-              (openBlock(true), createElementBlock(Fragment, null, renderList(getGroupElements(group), (element) => {
-                return openBlock(), createBlock(_sfc_main$l, {
-                  class: "lupa-search-results-product-element",
-                  item: _ctx.product,
-                  element,
-                  key: element.key,
-                  labels: labels.value,
-                  inStock: isInStock.value,
-                  link: link.value,
-                  onProductEvent: handleProductEvent
-                }, null, 8, ["item", "element", "labels", "inStock", "link"]);
-              }), 128))
-            ], 2);
-          }), 128))
-        ], 2)
-      ], 16);
+      return openBlock(), createElementBlock("div", null, [
+        loading.value ? (openBlock(), createElementBlock("div", _hoisted_1$j, "Loading...")) : createCommentVNode("", true),
+        error.value ? (openBlock(), createElementBlock("div", _hoisted_2$f, toDisplayString(error.value), 1)) : createCommentVNode("", true),
+        !loading.value && !error.value ? (openBlock(), createElementBlock("div", {
+          key: 2,
+          innerHTML: responseData.value
+        }, null, 8, _hoisted_3$9)) : createCommentVNode("", true)
+      ]);
     };
   }
 });
@@ -8526,17 +7609,17 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
           class: "lupa-loader"
         })) : createCommentVNode("", true),
         unref(hasResults) ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
-          showTopFilters.value ? (openBlock(), createBlock(_sfc_main$I, {
+          showTopFilters.value ? (openBlock(), createBlock(_sfc_main$r, {
             key: 0,
             options: (_a = _ctx.options.filters) != null ? _a : {}
           }, null, 8, ["options"])) : createCommentVNode("", true),
-          showMobileFilters.value ? (openBlock(), createBlock(_sfc_main$C, {
+          showMobileFilters.value ? (openBlock(), createBlock(_sfc_main$l, {
             key: 1,
             class: "lupa-toolbar-mobile",
             options: _ctx.options,
             "pagination-location": "top"
           }, null, 8, ["options"])) : createCommentVNode("", true),
-          currentFilterOptions.value ? (openBlock(), createBlock(_sfc_main$V, {
+          currentFilterOptions.value ? (openBlock(), createBlock(_sfc_main$E, {
             key: 2,
             class: normalizeClass(currentFiltersClass.value),
             "data-cy": "lupa-search-result-filters-mobile-toolbar",
@@ -8550,7 +7633,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
           sdkOptions: _ctx.options.options
         }, null, 8, ["options", "sdkOptions"]),
         unref(hasResults) ? (openBlock(), createElementBlock(Fragment, { key: 2 }, [
-          createVNode(_sfc_main$C, {
+          createVNode(_sfc_main$l, {
             class: "lupa-toolbar-top",
             options: _ctx.options,
             "pagination-location": "top"
@@ -8580,7 +7663,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
               onClick: goToFirstPage
             }, toDisplayString(_ctx.options.labels.backToFirstPage), 1)) : createCommentVNode("", true)
           ])) : createCommentVNode("", true),
-          createVNode(_sfc_main$C, {
+          createVNode(_sfc_main$l, {
             class: "lupa-toolbar-bottom",
             options: _ctx.options,
             "pagination-location": "bottom"
@@ -8659,7 +7742,7 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
               onClick: handleNavigationBack
             }, toDisplayString(backTitle.value), 9, _hoisted_3$5)
           ])) : createCommentVNode("", true),
-          createVNode(_sfc_main$C, {
+          createVNode(_sfc_main$l, {
             class: "lupa-toolbar-mobile",
             "pagination-location": "top",
             options: _ctx.options
@@ -8891,8 +7974,8 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
         class: normalizeClass(["lupa-search-result-wrapper", { "lupa-search-wrapper-no-results": !unref(hasResults) }])
       }, [
         _ctx.isContainer ? (openBlock(), createElementBlock("div", _hoisted_1$b, [
-          createVNode(_sfc_main$Z, { labels: didYouMeanLabels.value }, null, 8, ["labels"]),
-          createVNode(_sfc_main$X, {
+          createVNode(_sfc_main$I, { labels: didYouMeanLabels.value }, null, 8, ["labels"]),
+          createVNode(_sfc_main$G, {
             "show-summary": true,
             options: _ctx.options,
             "is-product-list": (_a = _ctx.isProductList) != null ? _a : false
@@ -8902,24 +7985,24 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
           key: 1,
           options: _ctx.options
         }, null, 8, ["options"])) : createCommentVNode("", true),
-        _ctx.options.filters ? (openBlock(), createBlock(_sfc_main$K, {
+        _ctx.options.filters ? (openBlock(), createBlock(_sfc_main$t, {
           key: 2,
           options: _ctx.options.filters
         }, null, 8, ["options"])) : createCommentVNode("", true),
-        unref(currentQueryText) || _ctx.isProductList ? (openBlock(), createBlock(_sfc_main$J, {
+        unref(currentQueryText) || _ctx.isProductList ? (openBlock(), createBlock(_sfc_main$s, {
           key: 3,
           breadcrumbs: _ctx.options.breadcrumbs
         }, null, 8, ["breadcrumbs"])) : createCommentVNode("", true),
         isTitleResultTopPosition.value ? (openBlock(), createElementBlock("div", _hoisted_2$8, [
-          showFilterSidebar.value ? (openBlock(), createBlock(_sfc_main$L, {
+          showFilterSidebar.value ? (openBlock(), createBlock(_sfc_main$u, {
             key: 0,
             options: (_b = _ctx.options.filters) != null ? _b : {},
             ref_key: "searchResultsFilters",
             ref: searchResultsFilters
           }, null, 8, ["options"])) : createCommentVNode("", true),
           createElementVNode("div", _hoisted_3$4, [
-            createVNode(_sfc_main$Z, { labels: didYouMeanLabels.value }, null, 8, ["labels"]),
-            createVNode(_sfc_main$X, {
+            createVNode(_sfc_main$I, { labels: didYouMeanLabels.value }, null, 8, ["labels"]),
+            createVNode(_sfc_main$G, {
               options: _ctx.options,
               "is-product-list": (_c = _ctx.isProductList) != null ? _c : false
             }, null, 8, ["options", "is-product-list"]),
@@ -8934,13 +8017,13 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
             }, 8, ["options", "ssr"])
           ])
         ])) : (openBlock(), createElementBlock(Fragment, { key: 5 }, [
-          createVNode(_sfc_main$Z, { labels: didYouMeanLabels.value }, null, 8, ["labels"]),
-          createVNode(_sfc_main$X, {
+          createVNode(_sfc_main$I, { labels: didYouMeanLabels.value }, null, 8, ["labels"]),
+          createVNode(_sfc_main$G, {
             options: _ctx.options,
             "is-product-list": (_d = _ctx.isProductList) != null ? _d : false
           }, null, 8, ["options", "is-product-list"]),
           createElementVNode("div", _hoisted_4$3, [
-            showFilterSidebar.value ? (openBlock(), createBlock(_sfc_main$L, {
+            showFilterSidebar.value ? (openBlock(), createBlock(_sfc_main$u, {
               key: 0,
               options: (_e = _ctx.options.filters) != null ? _e : {},
               ref_key: "searchResultsFilters",
@@ -14567,7 +13650,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
           onClick: withModifiers(innerClick, ["stop"])
         }, [
           createElementVNode("div", _hoisted_1$9, [
-            createVNode(_sfc_main$_, {
+            createVNode(_sfc_main$J, {
               options: fullSearchBoxOptions.value,
               "is-search-container": true,
               ref_key: "searchBox",
@@ -16050,7 +15133,7 @@ export {
   LupaSearch,
   _sfc_main$a as ProductList,
   _sfc_main$8 as Recommendations,
-  _sfc_main$_ as SearchBox,
+  _sfc_main$J as SearchBox,
   SearchBoxPanelType,
   _sfc_main$9 as SearchContainer,
   _sfc_main$c as SearchResults,
