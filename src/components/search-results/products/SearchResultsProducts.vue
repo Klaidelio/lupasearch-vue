@@ -154,7 +154,11 @@ const goToFirstPage = (): void => {
     <AdditionalPanels :options="options" location="top" :sdkOptions="options.options" />
     <template v-if="hasResults">
       <SearchResultsToolbar class="lupa-toolbar-top" :options="options" pagination-location="top" />
-      <div class="lupa-products" data-cy="lupa-products">
+      <SearchResultsProductCards
+        :products="searchResult.items"
+      />
+      <!-- cia -->
+      <!-- <div class="lupa-products" data-cy="lupa-products">
         <template v-if="$slots.productCard">
           <slot
             name="productCard"
@@ -174,7 +178,7 @@ const goToFirstPage = (): void => {
             :options="productCardOptions"
           />
         </template>
-      </div>
+      </div> -->
       <div
         class="lupa-empty-results"
         data-cy="lupa-no-results-in-page"
