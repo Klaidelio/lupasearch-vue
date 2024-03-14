@@ -7889,7 +7889,7 @@ const _sfc_main$c = /* @__PURE__ */ vue.defineComponent({
       const hasResults2 = Boolean(
         results.total > 0 || ((_a = results.similarQueries) == null ? void 0 : _a.length) || ((_b = results.didYouMean) == null ? void 0 : _b.options)
       );
-      (_d = (_c = props.options.callbacks) == null ? void 0 : _c.onSearchResults) == null ? void 0 : _d.call(_c, { queryKey, hasResults: hasResults2, params: paramStore.params });
+      (_d = (_c = props.options.callbacks) == null ? void 0 : _c.onSearchResults) == null ? void 0 : _d.call(_c, { queryKey, hasResults: hasResults2, params: paramStore.params, test2: results.items });
       if (!hasResults2) {
         return;
       }

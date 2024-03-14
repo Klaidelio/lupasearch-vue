@@ -125,10 +125,12 @@ const handleResults = async ({
   const hasResults = Boolean(
     results.total > 0 || results.similarQueries?.length || results.didYouMean?.options
   )
-  props.options.callbacks?.onSearchResults?.({ queryKey, hasResults, params: paramStore.params })
+  // @ts-ignore
+  props.options.callbacks?.onSearchResults?.({ queryKey, hasResults, params: paramStore.params, test2: results.items })
   if (!hasResults) {
     return
   }
+  // cia
   trackItemListView(props.options.labels.htmlTitleTemplate, results.items)
   await dynamicDataStore.enhanceSearchResultsWithDynamicData({ result: results })
 }
