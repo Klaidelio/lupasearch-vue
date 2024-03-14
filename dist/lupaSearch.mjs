@@ -3204,7 +3204,7 @@ const _hoisted_2$I = { class: "lupa-input-clear" };
 const _hoisted_3$u = { id: "lupa-search-box-input" };
 const _hoisted_4$n = ["value"];
 const _hoisted_5$e = ["aria-label", "placeholder"];
-const _hoisted_6$8 = {
+const _hoisted_6$7 = {
   key: 0,
   class: "lupa-close-label"
 };
@@ -3326,7 +3326,7 @@ const _sfc_main$13 = /* @__PURE__ */ defineComponent({
           class: "lupa-close-search-container",
           onClick: _cache[1] || (_cache[1] = ($event) => _ctx.$emit("close"))
         }, [
-          labels.value.close ? (openBlock(), createElementBlock("span", _hoisted_6$8, toDisplayString(labels.value.close), 1)) : createCommentVNode("", true)
+          labels.value.close ? (openBlock(), createElementBlock("span", _hoisted_6$7, toDisplayString(labels.value.close), 1)) : createCommentVNode("", true)
         ])) : createCommentVNode("", true)
       ]);
     };
@@ -5685,7 +5685,7 @@ const _hoisted_2$r = ["placeholder"];
 const _hoisted_3$j = { class: "lupa-terms-list" };
 const _hoisted_4$e = ["onClick"];
 const _hoisted_5$a = { class: "lupa-term-checkbox-wrapper" };
-const _hoisted_6$7 = { class: "lupa-term-checkbox-label" };
+const _hoisted_6$6 = { class: "lupa-term-checkbox-label" };
 const _hoisted_7$4 = { class: "lupa-term-label" };
 const _hoisted_8$1 = {
   key: 0,
@@ -5786,7 +5786,7 @@ const _sfc_main$B = /* @__PURE__ */ defineComponent({
                   class: normalizeClass(["lupa-term-checkbox", { checked: isChecked(item) }])
                 }, null, 2)
               ]),
-              createElementVNode("div", _hoisted_6$7, [
+              createElementVNode("div", _hoisted_6$6, [
                 createElementVNode("span", _hoisted_7$4, toDisplayString(item.title), 1),
                 _ctx.options.showDocumentCount ? (openBlock(), createElementBlock("span", _hoisted_8$1, "(" + toDisplayString(item.count) + ")", 1)) : createCommentVNode("", true)
               ])
@@ -5819,7 +5819,7 @@ const _hoisted_4$d = {
   class: "lupa-stats-range-label"
 };
 const _hoisted_5$9 = { class: "lupa-stats-from" };
-const _hoisted_6$6 = ["max", "min", "pattern", "aria-label"];
+const _hoisted_6$5 = ["max", "min", "pattern", "aria-label"];
 const _hoisted_7$3 = { key: 0 };
 const _hoisted_8 = /* @__PURE__ */ createElementVNode("div", { class: "lupa-stats-separator" }, null, -1);
 const _hoisted_9 = {
@@ -6006,7 +6006,7 @@ const _sfc_main$A = /* @__PURE__ */ defineComponent({
                 min: facetMin.value,
                 pattern: sliderInputFormat.value,
                 "aria-label": ariaLabelFrom.value
-              }, null, 8, _hoisted_6$6), [
+              }, null, 8, _hoisted_6$5), [
                 [
                   vModelText,
                   fromValue.value,
@@ -6570,7 +6570,7 @@ const _hoisted_5$7 = {
   key: 0,
   class: "lupa-sidebar-filter-count"
 };
-const _hoisted_6$5 = { class: "lupa-sidebar-filter-options" };
+const _hoisted_6$4 = { class: "lupa-sidebar-filter-options" };
 const _sfc_main$t = /* @__PURE__ */ defineComponent({
   __name: "MobileFilterSidebar",
   props: {
@@ -6613,7 +6613,7 @@ const _sfc_main$t = /* @__PURE__ */ defineComponent({
               onClick: handleMobileToggle
             })
           ]),
-          createElementVNode("div", _hoisted_6$5, [
+          createElementVNode("div", _hoisted_6$4, [
             createVNode(_sfc_main$u, {
               options: _ctx.options,
               expandable: isActiveFiltersExpanded.value
@@ -7027,7 +7027,7 @@ const _hoisted_2$g = { key: 1 };
 const _hoisted_3$a = { key: 3 };
 const _hoisted_4$6 = { key: 5 };
 const _hoisted_5$5 = { class: "lupa-toolbar-right" };
-const _hoisted_6$4 = { key: 1 };
+const _hoisted_6$3 = { key: 1 };
 const _hoisted_7$2 = { key: 3 };
 const _sfc_main$l = /* @__PURE__ */ defineComponent({
   __name: "SearchResultsToolbar",
@@ -7152,7 +7152,7 @@ const _sfc_main$l = /* @__PURE__ */ defineComponent({
             key: 0,
             options: paginationOptions.value.pageSize,
             label: paginationOptions.value.labels.pageSize
-          }, null, 8, ["options", "label"])) : (openBlock(), createElementBlock("div", _hoisted_6$4)),
+          }, null, 8, ["options", "label"])) : (openBlock(), createElementBlock("div", _hoisted_6$3)),
           sortOptions.value ? (openBlock(), createBlock(_sfc_main$m, {
             key: 2,
             options: sortOptions.value,
@@ -7227,7 +7227,7 @@ const _hoisted_3$8 = {
 };
 const _hoisted_4$5 = ["onClick"];
 const _hoisted_5$4 = ["innerHTML"];
-const _hoisted_6$3 = { key: 0 };
+const _hoisted_6$2 = { key: 0 };
 const _hoisted_7$1 = {
   class: "lupa-products",
   "data-cy": "lupa-products"
@@ -7277,7 +7277,7 @@ const _sfc_main$j = /* @__PURE__ */ defineComponent({
                 createElementVNode("span", {
                   innerHTML: getSimilarQueryContent(similarQuery.displayQuery)
                 }, null, 8, _hoisted_5$4),
-                similarQuery.count ? (openBlock(), createElementBlock("span", _hoisted_6$3, " (" + toDisplayString(similarQuery.count) + ")", 1)) : createCommentVNode("", true)
+                similarQuery.count ? (openBlock(), createElementBlock("span", _hoisted_6$2, " (" + toDisplayString(similarQuery.count) + ")", 1)) : createCommentVNode("", true)
               ], 8, _hoisted_4$5)
             ]),
             createElementVNode("div", _hoisted_7$1, [
@@ -7493,21 +7493,17 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
 });
 const _hoisted_1$d = { id: "lupa-search-results-products" };
 const _hoisted_2$a = {
-  class: "lupa-products",
-  "data-cy": "lupa-products"
-};
-const _hoisted_3$6 = {
   key: 0,
   class: "lupa-empty-results",
   "data-cy": "lupa-no-results-in-page"
 };
-const _hoisted_4$4 = {
+const _hoisted_3$6 = {
   key: 3,
   class: "lupa-empty-results",
   "data-cy": "lupa-no-results"
 };
-const _hoisted_5$3 = { key: 4 };
-const _hoisted_6$2 = { key: 5 };
+const _hoisted_4$4 = { key: 4 };
+const _hoisted_5$3 = { key: 5 };
 const _sfc_main$e = /* @__PURE__ */ defineComponent({
   __name: "SearchResultsProducts",
   props: {
@@ -7597,9 +7593,6 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       var _a, _b;
       return Boolean((_b = (_a = searchResult.value.similarResults) == null ? void 0 : _a.items) == null ? void 0 : _b.length);
     });
-    const getProductKeyAction = (index, product) => {
-      return getProductKey(`${index}`, product, props.options.idKey);
-    };
     const goToFirstPage = () => {
       paramStore.appendParams({
         params: [{ name: QUERY_PARAMS.PAGE, value: "1" }]
@@ -7607,6 +7600,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
     };
     return (_ctx, _cache) => {
       var _a;
+      const _component_SearchResultsProductCards = resolveComponent("SearchResultsProductCards");
       return openBlock(), createElementBlock("div", _hoisted_1$d, [
         unref(loading) && !unref(isMobileSidebarVisible) ? (openBlock(), createBlock(Spinner, {
           key: 0,
@@ -7642,24 +7636,10 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
             options: _ctx.options,
             "pagination-location": "top"
           }, null, 8, ["options"]),
-          createElementVNode("div", _hoisted_2$a, [
-            _ctx.$slots.productCard ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList(unref(searchResult).items, (product, index) => {
-              return renderSlot(_ctx.$slots, "productCard", {
-                style: normalizeStyle(columnSize.value),
-                key: getProductKeyAction(index, product),
-                product,
-                options: productCardOptions.value
-              });
-            }), 128)) : (openBlock(true), createElementBlock(Fragment, { key: 1 }, renderList(unref(searchResult).items, (product, index) => {
-              return openBlock(), createBlock(_sfc_main$k, {
-                style: normalizeStyle(columnSize.value),
-                key: getProductKeyAction(index, product),
-                product,
-                options: productCardOptions.value
-              }, null, 8, ["style", "product", "options"]);
-            }), 128))
-          ]),
-          unref(isPageEmpty) && _ctx.options.labels.noItemsInPage ? (openBlock(), createElementBlock("div", _hoisted_3$6, [
+          createVNode(_component_SearchResultsProductCards, {
+            products: unref(searchResult).items
+          }, null, 8, ["products"]),
+          unref(isPageEmpty) && _ctx.options.labels.noItemsInPage ? (openBlock(), createElementBlock("div", _hoisted_2$a, [
             createTextVNode(toDisplayString(_ctx.options.labels.noItemsInPage) + " ", 1),
             _ctx.options.labels.backToFirstPage ? (openBlock(), createElementBlock("span", {
               key: 0,
@@ -7677,18 +7657,18 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
             location: "bottom",
             sdkOptions: _ctx.options.options
           }, null, 8, ["options", "sdkOptions"])
-        ], 64)) : !unref(loading) && unref(currentQueryText) ? (openBlock(), createElementBlock("div", _hoisted_4$4, [
+        ], 64)) : !unref(loading) && unref(currentQueryText) ? (openBlock(), createElementBlock("div", _hoisted_3$6, [
           createTextVNode(toDisplayString(_ctx.options.labels.emptyResults) + " ", 1),
           createElementVNode("span", null, toDisplayString(unref(currentQueryText)), 1)
         ])) : createCommentVNode("", true),
-        hasSimilarQueries.value ? (openBlock(), createElementBlock("div", _hoisted_5$3, [
+        hasSimilarQueries.value ? (openBlock(), createElementBlock("div", _hoisted_4$4, [
           createVNode(_sfc_main$j, {
             labels: similarQueriesLabels.value,
             columnSize: columnSize.value,
             productCardOptions: productCardOptions.value
           }, null, 8, ["labels", "columnSize", "productCardOptions"])
         ])) : createCommentVNode("", true),
-        hasSimilarResults.value ? (openBlock(), createElementBlock("div", _hoisted_6$2, [
+        hasSimilarResults.value ? (openBlock(), createElementBlock("div", _hoisted_5$3, [
           createVNode(_sfc_main$f, {
             labels: similarResultsLabels.value,
             columnSize: columnSize.value,
