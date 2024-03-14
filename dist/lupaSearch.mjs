@@ -7545,11 +7545,7 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
   }
 });
 const _hoisted_1$d = { id: "lupa-search-results-products" };
-const _hoisted_2$a = {
-  id: "lupa-products",
-  class: "lupa-products",
-  "data-cy": "lupa-products"
-};
+const _hoisted_2$a = { id: "lupa-container" };
 const _hoisted_3$6 = {
   key: 0,
   class: "lupa-empty-results",
