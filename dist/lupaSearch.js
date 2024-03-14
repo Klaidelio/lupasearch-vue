@@ -3201,16 +3201,16 @@ const useSearchBoxStore = defineStore("searchBox", () => {
     resetHighlightIndex
   };
 });
-const _hoisted_1$Z = { id: "lupa-search-box-input-container" };
-const _hoisted_2$I = { class: "lupa-input-clear" };
-const _hoisted_3$u = { id: "lupa-search-box-input" };
+const _hoisted_1$_ = { id: "lupa-search-box-input-container" };
+const _hoisted_2$J = { class: "lupa-input-clear" };
+const _hoisted_3$v = { id: "lupa-search-box-input" };
 const _hoisted_4$n = ["value"];
 const _hoisted_5$e = ["aria-label", "placeholder"];
 const _hoisted_6$7 = {
   key: 0,
   class: "lupa-close-label"
 };
-const _sfc_main$13 = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$14 = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxInput",
   props: {
     options: {},
@@ -3292,14 +3292,14 @@ const _sfc_main$13 = /* @__PURE__ */ vue.defineComponent({
     };
     __expose({ focus });
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$Z, [
-        vue.createElementVNode("div", _hoisted_2$I, [
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$_, [
+        vue.createElementVNode("div", _hoisted_2$J, [
           vue.createElementVNode("div", {
             class: vue.normalizeClass(["lupa-input-clear-content", { "lupa-input-clear-filled": inputValue.value }]),
             onClick: clear
           }, null, 2)
         ]),
-        vue.createElementVNode("div", _hoisted_3$u, [
+        vue.createElementVNode("div", _hoisted_3$v, [
           vue.createElementVNode("input", {
             class: "lupa-hint",
             "aria-hidden": "true",
@@ -3334,7 +3334,7 @@ const _sfc_main$13 = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _sfc_main$12 = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$13 = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxMoreResults",
   props: {
     labels: {},
@@ -3367,9 +3367,9 @@ const _sfc_main$12 = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$Y = { class: "lupa-search-box-history-item" };
-const _hoisted_2$H = { class: "lupa-search-box-history-item-content" };
-const _sfc_main$11 = /* @__PURE__ */ vue.defineComponent({
+const _hoisted_1$Z = { class: "lupa-search-box-history-item" };
+const _hoisted_2$I = { class: "lupa-search-box-history-item-content" };
+const _sfc_main$12 = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxHistoryItem",
   props: {
     item: {},
@@ -3386,8 +3386,8 @@ const _sfc_main$11 = /* @__PURE__ */ vue.defineComponent({
       emit("click", { query: props.item });
     };
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$Y, [
-        vue.createElementVNode("div", _hoisted_2$H, [
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$Z, [
+        vue.createElementVNode("div", _hoisted_2$I, [
           vue.createElementVNode("div", {
             class: vue.normalizeClass(["lupa-search-box-history-item-text", { "lupa-search-box-history-item-highlighted": _ctx.highlighted }]),
             onClick: click2
@@ -3401,11 +3401,11 @@ const _sfc_main$11 = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$X = {
+const _hoisted_1$Y = {
   key: 0,
   class: "lupa-search-box-history-panel"
 };
-const _sfc_main$10 = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$11 = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxHistoryPanel",
   props: {
     options: {}
@@ -3447,9 +3447,9 @@ const _sfc_main$10 = /* @__PURE__ */ vue.defineComponent({
       }
     };
     return (_ctx, _cache) => {
-      return hasHistory.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$X, [
+      return hasHistory.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$Y, [
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(vue.unref(history), (item, index) => {
-          return vue.openBlock(), vue.createBlock(_sfc_main$11, {
+          return vue.openBlock(), vue.createBlock(_sfc_main$12, {
             key: item,
             item,
             highlighted: index === highlightIndex.value,
@@ -3465,25 +3465,25 @@ const _sfc_main$10 = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$W = { class: "lupa-search-box-no-results" };
-const _sfc_main$$ = /* @__PURE__ */ vue.defineComponent({
+const _hoisted_1$X = { class: "lupa-search-box-no-results" };
+const _sfc_main$10 = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxNoResults",
   props: {
     labels: {}
   },
   setup(__props) {
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("p", _hoisted_1$W, vue.toDisplayString(_ctx.labels.noResults), 1);
+      return vue.openBlock(), vue.createElementBlock("p", _hoisted_1$X, vue.toDisplayString(_ctx.labels.noResults), 1);
     };
   }
 });
-const _hoisted_1$V = ["innerHTML"];
-const _hoisted_2$G = {
+const _hoisted_1$W = ["innerHTML"];
+const _hoisted_2$H = {
   key: 1,
   "data-cy": "lupa-suggestion-value",
   class: "lupa-suggestion-value"
 };
-const _hoisted_3$t = {
+const _hoisted_3$u = {
   key: 2,
   class: "lupa-suggestion-facet",
   "data-cy": "lupa-suggestion-facet"
@@ -3496,7 +3496,7 @@ const _hoisted_5$d = {
   class: "lupa-suggestion-facet-value",
   "data-cy": "lupa-suggestion-facet-value"
 };
-const _sfc_main$_ = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$$ = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxSuggestion",
   props: {
     suggestion: {},
@@ -3533,8 +3533,8 @@ const _sfc_main$_ = /* @__PURE__ */ vue.defineComponent({
           class: "lupa-suggestion-value",
           "data-cy": "lupa-suggestion-value",
           innerHTML: _ctx.suggestion.displayHighlight
-        }, null, 8, _hoisted_1$V)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$G, vue.toDisplayString(_ctx.suggestion.display), 1)),
-        _ctx.suggestion.facet ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$t, [
+        }, null, 8, _hoisted_1$W)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$H, vue.toDisplayString(_ctx.suggestion.display), 1)),
+        _ctx.suggestion.facet ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$u, [
           vue.createElementVNode("span", _hoisted_4$m, vue.toDisplayString(facetLabel.value), 1),
           vue.createElementVNode("span", _hoisted_5$d, vue.toDisplayString(_ctx.suggestion.facet.title), 1)
         ])) : vue.createCommentVNode("", true)
@@ -3542,11 +3542,11 @@ const _sfc_main$_ = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$U = {
+const _hoisted_1$V = {
   id: "lupa-search-box-suggestions",
   "data-cy": "lupa-search-box-suggestions"
 };
-const _sfc_main$Z = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$_ = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxSuggestions",
   props: {
     items: {},
@@ -3607,9 +3607,9 @@ const _sfc_main$Z = /* @__PURE__ */ vue.defineComponent({
       });
     });
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$U, [
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$V, [
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(items.value, (item, index) => {
-          return vue.openBlock(), vue.createBlock(_sfc_main$_, {
+          return vue.openBlock(), vue.createBlock(_sfc_main$$, {
             key: getSuggestionKey(item),
             class: vue.normalizeClass(["lupa-suggestion", index === highlightedIndex.value ? "lupa-suggestion-highlighted" : ""]),
             suggestion: item,
@@ -3637,7 +3637,7 @@ const debounce$1 = (func, timeout) => {
     }, timeout);
   };
 };
-const _sfc_main$Y = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$Z = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxSuggestionsWrapper",
   props: {
     panel: {},
@@ -3679,7 +3679,7 @@ const _sfc_main$Y = /* @__PURE__ */ vue.defineComponent({
     };
     const getSuggestionsDebounced = debounce$1(getSuggestions, props.debounce);
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createBlock(_sfc_main$Z, {
+      return vue.openBlock(), vue.createBlock(_sfc_main$_, {
         items: searchResult.value,
         highlight: _ctx.panel.highlight,
         queryKey: _ctx.panel.queryKey,
@@ -3764,9 +3764,9 @@ const joinUrlParts = (...parts) => {
   }
   return (_c = (_b = (_a = parts == null ? void 0 : parts.map((part) => part.replace(/(^\/+|\/+$)/g, ""))) == null ? void 0 : _a.filter((part) => part !== "")) == null ? void 0 : _b.join("/")) != null ? _c : "";
 };
-const _hoisted_1$T = /* @__PURE__ */ vue.createElementVNode("div", null, "Testas Paveiksliukas", -1);
-const _hoisted_2$F = ["src"];
-const _sfc_main$X = /* @__PURE__ */ vue.defineComponent({
+const _hoisted_1$U = /* @__PURE__ */ vue.createElementVNode("div", null, "Testas Paveiksliukas", -1);
+const _hoisted_2$G = ["src"];
+const _sfc_main$Y = /* @__PURE__ */ vue.defineComponent({
   __name: "ProductImage",
   props: {
     item: {},
@@ -3814,20 +3814,20 @@ const _sfc_main$X = /* @__PURE__ */ vue.defineComponent({
     return (_ctx, _cache) => {
       var _a, _b;
       return vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
-        _hoisted_1$T,
+        _hoisted_1$U,
         vue.createElementVNode("div", {
           class: vue.normalizeClass((_a = _ctx.wrapperClass) != null ? _a : "")
         }, [
           vue.createElementVNode("img", vue.mergeProps({
             class: (_b = _ctx.imageClass) != null ? _b : "",
             src: finalUrl.value
-          }, { alt: imageAlt.value ? imageAlt.value : void 0 }, { onError: replaceWithPlaceholder }), null, 16, _hoisted_2$F)
+          }, { alt: imageAlt.value ? imageAlt.value : void 0 }, { onError: replaceWithPlaceholder }), null, 16, _hoisted_2$G)
         ], 2)
       ], 64);
     };
   }
 });
-const _sfc_main$W = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$X = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxProductImage",
   props: {
     item: {},
@@ -3835,7 +3835,7 @@ const _sfc_main$W = /* @__PURE__ */ vue.defineComponent({
   },
   setup(__props) {
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createBlock(_sfc_main$X, {
+      return vue.openBlock(), vue.createBlock(_sfc_main$Y, {
         item: _ctx.item,
         options: _ctx.options,
         "wrapper-class": "lupa-search-box-image-wrapper",
@@ -3844,12 +3844,12 @@ const _sfc_main$W = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$S = ["innerHTML"];
-const _hoisted_2$E = {
+const _hoisted_1$T = ["innerHTML"];
+const _hoisted_2$F = {
   key: 1,
   class: "lupa-search-box-product-title"
 };
-const _sfc_main$V = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$W = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxProductTitle",
   props: {
     item: {},
@@ -3869,18 +3869,18 @@ const _sfc_main$V = /* @__PURE__ */ vue.defineComponent({
         key: 0,
         class: "lupa-search-box-product-title",
         innerHTML: title.value
-      }, null, 8, _hoisted_1$S)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$E, [
+      }, null, 8, _hoisted_1$T)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$F, [
         vue.createElementVNode("strong", null, vue.toDisplayString(title.value), 1)
       ]));
     };
   }
 });
-const _hoisted_1$R = ["innerHTML"];
-const _hoisted_2$D = {
+const _hoisted_1$S = ["innerHTML"];
+const _hoisted_2$E = {
   key: 1,
   class: "lupa-search-box-product-description"
 };
-const _sfc_main$U = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$V = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxProductDescription",
   props: {
     item: {},
@@ -3900,12 +3900,12 @@ const _sfc_main$U = /* @__PURE__ */ vue.defineComponent({
         key: 0,
         class: "lupa-search-box-product-description",
         innerHTML: description.value
-      }, null, 8, _hoisted_1$R)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$D, vue.toDisplayString(description.value), 1));
+      }, null, 8, _hoisted_1$S)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$E, vue.toDisplayString(description.value), 1));
     };
   }
 });
-const _hoisted_1$Q = { class: "lupa-search-box-product-price" };
-const _sfc_main$T = /* @__PURE__ */ vue.defineComponent({
+const _hoisted_1$R = { class: "lupa-search-box-product-price" };
+const _sfc_main$U = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxProductPrice",
   props: {
     item: {},
@@ -3923,14 +3923,14 @@ const _sfc_main$T = /* @__PURE__ */ vue.defineComponent({
       );
     });
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$Q, [
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$R, [
         vue.createElementVNode("strong", null, vue.toDisplayString(price.value), 1)
       ]);
     };
   }
 });
-const _hoisted_1$P = { class: "lupa-search-box-product-regular-price" };
-const _sfc_main$S = /* @__PURE__ */ vue.defineComponent({
+const _hoisted_1$Q = { class: "lupa-search-box-product-regular-price" };
+const _sfc_main$T = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxProductRegularPrice",
   props: {
     item: {},
@@ -3948,16 +3948,16 @@ const _sfc_main$S = /* @__PURE__ */ vue.defineComponent({
       );
     });
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$P, vue.toDisplayString(price.value), 1);
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$Q, vue.toDisplayString(price.value), 1);
     };
   }
 });
-const _hoisted_1$O = ["innerHTML"];
-const _hoisted_2$C = { key: 0 };
-const _hoisted_3$s = { key: 1 };
+const _hoisted_1$P = ["innerHTML"];
+const _hoisted_2$D = { key: 0 };
+const _hoisted_3$t = { key: 1 };
 const _hoisted_4$l = { class: "lupa-search-box-custom-label" };
 const _hoisted_5$c = { class: "lupa-search-box-custom-text" };
-const _sfc_main$R = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$S = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxProductCustom",
   props: {
     item: {},
@@ -3983,11 +3983,11 @@ const _sfc_main$R = /* @__PURE__ */ vue.defineComponent({
         key: 0,
         class: [className.value, "lupa-search-box-product-custom"],
         innerHTML: text.value
-      }, vue.toHandlers(_ctx.options.action ? { click: handleClick } : {}, true)), null, 16, _hoisted_1$O)) : (vue.openBlock(), vue.createElementBlock("div", vue.mergeProps({
+      }, vue.toHandlers(_ctx.options.action ? { click: handleClick } : {}, true)), null, 16, _hoisted_1$P)) : (vue.openBlock(), vue.createElementBlock("div", vue.mergeProps({
         key: 1,
         class: [className.value, "lupa-search-box-product-custom"]
       }, vue.toHandlers(_ctx.options.action ? { click: handleClick } : {}, true)), [
-        !label.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$C, vue.toDisplayString(text.value), 1)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$s, [
+        !label.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$D, vue.toDisplayString(text.value), 1)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$t, [
           vue.createElementVNode("div", _hoisted_4$l, vue.toDisplayString(label.value), 1),
           vue.createElementVNode("div", _hoisted_5$c, vue.toDisplayString(text.value), 1)
         ]))
@@ -3995,8 +3995,8 @@ const _sfc_main$R = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$N = ["innerHTML"];
-const _sfc_main$Q = /* @__PURE__ */ vue.defineComponent({
+const _hoisted_1$O = ["innerHTML"];
+const _sfc_main$R = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxProductCustomHtml",
   props: {
     item: {},
@@ -4016,7 +4016,7 @@ const _sfc_main$Q = /* @__PURE__ */ vue.defineComponent({
       return vue.openBlock(), vue.createElementBlock("div", vue.mergeProps({
         class: className.value,
         innerHTML: text.value
-      }, vue.toHandlers(_ctx.options.action ? { click: handleClick } : {}, true)), null, 16, _hoisted_1$N);
+      }, vue.toHandlers(_ctx.options.action ? { click: handleClick } : {}, true)), null, 16, _hoisted_1$O);
     };
   }
 });
@@ -4210,10 +4210,10 @@ const useSearchResultStore = defineStore("searchResult", () => {
     setLoading
   };
 });
-const _hoisted_1$M = { class: "lupa-search-box-add-to-cart-wrapper" };
-const _hoisted_2$B = { class: "lupa-search-box-product-addtocart" };
-const _hoisted_3$r = ["disabled"];
-const _sfc_main$P = /* @__PURE__ */ vue.defineComponent({
+const _hoisted_1$N = { class: "lupa-search-box-add-to-cart-wrapper" };
+const _hoisted_2$C = { class: "lupa-search-box-product-addtocart" };
+const _hoisted_3$s = ["disabled"];
+const _sfc_main$Q = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxProductAddToCart",
   props: {
     item: {},
@@ -4241,15 +4241,15 @@ const _sfc_main$P = /* @__PURE__ */ vue.defineComponent({
       loading.value = false;
     });
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$M, [
-        vue.createElementVNode("div", _hoisted_2$B, [
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$N, [
+        vue.createElementVNode("div", _hoisted_2$C, [
           vue.createElementVNode("button", {
             onClick: vue.withModifiers(handleClick, ["stop", "prevent"]),
             class: vue.normalizeClass(loading.value ? "lupa-add-to-cart-loading" : "lupa-add-to-cart"),
             "data-cy": "lupa-add-to-cart",
             type: "button",
             disabled: !inStockValue.value || loading.value
-          }, vue.toDisplayString(label.value), 11, _hoisted_3$r)
+          }, vue.toDisplayString(label.value), 11, _hoisted_3$s)
         ])
       ]);
     };
@@ -4257,17 +4257,17 @@ const _sfc_main$P = /* @__PURE__ */ vue.defineComponent({
 });
 const __default__$2 = {
   components: {
-    SearchBoxProductImage: _sfc_main$W,
-    SearchBoxProductTitle: _sfc_main$V,
-    SearchBoxProductDescription: _sfc_main$U,
-    SearchBoxProductPrice: _sfc_main$T,
-    SearchBoxProductRegularPrice: _sfc_main$S,
-    SearchBoxProductCustom: _sfc_main$R,
-    SearchBoxProductCustomHtml: _sfc_main$Q,
-    SearchBoxProductAddToCart: _sfc_main$P
+    SearchBoxProductImage: _sfc_main$X,
+    SearchBoxProductTitle: _sfc_main$W,
+    SearchBoxProductDescription: _sfc_main$V,
+    SearchBoxProductPrice: _sfc_main$U,
+    SearchBoxProductRegularPrice: _sfc_main$T,
+    SearchBoxProductCustom: _sfc_main$S,
+    SearchBoxProductCustomHtml: _sfc_main$R,
+    SearchBoxProductAddToCart: _sfc_main$Q
   }
 };
-const _sfc_main$O = /* @__PURE__ */ vue.defineComponent(__spreadProps(__spreadValues({}, __default__$2), {
+const _sfc_main$P = /* @__PURE__ */ vue.defineComponent(__spreadProps(__spreadValues({}, __default__$2), {
   __name: "SearchBoxProductElement",
   props: {
     item: {},
@@ -4326,14 +4326,14 @@ const _sfc_main$O = /* @__PURE__ */ vue.defineComponent(__spreadProps(__spreadVa
     };
   }
 }));
-const _hoisted_1$L = ["href"];
-const _hoisted_2$A = { class: "lupa-search-box-product-image-section" };
-const _hoisted_3$q = { class: "lupa-search-box-product-details-section" };
+const _hoisted_1$M = ["href"];
+const _hoisted_2$B = { class: "lupa-search-box-product-image-section" };
+const _hoisted_3$r = { class: "lupa-search-box-product-details-section" };
 const _hoisted_4$k = {
   key: 0,
   class: "lupa-search-box-product-add-to-cart-section"
 };
-const _sfc_main$N = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$O = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxProduct",
   props: {
     item: {},
@@ -4390,9 +4390,9 @@ const _sfc_main$N = /* @__PURE__ */ vue.defineComponent({
         "data-cy": "lupa-search-box-product",
         onClick: handleClick
       }), [
-        vue.createElementVNode("div", _hoisted_2$A, [
+        vue.createElementVNode("div", _hoisted_2$B, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(imageElements.value, (element) => {
-            return vue.openBlock(), vue.createBlock(_sfc_main$O, {
+            return vue.openBlock(), vue.createBlock(_sfc_main$P, {
               class: "lupa-search-box-product-element",
               item: _ctx.item,
               element,
@@ -4402,9 +4402,9 @@ const _sfc_main$N = /* @__PURE__ */ vue.defineComponent({
             }, null, 8, ["item", "element", "labels", "link"]);
           }), 128))
         ]),
-        vue.createElementVNode("div", _hoisted_3$q, [
+        vue.createElementVNode("div", _hoisted_3$r, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(detailElements.value, (element) => {
-            return vue.openBlock(), vue.createBlock(_sfc_main$O, {
+            return vue.openBlock(), vue.createBlock(_sfc_main$P, {
               class: "lupa-search-box-product-element",
               item: _ctx.item,
               element,
@@ -4415,7 +4415,7 @@ const _sfc_main$N = /* @__PURE__ */ vue.defineComponent({
           }), 128))
         ]),
         addToCartElement.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$k, [
-          vue.createVNode(_sfc_main$O, {
+          vue.createVNode(_sfc_main$P, {
             class: "lupa-search-box-product-element",
             item: _ctx.item,
             element: addToCartElement.value,
@@ -4424,7 +4424,7 @@ const _sfc_main$N = /* @__PURE__ */ vue.defineComponent({
             isInStock: isInStock.value
           }, null, 8, ["item", "element", "labels", "link", "isInStock"])
         ])) : vue.createCommentVNode("", true)
-      ], 16, _hoisted_1$L);
+      ], 16, _hoisted_1$M);
     };
   }
 });
@@ -4483,8 +4483,8 @@ const useTrackingStore = defineStore("tracking", () => {
   };
   return { trackSearch, trackResults, trackEvent };
 });
-const _hoisted_1$K = { id: "lupa-search-box-products" };
-const _sfc_main$M = /* @__PURE__ */ vue.defineComponent({
+const _hoisted_1$L = { id: "lupa-search-box-products" };
+const _sfc_main$N = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxProducts",
   props: {
     items: {},
@@ -4546,7 +4546,7 @@ const _sfc_main$M = /* @__PURE__ */ vue.defineComponent({
       handleRoutingEvent(link, event, boxRoutingBehavior.value === "event");
     };
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$K, [
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$L, [
         _ctx.$slots.productCard ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList(_ctx.items, (item, index) => {
           return vue.renderSlot(_ctx.$slots, "productCard", {
             key: index,
@@ -4558,7 +4558,7 @@ const _sfc_main$M = /* @__PURE__ */ vue.defineComponent({
             itemClicked: handleProductClick
           });
         }), 128)) : (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 1 }, vue.renderList(_ctx.items, (item, index) => {
-          return vue.openBlock(), vue.createBlock(_sfc_main$N, {
+          return vue.openBlock(), vue.createBlock(_sfc_main$O, {
             key: index,
             item,
             panelOptions: _ctx.panelOptions,
@@ -4572,7 +4572,7 @@ const _sfc_main$M = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _sfc_main$L = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$M = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxProductsWrapper",
   props: {
     panel: {},
@@ -4625,7 +4625,7 @@ const _sfc_main$L = /* @__PURE__ */ vue.defineComponent({
     const getItemsDebounced = debounce$1(getItems, props.debounce);
     return (_ctx, _cache) => {
       var _a, _b;
-      return vue.openBlock(), vue.createBlock(_sfc_main$M, {
+      return vue.openBlock(), vue.createBlock(_sfc_main$N, {
         items: (_b = (_a = searchResult.value) == null ? void 0 : _a.items) != null ? _b : [],
         panelOptions: _ctx.panel,
         labels: _ctx.labels,
@@ -4643,12 +4643,12 @@ const _sfc_main$L = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$J = {
+const _hoisted_1$K = {
   key: 0,
   id: "lupa-search-box-panel"
 };
-const _hoisted_2$z = ["data-cy"];
-const _hoisted_3$p = {
+const _hoisted_2$A = ["data-cy"];
+const _hoisted_3$q = {
   key: 0,
   class: "lupa-panel-title"
 };
@@ -4658,11 +4658,11 @@ const _hoisted_4$j = {
 };
 const __default__$1 = {
   components: {
-    SearchBoxSuggestionsWrapper: _sfc_main$Y,
-    SearchBoxProductsWrapper: _sfc_main$L
+    SearchBoxSuggestionsWrapper: _sfc_main$Z,
+    SearchBoxProductsWrapper: _sfc_main$M
   }
 };
-const _sfc_main$K = /* @__PURE__ */ vue.defineComponent(__spreadProps(__spreadValues({}, __default__$1), {
+const _sfc_main$L = /* @__PURE__ */ vue.defineComponent(__spreadProps(__spreadValues({}, __default__$1), {
   __name: "SearchBoxMainPanel",
   props: {
     options: {},
@@ -4785,7 +4785,7 @@ const _sfc_main$K = /* @__PURE__ */ vue.defineComponent(__spreadProps(__spreadVa
         ref_key: "panelContainer",
         ref: panelContainer
       }, [
-        displayResults.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$J, [
+        displayResults.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$K, [
           vue.createElementVNode("div", {
             class: "lupa-main-panel",
             style: vue.normalizeStyle(expandOnSinglePanel.value ? { display: "block" } : {}),
@@ -4801,7 +4801,7 @@ const _sfc_main$K = /* @__PURE__ */ vue.defineComponent(__spreadProps(__spreadVa
                 ]),
                 "data-cy": "lupa-panel-" + panel.type + "-index"
               }, [
-                ((_a2 = panel.labels) == null ? void 0 : _a2.topResultsTitle) && showTopResultsPanelTitle(panel.queryKey) ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$p, vue.toDisplayString((_b = panel.labels) == null ? void 0 : _b.topResultsTitle), 1)) : vue.createCommentVNode("", true),
+                ((_a2 = panel.labels) == null ? void 0 : _a2.topResultsTitle) && showTopResultsPanelTitle(panel.queryKey) ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$q, vue.toDisplayString((_b = panel.labels) == null ? void 0 : _b.topResultsTitle), 1)) : vue.createCommentVNode("", true),
                 panel.queryKey ? (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(getComponent(panel.type)), {
                   key: 1,
                   panel,
@@ -4821,21 +4821,21 @@ const _sfc_main$K = /* @__PURE__ */ vue.defineComponent(__spreadProps(__spreadVa
                     key: "0"
                   } : void 0
                 ]), 1064, ["panel", "options", "debounce", "inputValue", "labels"])) : vue.createCommentVNode("", true)
-              ], 10, _hoisted_2$z);
+              ], 10, _hoisted_2$A);
             }), 128))
           ], 4),
-          !vue.unref(hasAnyResults) && _ctx.options.showNoResultsPanel ? (vue.openBlock(), vue.createBlock(_sfc_main$$, {
+          !vue.unref(hasAnyResults) && _ctx.options.showNoResultsPanel ? (vue.openBlock(), vue.createBlock(_sfc_main$10, {
             key: 0,
             labels: labels.value
           }, null, 8, ["labels"])) : vue.createCommentVNode("", true),
-          vue.unref(hasAnyResults) || !_ctx.options.hideMoreResultsButtonOnNoResults ? (vue.openBlock(), vue.createBlock(_sfc_main$12, {
+          vue.unref(hasAnyResults) || !_ctx.options.hideMoreResultsButtonOnNoResults ? (vue.openBlock(), vue.createBlock(_sfc_main$13, {
             key: 1,
             labels: labels.value,
             showTotalCount: (_a = _ctx.options.showTotalCount) != null ? _a : false,
             onGoToResults: _cache[3] || (_cache[3] = ($event) => _ctx.$emit("go-to-results"))
           }, null, 8, ["labels", "showTotalCount"])) : vue.createCommentVNode("", true)
         ])) : displayHistory.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$j, [
-          vue.createVNode(_sfc_main$10, {
+          vue.createVNode(_sfc_main$11, {
             options: _ctx.options.history,
             history: history.value,
             onGoToResults: handleGoToResults,
@@ -4860,9 +4860,9 @@ const unbindSearchTriggers = (triggers = [], event) => {
   const elements = getElements(triggers);
   elements.forEach((e) => e == null ? void 0 : e.removeEventListener(BIND_EVENT, event));
 };
-const _hoisted_1$I = { id: "lupa-search-box" };
-const _hoisted_2$y = { class: "lupa-search-box-wrapper" };
-const _sfc_main$J = /* @__PURE__ */ vue.defineComponent({
+const _hoisted_1$J = { id: "lupa-search-box" };
+const _hoisted_2$z = { class: "lupa-search-box-wrapper" };
+const _sfc_main$K = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBox",
   props: {
     options: {},
@@ -5100,9 +5100,9 @@ const _sfc_main$J = /* @__PURE__ */ vue.defineComponent({
     };
     return (_ctx, _cache) => {
       var _a2;
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$I, [
-        vue.createElementVNode("div", _hoisted_2$y, [
-          vue.createVNode(_sfc_main$13, {
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$J, [
+        vue.createElementVNode("div", _hoisted_2$z, [
+          vue.createVNode(_sfc_main$14, {
             options: inputOptions.value,
             suggestedValue: suggestedValue.value,
             "can-close": (_a2 = _ctx.isSearchContainer) != null ? _a2 : false,
@@ -5113,7 +5113,7 @@ const _sfc_main$J = /* @__PURE__ */ vue.defineComponent({
             onFocus: _cache[0] || (_cache[0] = ($event) => opened.value = true),
             onClose: _cache[1] || (_cache[1] = ($event) => _ctx.$emit("close"))
           }, null, 8, ["options", "suggestedValue", "can-close", "emit-input-on-focus"]),
-          opened.value || _ctx.isSearchContainer ? (vue.openBlock(), vue.createBlock(_sfc_main$K, {
+          opened.value || _ctx.isSearchContainer ? (vue.openBlock(), vue.createBlock(_sfc_main$L, {
             key: 0,
             options: panelOptions.value,
             inputValue: inputValue.value,
@@ -5216,20 +5216,20 @@ const getInitialSearchResults = (options, defaultData) => __async(exports, null,
     options.options.onError(e);
   }
 });
-const _hoisted_1$H = {
+const _hoisted_1$I = {
   key: 0,
   id: "lupa-search-results-did-you-mean"
 };
-const _hoisted_2$x = {
+const _hoisted_2$y = {
   key: 0,
   "data-cy": "suggested-search-text-label"
 };
-const _hoisted_3$o = {
+const _hoisted_3$p = {
   key: 1,
   "data-cy": "did-you-mean-label"
 };
 const _hoisted_4$i = { key: 1 };
-const _sfc_main$I = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$J = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchResultsDidYouMean",
   props: {
     labels: {}
@@ -5261,8 +5261,8 @@ const _sfc_main$I = /* @__PURE__ */ vue.defineComponent({
       paramStore.goToResults({ searchText, facet });
     };
     return (_ctx, _cache) => {
-      return vue.unref(searchResult).suggestedSearchText || didYouMeanValue.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$H, [
-        vue.unref(searchResult).suggestedSearchText ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$x, [
+      return vue.unref(searchResult).suggestedSearchText || didYouMeanValue.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$I, [
+        vue.unref(searchResult).suggestedSearchText ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$y, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.labels.noResultsSuggestion.split(" "), (label, index) => {
             return vue.openBlock(), vue.createElementBlock("span", { key: index }, [
               vue.createElementVNode("span", {
@@ -5271,7 +5271,7 @@ const _sfc_main$I = /* @__PURE__ */ vue.defineComponent({
             ]);
           }), 128))
         ])) : vue.createCommentVNode("", true),
-        didYouMeanValue.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$o, [
+        didYouMeanValue.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$p, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.labels.didYouMean.split(" "), (label, index) => {
             return vue.openBlock(), vue.createElementBlock("span", { key: index }, [
               label.includes("{1}") ? (vue.openBlock(), vue.createElementBlock("span", {
@@ -5287,12 +5287,12 @@ const _sfc_main$I = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$G = {
+const _hoisted_1$H = {
   key: 0,
   class: "lupa-search-results-summary"
 };
-const _hoisted_2$w = ["innerHTML"];
-const _sfc_main$H = /* @__PURE__ */ vue.defineComponent({
+const _hoisted_2$x = ["innerHTML"];
+const _sfc_main$I = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchResultsSummary",
   props: {
     label: {},
@@ -5307,8 +5307,8 @@ const _sfc_main$H = /* @__PURE__ */ vue.defineComponent({
       return addParamsToLabel(props.label, range, `<span>${totalItems.value}</span>`);
     });
     return (_ctx, _cache) => {
-      return vue.unref(totalItems) > 0 ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$G, [
-        vue.createElementVNode("div", { innerHTML: summaryLabel.value }, null, 8, _hoisted_2$w),
+      return vue.unref(totalItems) > 0 ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$H, [
+        vue.createElementVNode("div", { innerHTML: summaryLabel.value }, null, 8, _hoisted_2$x),
         _ctx.clearable ? (vue.openBlock(), vue.createElementBlock("span", {
           key: 0,
           class: "lupa-filter-clear",
@@ -5319,18 +5319,18 @@ const _sfc_main$H = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$F = {
+const _hoisted_1$G = {
   key: 0,
   class: "lupa-result-page-title",
   "data-cy": "lupa-result-page-title"
 };
-const _hoisted_2$v = { key: 0 };
-const _hoisted_3$n = {
+const _hoisted_2$w = { key: 0 };
+const _hoisted_3$o = {
   key: 1,
   class: "lupa-results-total-count"
 };
 const _hoisted_4$h = ["innerHTML"];
-const _sfc_main$G = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$H = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchResultsTitle",
   props: {
     options: {},
@@ -5365,12 +5365,12 @@ const _sfc_main$G = /* @__PURE__ */ vue.defineComponent({
     });
     return (_ctx, _cache) => {
       return vue.openBlock(), vue.createElementBlock("div", null, [
-        showSearchTitle.value ? (vue.openBlock(), vue.createElementBlock("h1", _hoisted_1$F, [
+        showSearchTitle.value ? (vue.openBlock(), vue.createElementBlock("h1", _hoisted_1$G, [
           vue.createTextVNode(vue.toDisplayString(_ctx.options.labels.searchResults), 1),
-          queryText.value ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$v, "'" + vue.toDisplayString(queryText.value) + "'", 1)) : vue.createCommentVNode("", true),
-          showProductCount.value ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$n, "(" + vue.toDisplayString(vue.unref(totalItems)) + ")", 1)) : vue.createCommentVNode("", true)
+          queryText.value ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$w, "'" + vue.toDisplayString(queryText.value) + "'", 1)) : vue.createCommentVNode("", true),
+          showProductCount.value ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$o, "(" + vue.toDisplayString(vue.unref(totalItems)) + ")", 1)) : vue.createCommentVNode("", true)
         ])) : vue.createCommentVNode("", true),
-        _ctx.showSummary ? (vue.openBlock(), vue.createBlock(_sfc_main$H, {
+        _ctx.showSummary ? (vue.openBlock(), vue.createBlock(_sfc_main$I, {
           key: 1,
           label: summaryLabel.value
         }, null, 8, ["label"])) : vue.createCommentVNode("", true),
@@ -5383,16 +5383,16 @@ const _sfc_main$G = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$E = { class: "lupa-search-result-filter-value" };
-const _hoisted_2$u = {
+const _hoisted_1$F = { class: "lupa-search-result-filter-value" };
+const _hoisted_2$v = {
   class: "lupa-current-filter-label",
   "data-cy": "lupa-current-filter-label"
 };
-const _hoisted_3$m = {
+const _hoisted_3$n = {
   class: "lupa-current-filter-value",
   "data-cy": "lupa-current-filter-value"
 };
-const _sfc_main$F = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$G = /* @__PURE__ */ vue.defineComponent({
   __name: "CurrentFilterDisplay",
   props: {
     filter: {}
@@ -5405,28 +5405,28 @@ const _sfc_main$F = /* @__PURE__ */ vue.defineComponent({
       emit("remove", { filter: props.filter });
     };
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$E, [
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$F, [
         vue.createElementVNode("div", {
           class: "lupa-current-filter-action",
           onClick: handleClick
         }, "⨉"),
-        vue.createElementVNode("div", _hoisted_2$u, vue.toDisplayString(_ctx.filter.label) + ": ", 1),
-        vue.createElementVNode("div", _hoisted_3$m, vue.toDisplayString(_ctx.filter.value), 1)
+        vue.createElementVNode("div", _hoisted_2$v, vue.toDisplayString(_ctx.filter.label) + ": ", 1),
+        vue.createElementVNode("div", _hoisted_3$n, vue.toDisplayString(_ctx.filter.value), 1)
       ]);
     };
   }
 });
-const _hoisted_1$D = { class: "lupa-filter-title-text" };
-const _hoisted_2$t = {
+const _hoisted_1$E = { class: "lupa-filter-title-text" };
+const _hoisted_2$u = {
   key: 0,
   class: "lupa-filter-count"
 };
-const _hoisted_3$l = {
+const _hoisted_3$m = {
   key: 0,
   class: "filter-values"
 };
 const _hoisted_4$g = { class: "lupa-current-filter-list" };
-const _sfc_main$E = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$F = /* @__PURE__ */ vue.defineComponent({
   __name: "CurrentFilters",
   props: {
     options: {},
@@ -5481,19 +5481,19 @@ const _sfc_main$E = /* @__PURE__ */ vue.defineComponent({
           class: "lupa-current-filter-title",
           onClick: _cache[0] || (_cache[0] = ($event) => isOpen.value = !isOpen.value)
         }, [
-          vue.createElementVNode("div", _hoisted_1$D, [
+          vue.createElementVNode("div", _hoisted_1$E, [
             vue.createTextVNode(vue.toDisplayString((_c = (_b = (_a = _ctx.options) == null ? void 0 : _a.labels) == null ? void 0 : _b.title) != null ? _c : "") + " ", 1),
-            _ctx.expandable ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$t, " (" + vue.toDisplayString(vue.unref(currentFilterCount)) + ") ", 1)) : vue.createCommentVNode("", true)
+            _ctx.expandable ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$u, " (" + vue.toDisplayString(vue.unref(currentFilterCount)) + ") ", 1)) : vue.createCommentVNode("", true)
           ]),
           _ctx.expandable ? (vue.openBlock(), vue.createElementBlock("div", {
             key: 0,
             class: vue.normalizeClass(["lupa-filter-title-caret", isOpen.value && "open"])
           }, null, 2)) : vue.createCommentVNode("", true)
         ]),
-        !_ctx.expandable || isOpen.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$l, [
+        !_ctx.expandable || isOpen.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$m, [
           vue.createElementVNode("div", _hoisted_4$g, [
             (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(vue.unref(displayFilters), (filter) => {
-              return vue.openBlock(), vue.createBlock(_sfc_main$F, {
+              return vue.openBlock(), vue.createBlock(_sfc_main$G, {
                 key: filter.key + "_" + filter.value,
                 filter,
                 onRemove: handleRemove
@@ -5510,8 +5510,8 @@ const _sfc_main$E = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$C = ["href"];
-const _sfc_main$D = /* @__PURE__ */ vue.defineComponent({
+const _hoisted_1$D = ["href"];
+const _sfc_main$E = /* @__PURE__ */ vue.defineComponent({
   __name: "CategoryFilterItem",
   props: {
     options: {},
@@ -5548,20 +5548,20 @@ const _sfc_main$D = /* @__PURE__ */ vue.defineComponent({
           "data-cy": "lupa-child-category-item",
           href: urlLink.value,
           onClick: handleNavigation
-        }, vue.toDisplayString(title.value), 9, _hoisted_1$C)
+        }, vue.toDisplayString(title.value), 9, _hoisted_1$D)
       ], 2);
     };
   }
 });
-const _hoisted_1$B = {
+const _hoisted_1$C = {
   class: "lupa-category-filter",
   "data-cy": "lupa-category-filter"
 };
-const _hoisted_2$s = { class: "lupa-category-back" };
-const _hoisted_3$k = ["href"];
+const _hoisted_2$t = { class: "lupa-category-back" };
+const _hoisted_3$l = ["href"];
 const _hoisted_4$f = ["href"];
 const _hoisted_5$b = { class: "lupa-child-category-list" };
-const _sfc_main$C = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$D = /* @__PURE__ */ vue.defineComponent({
   __name: "CategoryFilter",
   props: {
     options: {}
@@ -5647,14 +5647,14 @@ const _sfc_main$C = /* @__PURE__ */ vue.defineComponent({
     };
     __expose({ fetch: fetch2 });
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$B, [
-        vue.createElementVNode("div", _hoisted_2$s, [
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$C, [
+        vue.createElementVNode("div", _hoisted_2$t, [
           hasBackButton.value ? (vue.openBlock(), vue.createElementBlock("a", {
             key: 0,
             "data-cy": "lupa-category-back",
             href: backUrlLink.value,
             onClick: handleNavigationBack
-          }, vue.toDisplayString(backTitle.value), 9, _hoisted_3$k)) : vue.createCommentVNode("", true)
+          }, vue.toDisplayString(backTitle.value), 9, _hoisted_3$l)) : vue.createCommentVNode("", true)
         ]),
         vue.createElementVNode("div", {
           class: vue.normalizeClass(["lupa-current-category", { "lupa-current-category-active": isActive }])
@@ -5668,7 +5668,7 @@ const _sfc_main$C = /* @__PURE__ */ vue.defineComponent({
         ], 2),
         vue.createElementVNode("div", _hoisted_5$b, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(categoryChildren.value, (child) => {
-            return vue.openBlock(), vue.createBlock(_sfc_main$D, {
+            return vue.openBlock(), vue.createBlock(_sfc_main$E, {
               key: getCategoryKey(child),
               item: child,
               options: _ctx.options
@@ -5679,12 +5679,12 @@ const _sfc_main$C = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$A = {
+const _hoisted_1$B = {
   class: "lupa-search-result-facet-term-values",
   "data-cy": "lupa-search-result-facet-term-values"
 };
-const _hoisted_2$r = ["placeholder"];
-const _hoisted_3$j = { class: "lupa-terms-list" };
+const _hoisted_2$s = ["placeholder"];
+const _hoisted_3$k = { class: "lupa-terms-list" };
 const _hoisted_4$e = ["onClick"];
 const _hoisted_5$a = { class: "lupa-term-checkbox-wrapper" };
 const _hoisted_6$6 = { class: "lupa-term-checkbox-label" };
@@ -5695,7 +5695,7 @@ const _hoisted_8$1 = {
 };
 const _hoisted_9$1 = { key: 0 };
 const _hoisted_10$1 = { key: 1 };
-const _sfc_main$B = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$C = /* @__PURE__ */ vue.defineComponent({
   __name: "TermFacet",
   props: {
     options: {},
@@ -5765,17 +5765,17 @@ const _sfc_main$B = /* @__PURE__ */ vue.defineComponent({
       return selectedItems == null ? void 0 : selectedItems.includes((_b = item.title) == null ? void 0 : _b.toString());
     };
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$A, [
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$B, [
         isFilterable.value ? vue.withDirectives((vue.openBlock(), vue.createElementBlock("input", {
           key: 0,
           class: "lupa-term-filter",
           "data-cy": "lupa-term-filter",
           "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => termFilter.value = $event),
           placeholder: _ctx.options.labels.facetFilter
-        }, null, 8, _hoisted_2$r)), [
+        }, null, 8, _hoisted_2$s)), [
           [vue.vModelText, termFilter.value]
         ]) : vue.createCommentVNode("", true),
-        vue.createElementVNode("div", _hoisted_3$j, [
+        vue.createElementVNode("div", _hoisted_3$k, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(displayValues.value, (item) => {
             return vue.openBlock(), vue.createElementBlock("div", {
               class: vue.normalizeClass(["lupa-facet-term", { checked: isChecked(item) }]),
@@ -5807,12 +5807,12 @@ const _sfc_main$B = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$z = { class: "lupa-search-result-facet-stats-values" };
-const _hoisted_2$q = {
+const _hoisted_1$A = { class: "lupa-search-result-facet-stats-values" };
+const _hoisted_2$r = {
   key: 0,
   class: "lupa-stats-facet-summary"
 };
-const _hoisted_3$i = {
+const _hoisted_3$j = {
   key: 1,
   class: "lupa-stats-facet-summary-input"
 };
@@ -5835,7 +5835,7 @@ const _hoisted_13 = {
   key: 2,
   class: "lupa-stats-slider-wrapper"
 };
-const _sfc_main$A = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$B = /* @__PURE__ */ vue.defineComponent({
   __name: "StatsFacet",
   props: {
     options: {},
@@ -5995,8 +5995,8 @@ const _sfc_main$A = /* @__PURE__ */ vue.defineComponent({
       });
     };
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$z, [
-        !isInputVisible.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$q, vue.toDisplayString(statsSummary.value), 1)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$i, [
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$A, [
+        !isInputVisible.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$r, vue.toDisplayString(statsSummary.value), 1)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$j, [
           vue.createElementVNode("div", null, [
             rangeLabelFrom.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$d, vue.toDisplayString(rangeLabelFrom.value), 1)) : vue.createCommentVNode("", true),
             vue.createElementVNode("div", _hoisted_5$9, [
@@ -6048,9 +6048,9 @@ const _sfc_main$A = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$y = { class: "lupa-term-checkbox-wrapper" };
-const _hoisted_2$p = { class: "lupa-term-checkbox-label" };
-const _hoisted_3$h = { class: "lupa-term-label" };
+const _hoisted_1$z = { class: "lupa-term-checkbox-wrapper" };
+const _hoisted_2$q = { class: "lupa-term-checkbox-label" };
+const _hoisted_3$i = { class: "lupa-term-label" };
 const _hoisted_4$c = {
   key: 0,
   class: "lupa-term-count"
@@ -6059,7 +6059,7 @@ const _hoisted_5$8 = {
   key: 0,
   class: "lupa-facet-level"
 };
-const _sfc_main$z = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$A = /* @__PURE__ */ vue.defineComponent({
   __name: "HierarchyFacetLevel",
   props: {
     options: {},
@@ -6106,13 +6106,13 @@ const _sfc_main$z = /* @__PURE__ */ vue.defineComponent({
           "data-cy": "lupa-facet-term",
           onClick: _cache[0] || (_cache[0] = ($event) => handleFacetClick(_ctx.item))
         }, [
-          vue.createElementVNode("div", _hoisted_1$y, [
+          vue.createElementVNode("div", _hoisted_1$z, [
             vue.createElementVNode("span", {
               class: vue.normalizeClass(["lupa-term-checkbox", { checked: isChecked.value }])
             }, null, 2)
           ]),
-          vue.createElementVNode("div", _hoisted_2$p, [
-            vue.createElementVNode("span", _hoisted_3$h, vue.toDisplayString(_ctx.item.title) + vue.toDisplayString(" "), 1),
+          vue.createElementVNode("div", _hoisted_2$q, [
+            vue.createElementVNode("span", _hoisted_3$i, vue.toDisplayString(_ctx.item.title) + vue.toDisplayString(" "), 1),
             _ctx.options.showDocumentCount ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_4$c, "(" + vue.toDisplayString(_ctx.item.count) + ")", 1)) : vue.createCommentVNode("", true)
           ])
         ]),
@@ -6132,13 +6132,13 @@ const _sfc_main$z = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$x = {
+const _hoisted_1$y = {
   class: "lupa-search-result-facet-term-values lupa-search-result-facet-hierarchy-values",
   "data-cy": "lupa-search-result-facet-term-values"
 };
-const _hoisted_2$o = { key: 0 };
-const _hoisted_3$g = ["placeholder"];
-const _sfc_main$y = /* @__PURE__ */ vue.defineComponent({
+const _hoisted_2$p = { key: 0 };
+const _hoisted_3$h = ["placeholder"];
+const _sfc_main$z = /* @__PURE__ */ vue.defineComponent({
   __name: "HierarchyFacet",
   props: {
     options: {},
@@ -6189,19 +6189,19 @@ const _sfc_main$y = /* @__PURE__ */ vue.defineComponent({
       showAll.value = true;
     };
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$x, [
-        isFilterable.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$o, [
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$y, [
+        isFilterable.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$p, [
           vue.withDirectives(vue.createElementVNode("input", {
             class: "lupa-term-filter",
             "data-cy": "lupa-term-filter",
             "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => termFilter.value = $event),
             placeholder: _ctx.options.labels.facetFilter
-          }, null, 8, _hoisted_3$g), [
+          }, null, 8, _hoisted_3$h), [
             [vue.vModelText, termFilter.value]
           ])
         ])) : vue.createCommentVNode("", true),
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(displayValues.value, (item) => {
-          return vue.openBlock(), vue.createBlock(_sfc_main$z, {
+          return vue.openBlock(), vue.createBlock(_sfc_main$A, {
             key: item.title,
             options: _ctx.options,
             item,
@@ -6221,20 +6221,20 @@ const _sfc_main$y = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$w = { class: "lupa-facet-label-text" };
-const _hoisted_2$n = {
+const _hoisted_1$x = { class: "lupa-facet-label-text" };
+const _hoisted_2$o = {
   key: 0,
   class: "lupa-facet-content",
   "data-cy": "lupa-facet-content"
 };
 const __default__ = {
   components: {
-    TermFacet: _sfc_main$B,
-    StatsFacet: _sfc_main$A,
-    HierarchyFacet: _sfc_main$y
+    TermFacet: _sfc_main$C,
+    StatsFacet: _sfc_main$B,
+    HierarchyFacet: _sfc_main$z
   }
 };
-const _sfc_main$x = /* @__PURE__ */ vue.defineComponent(__spreadProps(__spreadValues({}, __default__), {
+const _sfc_main$y = /* @__PURE__ */ vue.defineComponent(__spreadProps(__spreadValues({}, __default__), {
   __name: "FacetDisplay",
   props: {
     options: {},
@@ -6346,12 +6346,12 @@ const _sfc_main$x = /* @__PURE__ */ vue.defineComponent(__spreadProps(__spreadVa
           "data-cy": "lupa-search-result-facet-label",
           onClick: toggleFacet
         }, [
-          vue.createElementVNode("div", _hoisted_1$w, vue.toDisplayString(facet.value.label), 1),
+          vue.createElementVNode("div", _hoisted_1$x, vue.toDisplayString(facet.value.label), 1),
           vue.createElementVNode("div", {
             class: vue.normalizeClass(["lupa-facet-label-caret", isOpen.value && "open"])
           }, null, 2)
         ], 2),
-        isOpen.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$n, [
+        isOpen.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$o, [
           (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(facetType.value), {
             facet: facet.value,
             currentFilters: currentFilters.value[facet.value.key],
@@ -6369,12 +6369,12 @@ const _sfc_main$x = /* @__PURE__ */ vue.defineComponent(__spreadProps(__spreadVa
     };
   }
 }));
-const _hoisted_1$v = { class: "lupa-search-result-facet-section" };
-const _hoisted_2$m = {
+const _hoisted_1$w = { class: "lupa-search-result-facet-section" };
+const _hoisted_2$n = {
   key: 0,
   class: "lupa-facets-title"
 };
-const _sfc_main$w = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$x = /* @__PURE__ */ vue.defineComponent({
   __name: "FacetList",
   props: {
     options: {},
@@ -6409,14 +6409,14 @@ const _sfc_main$w = /* @__PURE__ */ vue.defineComponent({
     };
     return (_ctx, _cache) => {
       var _a;
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$v, [
-        _ctx.options.labels.title ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$m, vue.toDisplayString(_ctx.options.labels.title), 1)) : vue.createCommentVNode("", true),
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$w, [
+        _ctx.options.labels.title ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$n, vue.toDisplayString(_ctx.options.labels.title), 1)) : vue.createCommentVNode("", true),
         vue.createElementVNode("div", {
           class: vue.normalizeClass(["lupa-search-result-facet-list", "lupa-" + ((_a = _ctx.facetStyle) != null ? _a : "")])
         }, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(displayFacets.value, (facet) => {
             var _a2;
-            return vue.openBlock(), vue.createBlock(_sfc_main$x, {
+            return vue.openBlock(), vue.createBlock(_sfc_main$y, {
               key: facet.key,
               facet,
               currentFilters: currentFiltersValue.value,
@@ -6431,8 +6431,8 @@ const _sfc_main$w = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$u = { class: "lupa-search-result-facets" };
-const _sfc_main$v = /* @__PURE__ */ vue.defineComponent({
+const _hoisted_1$v = { class: "lupa-search-result-facets" };
+const _sfc_main$w = /* @__PURE__ */ vue.defineComponent({
   __name: "Facets",
   props: {
     options: {},
@@ -6493,8 +6493,8 @@ const _sfc_main$v = /* @__PURE__ */ vue.defineComponent({
       paramStore.removeParameters({ paramsToRemove: [param] });
     };
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$u, [
-        regularFacets.value ? (vue.openBlock(), vue.createBlock(_sfc_main$w, {
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$v, [
+        regularFacets.value ? (vue.openBlock(), vue.createBlock(_sfc_main$x, {
           key: 0,
           options: _ctx.options,
           facets: regularFacets.value,
@@ -6508,11 +6508,11 @@ const _sfc_main$v = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$t = {
+const _hoisted_1$u = {
   id: "lupa-search-result-filters",
   class: "lupa-search-result-filters"
 };
-const _sfc_main$u = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$v = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchResultsFilters",
   props: {
     options: {},
@@ -6541,19 +6541,19 @@ const _sfc_main$u = /* @__PURE__ */ vue.defineComponent({
     __expose({ fetch: fetch2 });
     return (_ctx, _cache) => {
       var _a;
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$t, [
-        showCurrentFilters.value ? (vue.openBlock(), vue.createBlock(_sfc_main$E, {
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$u, [
+        showCurrentFilters.value ? (vue.openBlock(), vue.createBlock(_sfc_main$F, {
           key: 0,
           options: _ctx.options.currentFilters,
           expandable: (_a = _ctx.expandable) != null ? _a : false
         }, null, 8, ["options", "expandable"])) : vue.createCommentVNode("", true),
-        _ctx.options.categories ? (vue.openBlock(), vue.createBlock(_sfc_main$C, {
+        _ctx.options.categories ? (vue.openBlock(), vue.createBlock(_sfc_main$D, {
           key: 1,
           options: _ctx.options.categories,
           ref_key: "categoryFilters",
           ref: categoryFilters
         }, null, 8, ["options"])) : vue.createCommentVNode("", true),
-        _ctx.options.facets ? (vue.openBlock(), vue.createBlock(_sfc_main$v, {
+        _ctx.options.facets ? (vue.openBlock(), vue.createBlock(_sfc_main$w, {
           key: 2,
           options: _ctx.options.facets
         }, null, 8, ["options"])) : vue.createCommentVNode("", true)
@@ -6561,19 +6561,19 @@ const _sfc_main$u = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$s = {
+const _hoisted_1$t = {
   key: 0,
   class: "lupa-mobile-filter-sidebar"
 };
-const _hoisted_2$l = { class: "lupa-mobile-sidebar-content" };
-const _hoisted_3$f = { class: "lupa-sidebar-top" };
+const _hoisted_2$m = { class: "lupa-mobile-sidebar-content" };
+const _hoisted_3$g = { class: "lupa-sidebar-top" };
 const _hoisted_4$b = { class: "lupa-sidebar-title" };
 const _hoisted_5$7 = {
   key: 0,
   class: "lupa-sidebar-filter-count"
 };
 const _hoisted_6$4 = { class: "lupa-sidebar-filter-options" };
-const _sfc_main$t = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$u = /* @__PURE__ */ vue.defineComponent({
   __name: "MobileFilterSidebar",
   props: {
     options: {}
@@ -6599,13 +6599,13 @@ const _sfc_main$t = /* @__PURE__ */ vue.defineComponent({
       searchResultStore.setSidebarState({ visible: false });
     };
     return (_ctx, _cache) => {
-      return isMobileSidebarVisible.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$s, [
+      return isMobileSidebarVisible.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$t, [
         vue.createElementVNode("div", {
           class: "lupa-sidebar-close",
           onClick: vue.withModifiers(handleMobileToggle, ["stop"])
         }),
-        vue.createElementVNode("div", _hoisted_2$l, [
-          vue.createElementVNode("div", _hoisted_3$f, [
+        vue.createElementVNode("div", _hoisted_2$m, [
+          vue.createElementVNode("div", _hoisted_3$g, [
             vue.createElementVNode("div", _hoisted_4$b, [
               vue.createTextVNode(vue.toDisplayString(sidebarTitle.value) + " ", 1),
               isFilterCountVisible.value ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_5$7, vue.toDisplayString(vue.unref(currentFilterCount)), 1)) : vue.createCommentVNode("", true)
@@ -6616,7 +6616,7 @@ const _sfc_main$t = /* @__PURE__ */ vue.defineComponent({
             })
           ]),
           vue.createElementVNode("div", _hoisted_6$4, [
-            vue.createVNode(_sfc_main$u, {
+            vue.createVNode(_sfc_main$v, {
               options: _ctx.options,
               expandable: isActiveFiltersExpanded.value
             }, null, 8, ["options", "expandable"])
@@ -6626,14 +6626,14 @@ const _sfc_main$t = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$r = { id: "lupa-search-results-breadcrumbs" };
-const _hoisted_2$k = ["href", "onClick"];
-const _hoisted_3$e = {
+const _hoisted_1$s = { id: "lupa-search-results-breadcrumbs" };
+const _hoisted_2$l = ["href", "onClick"];
+const _hoisted_3$f = {
   key: 1,
   class: "lupa-search-results-breadcrumb-text"
 };
 const _hoisted_4$a = { key: 2 };
-const _sfc_main$s = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$t = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchResultsBreadcrumbs",
   props: {
     breadcrumbs: {}
@@ -6658,7 +6658,7 @@ const _sfc_main$s = /* @__PURE__ */ vue.defineComponent({
       handleRoutingEvent(link, event, hasEventRouting.value);
     };
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$r, [
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$s, [
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(breadcrumbsValue.value, (breadcrumb, index) => {
           return vue.openBlock(), vue.createElementBlock("span", {
             class: "lupa-search-results-breadcrumb",
@@ -6672,7 +6672,7 @@ const _sfc_main$s = /* @__PURE__ */ vue.defineComponent({
                 var _a;
                 return handleNavigation(e, (_a = breadcrumb == null ? void 0 : breadcrumb.link) != null ? _a : "");
               }
-            }, vue.toDisplayString(getLabel(breadcrumb.label)), 9, _hoisted_2$k)) : (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$e, vue.toDisplayString(getLabel(breadcrumb.label)), 1)),
+            }, vue.toDisplayString(getLabel(breadcrumb.label)), 9, _hoisted_2$l)) : (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$f, vue.toDisplayString(getLabel(breadcrumb.label)), 1)),
             index < breadcrumbsValue.value.length - 1 ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_4$a, " / ")) : vue.createCommentVNode("", true)
           ]);
         }), 128))
@@ -6680,11 +6680,11 @@ const _sfc_main$s = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$q = {
+const _hoisted_1$r = {
   id: "lupa-search-result-filters",
   class: "lupa-search-result-filters"
 };
-const _sfc_main$r = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$s = /* @__PURE__ */ vue.defineComponent({
   __name: "FiltersTopDropdown",
   props: {
     options: {}
@@ -6692,8 +6692,8 @@ const _sfc_main$r = /* @__PURE__ */ vue.defineComponent({
   setup(__props) {
     return (_ctx, _cache) => {
       var _a;
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$q, [
-        _ctx.options.facets ? (vue.openBlock(), vue.createBlock(_sfc_main$v, {
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$r, [
+        _ctx.options.facets ? (vue.openBlock(), vue.createBlock(_sfc_main$w, {
           key: 0,
           options: _ctx.options.facets,
           "facet-style": (_a = _ctx.options.facets.style) == null ? void 0 : _a.type,
@@ -6703,8 +6703,8 @@ const _sfc_main$r = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$p = { id: "lupa-search-results-layout-selection" };
-const _sfc_main$q = /* @__PURE__ */ vue.defineComponent({
+const _hoisted_1$q = { id: "lupa-search-results-layout-selection" };
+const _sfc_main$r = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchResultsLayoutSelection",
   setup(__props) {
     const searchResultStore = useSearchResultStore();
@@ -6715,7 +6715,7 @@ const _sfc_main$q = /* @__PURE__ */ vue.defineComponent({
       searchResultStore.setLayout(layout2);
     };
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$p, [
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$q, [
         vue.createElementVNode("div", {
           class: vue.normalizeClass([
             "lupa-layout-selection-grid",
@@ -6737,11 +6737,11 @@ const _sfc_main$q = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$o = {
+const _hoisted_1$p = {
   key: 0,
   class: "lupa-mobile-toggle-filter-count"
 };
-const _sfc_main$p = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$q = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchResultsMobileToggle",
   props: {
     label: {},
@@ -6759,26 +6759,26 @@ const _sfc_main$p = /* @__PURE__ */ vue.defineComponent({
         onClick: handleMobileToggle
       }, [
         vue.createTextVNode(vue.toDisplayString(_ctx.label) + " ", 1),
-        _ctx.showFilterCount && vue.unref(currentFilterCount) > 0 ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_1$o, vue.toDisplayString(vue.unref(currentFilterCount)), 1)) : vue.createCommentVNode("", true)
+        _ctx.showFilterCount && vue.unref(currentFilterCount) > 0 ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_1$p, vue.toDisplayString(vue.unref(currentFilterCount)), 1)) : vue.createCommentVNode("", true)
       ], 2);
     };
   }
 });
-const _hoisted_1$n = {
+const _hoisted_1$o = {
   key: 0,
   id: "lupa-search-results-page-select",
   "data-cy": "lupa-search-results-page-select"
 };
-const _hoisted_2$j = {
+const _hoisted_2$k = {
   key: 0,
   class: "lupa-page-number-separator"
 };
-const _hoisted_3$d = ["onClick"];
+const _hoisted_3$e = ["onClick"];
 const _hoisted_4$9 = {
   key: 0,
   class: "lupa-page-number-separator"
 };
-const _sfc_main$o = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$p = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchResultsPageSelect",
   props: {
     lastPageLabel: {},
@@ -6855,7 +6855,7 @@ const _sfc_main$o = /* @__PURE__ */ vue.defineComponent({
       }
     };
     return (_ctx, _cache) => {
-      return showPagination.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$n, [
+      return showPagination.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$o, [
         showBack.value ? (vue.openBlock(), vue.createElementBlock("div", {
           key: 0,
           class: vue.normalizeClass(firstPageLabel.value === "<" ? "lupa-page-arrow" : "lupa-show-less"),
@@ -6866,7 +6866,7 @@ const _sfc_main$o = /* @__PURE__ */ vue.defineComponent({
             class: "lupa-page-number lupa-page-number-first",
             onClick: _cache[1] || (_cache[1] = () => handlePageChange(1))
           }, " 1 "),
-          showFirstPageSeparator.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$j, "...")) : vue.createCommentVNode("", true)
+          showFirstPageSeparator.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$k, "...")) : vue.createCommentVNode("", true)
         ], 64)) : vue.createCommentVNode("", true),
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(pages.value, (page) => {
           return vue.openBlock(), vue.createElementBlock("div", {
@@ -6877,7 +6877,7 @@ const _sfc_main$o = /* @__PURE__ */ vue.defineComponent({
               page === _ctx.options.selectedPage ? "lupa-page-number-selected" : ""
             ]),
             "data-cy": "lupa-page-number"
-          }, vue.toDisplayString(page), 11, _hoisted_3$d);
+          }, vue.toDisplayString(page), 11, _hoisted_3$e);
         }), 128)),
         showLastPage.value ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 2 }, [
           showLastPageSeparator.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$9, "...")) : vue.createCommentVNode("", true),
@@ -6899,14 +6899,14 @@ const _sfc_main$o = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$m = {
+const _hoisted_1$n = {
   id: "lupa-search-results-page-size",
   "data-cy": "lupa-search-results-page-size"
 };
-const _hoisted_2$i = { id: "lupa-select" };
-const _hoisted_3$c = { class: "lupa-select-label" };
+const _hoisted_2$j = { id: "lupa-select" };
+const _hoisted_3$d = { class: "lupa-select-label" };
 const _hoisted_4$8 = ["aria-label"];
-const _sfc_main$n = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$o = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchResultsPageSize",
   props: {
     label: {},
@@ -6923,9 +6923,9 @@ const _sfc_main$n = /* @__PURE__ */ vue.defineComponent({
       });
     };
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$m, [
-        vue.createElementVNode("div", _hoisted_2$i, [
-          vue.createElementVNode("label", _hoisted_3$c, vue.toDisplayString(_ctx.label), 1),
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$n, [
+        vue.createElementVNode("div", _hoisted_2$j, [
+          vue.createElementVNode("label", _hoisted_3$d, vue.toDisplayString(_ctx.label), 1),
           vue.createElementVNode("select", {
             class: "lupa-select-dropdown",
             "aria-label": _ctx.label,
@@ -6943,15 +6943,15 @@ const _sfc_main$n = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$l = {
+const _hoisted_1$m = {
   id: "lupa-search-results-sort",
   class: "lupa-search-results-sort"
 };
-const _hoisted_2$h = { id: "lupa-select" };
-const _hoisted_3$b = { class: "lupa-select-label" };
+const _hoisted_2$i = { id: "lupa-select" };
+const _hoisted_3$c = { class: "lupa-select-label" };
 const _hoisted_4$7 = ["aria-label"];
 const _hoisted_5$6 = ["value"];
-const _sfc_main$m = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$n = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchResultsSort",
   props: {
     options: {},
@@ -6999,9 +6999,9 @@ const _sfc_main$m = /* @__PURE__ */ vue.defineComponent({
       previousKey.value = selectedKey.value;
     };
     return (_ctx, _cache) => {
-      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$l, [
-        vue.createElementVNode("div", _hoisted_2$h, [
-          vue.createElementVNode("label", _hoisted_3$b, vue.toDisplayString(_ctx.options.label), 1),
+      return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$m, [
+        vue.createElementVNode("div", _hoisted_2$i, [
+          vue.createElementVNode("label", _hoisted_3$c, vue.toDisplayString(_ctx.options.label), 1),
           vue.withDirectives(vue.createElementVNode("select", {
             class: "lupa-select-dropdown",
             "aria-label": _ctx.options.label,
@@ -7024,14 +7024,14 @@ const _sfc_main$m = /* @__PURE__ */ vue.defineComponent({
     };
   }
 });
-const _hoisted_1$k = { class: "lupa-toolbar-left" };
-const _hoisted_2$g = { key: 1 };
-const _hoisted_3$a = { key: 3 };
+const _hoisted_1$l = { class: "lupa-toolbar-left" };
+const _hoisted_2$h = { key: 1 };
+const _hoisted_3$b = { key: 3 };
 const _hoisted_4$6 = { key: 5 };
 const _hoisted_5$5 = { class: "lupa-toolbar-right" };
 const _hoisted_6$3 = { key: 1 };
 const _hoisted_7$2 = { key: 3 };
-const _sfc_main$l = /* @__PURE__ */ vue.defineComponent({
+const _sfc_main$m = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchResultsToolbar",
   props: {
     options: {},
@@ -7130,15 +7130,15 @@ const _sfc_main$l = /* @__PURE__ */ vue.defineComponent({
         id: "lupa-search-results-toolbar",
         class: vue.normalizeClass({ "lupa-filter-no-results": !hasResults.value })
       }, [
-        vue.createElementVNode("div", _hoisted_1$k, [
-          showLayoutSelection.value ? (vue.openBlock(), vue.createBlock(_sfc_main$q, { key: 0 })) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$g)),
-          showItemSummary.value ? (vue.openBlock(), vue.createBlock(_sfc_main$H, {
+        vue.createElementVNode("div", _hoisted_1$l, [
+          showLayoutSelection.value ? (vue.openBlock(), vue.createBlock(_sfc_main$r, { key: 0 })) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$h)),
+          showItemSummary.value ? (vue.openBlock(), vue.createBlock(_sfc_main$I, {
             key: 2,
             label: searchSummaryLabel.value,
             clearable: vue.unref(hasAnyFilter) && showFilterClear.value,
             onClear: handleClearAll
-          }, null, 8, ["label", "clearable"])) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$a)),
-          displayPageSelect.value ? (vue.openBlock(), vue.createBlock(_sfc_main$o, {
+          }, null, 8, ["label", "clearable"])) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$b)),
+          displayPageSelect.value ? (vue.openBlock(), vue.createBlock(_sfc_main$p, {
             key: 4,
             options: paginationOptions.value.pageSelect,
             "last-page-label": paginationOptions.value.labels.showMore,
@@ -7146,22 +7146,74 @@ const _sfc_main$l = /* @__PURE__ */ vue.defineComponent({
           }, null, 8, ["options", "last-page-label", "first-page-label"])) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$6))
         ]),
         vue.createElementVNode("div", _hoisted_5$5, [
-          vue.createVNode(_sfc_main$p, {
+          vue.createVNode(_sfc_main$q, {
             label: optionsValue.value.labels.mobileFilterButton,
             "show-filter-count": showMobileFilterCount.value
           }, null, 8, ["label", "show-filter-count"]),
-          paginationDisplay.value.pageSize ? (vue.openBlock(), vue.createBlock(_sfc_main$n, {
+          paginationDisplay.value.pageSize ? (vue.openBlock(), vue.createBlock(_sfc_main$o, {
             key: 0,
             options: paginationOptions.value.pageSize,
             label: paginationOptions.value.labels.pageSize
           }, null, 8, ["options", "label"])) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_6$3)),
-          sortOptions.value ? (vue.openBlock(), vue.createBlock(_sfc_main$m, {
+          sortOptions.value ? (vue.openBlock(), vue.createBlock(_sfc_main$n, {
             key: 2,
             options: sortOptions.value,
             callbacks: callbacks.value
           }, null, 8, ["options", "callbacks"])) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_7$2))
         ])
       ], 2);
+    };
+  }
+});
+const _hoisted_1$k = { key: 0 };
+const _hoisted_2$g = { key: 1 };
+const _hoisted_3$a = ["innerHTML"];
+const _sfc_main$l = /* @__PURE__ */ vue.defineComponent({
+  __name: "SearchResultsProductCards",
+  props: {
+    products: {}
+  },
+  setup(__props) {
+    const props = __props;
+    const optionsStore = useOptionsStore();
+    const isInStock = vue.ref(true);
+    const loading = vue.ref(true);
+    const error = vue.ref("");
+    const rawHtml = vue.ref("");
+    const ssr = vue.computed(() => Boolean(optionsStore.searchResultOptions.ssr));
+    vue.onMounted(() => __async(this, null, function* () {
+      try {
+        console.log("SearchResultsProductCards");
+        console.log("props: =>", { props });
+        console.log("product: => ", props.products);
+        const response = yield fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=1027573`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        const json = yield response.json();
+        console.log("Response json: ", json);
+        rawHtml.value = json.html;
+      } catch (err) {
+        error.value = err.message;
+      } finally {
+        loading.value = false;
+      }
+    }));
+    const checkIfIsInStock = () => __async(this, null, function* () {
+      isInStock.value = props.options.isInStock ? yield props.options.isInStock(props.product) : true;
+    });
+    if (ssr.value) {
+      checkIfIsInStock();
+    }
+    return (_ctx, _cache) => {
+      return vue.openBlock(), vue.createElementBlock("div", null, [
+        loading.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$k, "Loading...")) : vue.createCommentVNode("", true),
+        error.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$g, vue.toDisplayString(error.value), 1)) : vue.createCommentVNode("", true),
+        !loading.value && !error.value ? (vue.openBlock(), vue.createElementBlock("div", {
+          key: 2,
+          innerHTML: rawHtml.value
+        }, null, 8, _hoisted_3$a)) : vue.createCommentVNode("", true)
+      ]);
     };
   }
 });
@@ -7602,24 +7654,23 @@ const _sfc_main$e = /* @__PURE__ */ vue.defineComponent({
     };
     return (_ctx, _cache) => {
       var _a;
-      const _component_SearchResultsProductCards = vue.resolveComponent("SearchResultsProductCards");
       return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$d, [
         vue.unref(loading) && !vue.unref(isMobileSidebarVisible) ? (vue.openBlock(), vue.createBlock(Spinner, {
           key: 0,
           class: "lupa-loader"
         })) : vue.createCommentVNode("", true),
         vue.unref(hasResults) ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
-          showTopFilters.value ? (vue.openBlock(), vue.createBlock(_sfc_main$r, {
+          showTopFilters.value ? (vue.openBlock(), vue.createBlock(_sfc_main$s, {
             key: 0,
             options: (_a = _ctx.options.filters) != null ? _a : {}
           }, null, 8, ["options"])) : vue.createCommentVNode("", true),
-          showMobileFilters.value ? (vue.openBlock(), vue.createBlock(_sfc_main$l, {
+          showMobileFilters.value ? (vue.openBlock(), vue.createBlock(_sfc_main$m, {
             key: 1,
             class: "lupa-toolbar-mobile",
             options: _ctx.options,
             "pagination-location": "top"
           }, null, 8, ["options"])) : vue.createCommentVNode("", true),
-          currentFilterOptions.value ? (vue.openBlock(), vue.createBlock(_sfc_main$E, {
+          currentFilterOptions.value ? (vue.openBlock(), vue.createBlock(_sfc_main$F, {
             key: 2,
             class: vue.normalizeClass(currentFiltersClass.value),
             "data-cy": "lupa-search-result-filters-mobile-toolbar",
@@ -7633,12 +7684,12 @@ const _sfc_main$e = /* @__PURE__ */ vue.defineComponent({
           sdkOptions: _ctx.options.options
         }, null, 8, ["options", "sdkOptions"]),
         vue.unref(hasResults) ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 2 }, [
-          vue.createVNode(_sfc_main$l, {
+          vue.createVNode(_sfc_main$m, {
             class: "lupa-toolbar-top",
             options: _ctx.options,
             "pagination-location": "top"
           }, null, 8, ["options"]),
-          vue.createVNode(_component_SearchResultsProductCards, {
+          vue.createVNode(_sfc_main$l, {
             products: vue.unref(searchResult).items
           }, null, 8, ["products"]),
           vue.unref(isPageEmpty) && _ctx.options.labels.noItemsInPage ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$a, [
@@ -7649,7 +7700,7 @@ const _sfc_main$e = /* @__PURE__ */ vue.defineComponent({
               onClick: goToFirstPage
             }, vue.toDisplayString(_ctx.options.labels.backToFirstPage), 1)) : vue.createCommentVNode("", true)
           ])) : vue.createCommentVNode("", true),
-          vue.createVNode(_sfc_main$l, {
+          vue.createVNode(_sfc_main$m, {
             class: "lupa-toolbar-bottom",
             options: _ctx.options,
             "pagination-location": "bottom"
@@ -7728,7 +7779,7 @@ const _sfc_main$d = /* @__PURE__ */ vue.defineComponent({
               onClick: handleNavigationBack
             }, vue.toDisplayString(backTitle.value), 9, _hoisted_3$5)
           ])) : vue.createCommentVNode("", true),
-          vue.createVNode(_sfc_main$l, {
+          vue.createVNode(_sfc_main$m, {
             class: "lupa-toolbar-mobile",
             "pagination-location": "top",
             options: _ctx.options
@@ -7960,8 +8011,8 @@ const _sfc_main$c = /* @__PURE__ */ vue.defineComponent({
         class: vue.normalizeClass(["lupa-search-result-wrapper", { "lupa-search-wrapper-no-results": !vue.unref(hasResults) }])
       }, [
         _ctx.isContainer ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$b, [
-          vue.createVNode(_sfc_main$I, { labels: didYouMeanLabels.value }, null, 8, ["labels"]),
-          vue.createVNode(_sfc_main$G, {
+          vue.createVNode(_sfc_main$J, { labels: didYouMeanLabels.value }, null, 8, ["labels"]),
+          vue.createVNode(_sfc_main$H, {
             "show-summary": true,
             options: _ctx.options,
             "is-product-list": (_a = _ctx.isProductList) != null ? _a : false
@@ -7971,24 +8022,24 @@ const _sfc_main$c = /* @__PURE__ */ vue.defineComponent({
           key: 1,
           options: _ctx.options
         }, null, 8, ["options"])) : vue.createCommentVNode("", true),
-        _ctx.options.filters ? (vue.openBlock(), vue.createBlock(_sfc_main$t, {
+        _ctx.options.filters ? (vue.openBlock(), vue.createBlock(_sfc_main$u, {
           key: 2,
           options: _ctx.options.filters
         }, null, 8, ["options"])) : vue.createCommentVNode("", true),
-        vue.unref(currentQueryText) || _ctx.isProductList ? (vue.openBlock(), vue.createBlock(_sfc_main$s, {
+        vue.unref(currentQueryText) || _ctx.isProductList ? (vue.openBlock(), vue.createBlock(_sfc_main$t, {
           key: 3,
           breadcrumbs: _ctx.options.breadcrumbs
         }, null, 8, ["breadcrumbs"])) : vue.createCommentVNode("", true),
         isTitleResultTopPosition.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$8, [
-          showFilterSidebar.value ? (vue.openBlock(), vue.createBlock(_sfc_main$u, {
+          showFilterSidebar.value ? (vue.openBlock(), vue.createBlock(_sfc_main$v, {
             key: 0,
             options: (_b = _ctx.options.filters) != null ? _b : {},
             ref_key: "searchResultsFilters",
             ref: searchResultsFilters
           }, null, 8, ["options"])) : vue.createCommentVNode("", true),
           vue.createElementVNode("div", _hoisted_3$4, [
-            vue.createVNode(_sfc_main$I, { labels: didYouMeanLabels.value }, null, 8, ["labels"]),
-            vue.createVNode(_sfc_main$G, {
+            vue.createVNode(_sfc_main$J, { labels: didYouMeanLabels.value }, null, 8, ["labels"]),
+            vue.createVNode(_sfc_main$H, {
               options: _ctx.options,
               "is-product-list": (_c = _ctx.isProductList) != null ? _c : false
             }, null, 8, ["options", "is-product-list"]),
@@ -8003,13 +8054,13 @@ const _sfc_main$c = /* @__PURE__ */ vue.defineComponent({
             }, 8, ["options", "ssr"])
           ])
         ])) : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 5 }, [
-          vue.createVNode(_sfc_main$I, { labels: didYouMeanLabels.value }, null, 8, ["labels"]),
-          vue.createVNode(_sfc_main$G, {
+          vue.createVNode(_sfc_main$J, { labels: didYouMeanLabels.value }, null, 8, ["labels"]),
+          vue.createVNode(_sfc_main$H, {
             options: _ctx.options,
             "is-product-list": (_d = _ctx.isProductList) != null ? _d : false
           }, null, 8, ["options", "is-product-list"]),
           vue.createElementVNode("div", _hoisted_4$3, [
-            showFilterSidebar.value ? (vue.openBlock(), vue.createBlock(_sfc_main$u, {
+            showFilterSidebar.value ? (vue.openBlock(), vue.createBlock(_sfc_main$v, {
               key: 0,
               options: (_e = _ctx.options.filters) != null ? _e : {},
               ref_key: "searchResultsFilters",
@@ -13636,7 +13687,7 @@ const _sfc_main$9 = /* @__PURE__ */ vue.defineComponent({
           onClick: vue.withModifiers(innerClick, ["stop"])
         }, [
           vue.createElementVNode("div", _hoisted_1$9, [
-            vue.createVNode(_sfc_main$J, {
+            vue.createVNode(_sfc_main$K, {
               options: fullSearchBoxOptions.value,
               "is-search-container": true,
               ref_key: "searchBox",
@@ -15118,7 +15169,7 @@ exports.DocumentElementType = DocumentElementType;
 exports.LupaSearch = LupaSearch;
 exports.ProductList = _sfc_main$a;
 exports.Recommendations = _sfc_main$8;
-exports.SearchBox = _sfc_main$J;
+exports.SearchBox = _sfc_main$K;
 exports.SearchBoxPanelType = SearchBoxPanelType;
 exports.SearchContainer = _sfc_main$9;
 exports.SearchResults = _sfc_main$c;

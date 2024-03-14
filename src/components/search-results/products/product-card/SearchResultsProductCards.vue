@@ -19,6 +19,8 @@ const ssr = computed(() => Boolean(optionsStore.searchResultOptions.ssr))
 
 onMounted(async () => {
   try {
+    console.log('SearchResultsProductCards')
+    console.log("props: =>", {props})
     console.log("product: => ", props.products)
     const response = await fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=1027573`)
     if (!response.ok) {
