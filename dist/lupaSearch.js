@@ -7182,7 +7182,7 @@ const _sfc_main$k = /* @__PURE__ */ vue.defineComponent({
     const isInStock = vue.ref(true);
     const loading = vue.ref(true);
     const error = vue.ref("");
-    const responseData = vue.ref("");
+    const rawHtml = vue.ref("");
     const ssr = vue.computed(() => Boolean(optionsStore.searchResultOptions.ssr));
     vue.onMounted(() => __async(this, null, function* () {
       try {
@@ -7192,8 +7192,12 @@ const _sfc_main$k = /* @__PURE__ */ vue.defineComponent({
           throw new Error("Failed to fetch data");
         }
         const json = yield response.json();
-        console.log("json: ", json);
+        console.log("Response json: ", json);
+        rawHtml.value = json.html;
       } catch (err) {
+        error.value = err.message;
+      } finally {
+        loading.value = false;
       }
     }));
     const checkIfIsInStock = () => __async(this, null, function* () {
@@ -7208,7 +7212,7 @@ const _sfc_main$k = /* @__PURE__ */ vue.defineComponent({
         error.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$f, vue.toDisplayString(error.value), 1)) : vue.createCommentVNode("", true),
         !loading.value && !error.value ? (vue.openBlock(), vue.createElementBlock("div", {
           key: 2,
-          innerHTML: responseData.value
+          innerHTML: rawHtml.value
         }, null, 8, _hoisted_3$9)) : vue.createCommentVNode("", true)
       ]);
     };

@@ -7180,7 +7180,7 @@ const _sfc_main$k = /* @__PURE__ */ defineComponent({
     const isInStock = ref(true);
     const loading = ref(true);
     const error = ref("");
-    const responseData = ref("");
+    const rawHtml = ref("");
     const ssr = computed(() => Boolean(optionsStore.searchResultOptions.ssr));
     onMounted(() => __async(this, null, function* () {
       try {
@@ -7190,8 +7190,12 @@ const _sfc_main$k = /* @__PURE__ */ defineComponent({
           throw new Error("Failed to fetch data");
         }
         const json = yield response.json();
-        console.log("json: ", json);
+        console.log("Response json: ", json);
+        rawHtml.value = json.html;
       } catch (err) {
+        error.value = err.message;
+      } finally {
+        loading.value = false;
       }
     }));
     const checkIfIsInStock = () => __async(this, null, function* () {
@@ -7206,7 +7210,7 @@ const _sfc_main$k = /* @__PURE__ */ defineComponent({
         error.value ? (openBlock(), createElementBlock("div", _hoisted_2$f, toDisplayString(error.value), 1)) : createCommentVNode("", true),
         !loading.value && !error.value ? (openBlock(), createElementBlock("div", {
           key: 2,
-          innerHTML: responseData.value
+          innerHTML: rawHtml.value
         }, null, 8, _hoisted_3$9)) : createCommentVNode("", true)
       ]);
     };

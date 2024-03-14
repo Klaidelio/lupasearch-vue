@@ -1,9 +1,7 @@
 <script lang="ts" setup>
 import { useOptionsStore } from '@/stores/options'
 import type { ProductClickTrackingSettings } from '@/types/AnalyticsOptions'
-
 import type { SearchResultsProductCardOptions } from '@/types/search-results/SearchResultsProductCardOptions'
-
 import type { Document } from '@getlupa/client-sdk/Types'
 import { computed, onMounted, ref } from 'vue'
 
@@ -15,29 +13,14 @@ const props = defineProps<{
   clickTrackingSettings?: ProductClickTrackingSettings
 }>()
 
-
 const optionsStore = useOptionsStore()
-
-
-
 
 const isInStock = ref(true)
 const loading = ref(true)
 const error = ref('')
-const responseData = ref('')
-
-
-
-
-
-
-
+const rawHtml = ref('')
 
 const ssr = computed(() => Boolean(optionsStore.searchResultOptions.ssr))
-
-
-
-
 
 onMounted(async () => {
   try {
@@ -47,31 +30,30 @@ onMounted(async () => {
       throw new Error('Failed to fetch data')
     }
     const json = await response.json()
-    console.log("json: ", json)
-    // responseData.value = html
-    // loading.value = false
+    console.log("Response json: ", json)
+    rawHtml.value = json.html
   } catch (err) {
-    // error.value = err.message
-    // loading.value = false
+    error.value = err.message
+  } finally {
+    loading.value = false
+
   }
 })
+
 const checkIfIsInStock = async (): Promise<void> => {
   isInStock.value = props.options.isInStock ? await props.options.isInStock(props.product) : true
 }
 
-
-
-
-
 if (ssr.value) {
   checkIfIsInStock()
 }
+
 </script>
-<!-- cia -->
+
 <template>
   <div>
     <div v-if="loading">Loading...</div>
     <div v-if="error">{{ error }}</div>
-    <div v-if="!loading && !error" v-html="responseData"></div>
+    <div v-if="!loading && !error" v-html="rawHtml"></div>
   </div>
 </template>
