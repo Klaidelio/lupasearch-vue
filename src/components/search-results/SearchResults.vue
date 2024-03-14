@@ -126,11 +126,19 @@ const handleResults = async ({
     results.total > 0 || results.similarQueries?.length || results.didYouMean?.options
   )
   // @ts-ignore
-  props.options.callbacks?.onSearchResults?.({ queryKey, hasResults, params: paramStore.params, test2: results.items })
+  props.options.callbacks?.onSearchResults?.({ queryKey, hasResults, params: paramStore.params })
   if (!hasResults) {
     return
   }
-  // cia
+  const response = await fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${results.items.map(({ id }) => id).join()}`)
+  if (response.ok) {
+    const json = await response.json()
+    // @ts-ignore
+    if (!!json.html) {
+      // @ts-ignore
+      props.options.callbacks?.onSearchResults?.({ queryKey, hasResults, params: paramStore.params, html: json.html })
+    }
+  }
   trackItemListView(props.options.labels.htmlTitleTemplate, results.items)
   await dynamicDataStore.enhanceSearchResultsWithDynamicData({ result: results })
 }
@@ -206,7 +214,7 @@ const handleMounted = (): void => {
     setDocumentTitle(pageTitle, '')
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     if (searchResultsFilters.value) {
-      ;(searchResultsFilters.value as any)?.fetch()
+      ; (searchResultsFilters.value as any)?.fetch()
     }
   }
   const params = new URLSearchParams(window.location.search)
@@ -260,33 +268,19 @@ handleCreated()
 defineExpose({ handleMounted, handleUrlChange })
 </script>
 <template>
-  <div
-    class="lupa-search-result-wrapper"
-    :class="{ 'lupa-search-wrapper-no-results': !hasResults }"
-  >
+  <div class="lupa-search-result-wrapper" :class="{ 'lupa-search-wrapper-no-results': !hasResults }">
     <template v-if="isContainer">
       <div class="lupa-container-title-summary-mobile">
         <SearchResultsDidYouMean :labels="didYouMeanLabels" />
-        <SearchResultsTitle
-          :show-summary="true"
-          :options="options"
-          :is-product-list="isProductList ?? false"
-        />
+        <SearchResultsTitle :show-summary="true" :options="options" :is-product-list="isProductList ?? false" />
       </div>
     </template>
     <CategoryTopFilters v-if="isTitleResultTopPosition" :options="options" />
     <MobileFilterSidebar v-if="options.filters" :options="options.filters" />
-    <SearchResultsBreadcrumbs
-      v-if="currentQueryText || isProductList"
-      :breadcrumbs="options.breadcrumbs"
-    />
+    <SearchResultsBreadcrumbs v-if="currentQueryText || isProductList" :breadcrumbs="options.breadcrumbs" />
     <template v-if="isTitleResultTopPosition">
       <div id="lupa-search-results" class="top-layout-wrapper">
-        <SearchResultsFilters
-          v-if="showFilterSidebar"
-          :options="options.filters ?? {}"
-          ref="searchResultsFilters"
-        />
+        <SearchResultsFilters v-if="showFilterSidebar" :options="options.filters ?? {}" ref="searchResultsFilters" />
         <div class="search-content">
           <SearchResultsDidYouMean :labels="didYouMeanLabels" />
           <SearchResultsTitle :options="options" :is-product-list="isProductList ?? false" />
@@ -303,11 +297,7 @@ defineExpose({ handleMounted, handleUrlChange })
       <SearchResultsTitle :options="options" :is-product-list="isProductList ?? false" />
 
       <div id="lupa-search-results">
-        <SearchResultsFilters
-          v-if="showFilterSidebar"
-          :options="options.filters ?? {}"
-          ref="searchResultsFilters"
-        />
+        <SearchResultsFilters v-if="showFilterSidebar" :options="options.filters ?? {}" ref="searchResultsFilters" />
         <SearchResultsProducts :options="options" :ssr="ssrEnabled">
           <template #append>
             <slot />

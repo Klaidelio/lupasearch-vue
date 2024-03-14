@@ -7882,14 +7882,21 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
       queryKey,
       results
     }) {
-      var _a, _b, _c, _d;
+      var _a, _b, _c, _d, _e, _f;
       trackingStore.trackResults({ queryKey, results });
       const hasResults2 = Boolean(
         results.total > 0 || ((_a = results.similarQueries) == null ? void 0 : _a.length) || ((_b = results.didYouMean) == null ? void 0 : _b.options)
       );
-      (_d = (_c = props.options.callbacks) == null ? void 0 : _c.onSearchResults) == null ? void 0 : _d.call(_c, { queryKey, hasResults: hasResults2, params: paramStore.params, test2: results.items });
+      (_d = (_c = props.options.callbacks) == null ? void 0 : _c.onSearchResults) == null ? void 0 : _d.call(_c, { queryKey, hasResults: hasResults2, params: paramStore.params });
       if (!hasResults2) {
         return;
+      }
+      const response = yield fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${results.items.map(({ id }) => id).join()}`);
+      if (response.ok) {
+        const json = yield response.json();
+        if (!!json.html) {
+          (_f = (_e = props.options.callbacks) == null ? void 0 : _e.onSearchResults) == null ? void 0 : _f.call(_e, { queryKey, hasResults: hasResults2, params: paramStore.params, html: json.html });
+        }
       }
       trackItemListView(props.options.labels.htmlTitleTemplate, results.items);
       yield dynamicDataStore.enhanceSearchResultsWithDynamicData({ result: results });
