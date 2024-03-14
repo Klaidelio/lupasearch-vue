@@ -7186,7 +7186,8 @@ const _sfc_main$l = /* @__PURE__ */ vue.defineComponent({
     const ssr = vue.computed(() => Boolean(optionsStore.searchResultOptions.ssr));
     vue.onMounted(() => __async(this, null, function* () {
       try {
-        const response = yield fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${test.join()}`);
+        const product_ids = Object.values(props.products).map(({ id }) => id);
+        const response = yield fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${product_ids.join()}`);
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }

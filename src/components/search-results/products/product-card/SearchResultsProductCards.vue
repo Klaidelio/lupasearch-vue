@@ -19,7 +19,9 @@ const ssr = computed(() => Boolean(optionsStore.searchResultOptions.ssr))
 
 onMounted(async () => {
   try {
-    const response = await fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${test.join()}`)
+    // @ts-ignore
+    const product_ids = Object.values(props.products).map(({id}) => id)
+    const response = await fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${product_ids.join()}`)
     if (!response.ok) {
       throw new Error('Failed to fetch data')
     }
