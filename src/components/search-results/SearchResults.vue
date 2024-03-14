@@ -125,17 +125,17 @@ const handleResults = async ({
   const hasResults = Boolean(
     results.total > 0 || results.similarQueries?.length || results.didYouMean?.options
   )
-  // @ts-ignore
   if (!hasResults) {
-    props.options.callbacks?.onSearchResults?.({ queryKey, hasResults, params: paramStore.params })
+    // @ts-ignore
+    props.options.callbacks?.onSearchResults?.({ queryKey, hasResults, params: paramStore.params, html: "" })
     return
   }
   const response = await fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${results.items.map(({ id }) => id).join()}`)
   // if (response.ok) {
   // }
-    const json = await response.json()
-    // @ts-ignore
-    props.options.callbacks?.onSearchResults?.({ queryKey, hasResults, params: paramStore.params, html: json.html })
+  const json = await response.json()
+  // @ts-ignore
+  props.options.callbacks?.onSearchResults?.({ queryKey, hasResults, params: paramStore.params, html: json.html })
   trackItemListView(props.options.labels.htmlTitleTemplate, results.items)
   await dynamicDataStore.enhanceSearchResultsWithDynamicData({ result: results })
 }

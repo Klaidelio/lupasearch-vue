@@ -7895,7 +7895,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
         results.total > 0 || ((_a = results.similarQueries) == null ? void 0 : _a.length) || ((_b = results.didYouMean) == null ? void 0 : _b.options)
       );
       if (!hasResults2) {
-        (_d = (_c = props.options.callbacks) == null ? void 0 : _c.onSearchResults) == null ? void 0 : _d.call(_c, { queryKey, hasResults: hasResults2, params: paramStore.params });
+        (_d = (_c = props.options.callbacks) == null ? void 0 : _c.onSearchResults) == null ? void 0 : _d.call(_c, { queryKey, hasResults: hasResults2, params: paramStore.params, html: "" });
         return;
       }
       const response = yield fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${results.items.map(({ id }) => id).join()}`);
