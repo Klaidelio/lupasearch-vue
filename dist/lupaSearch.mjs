@@ -7163,7 +7163,10 @@ const _sfc_main$m = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$k = { key: 0 };
+const _hoisted_1$k = {
+  key: 0,
+  class: "loading-overlay active"
+};
 const _hoisted_2$g = { key: 1 };
 const _hoisted_3$a = ["innerHTML"];
 const _sfc_main$l = /* @__PURE__ */ defineComponent({
@@ -7181,11 +7184,6 @@ const _sfc_main$l = /* @__PURE__ */ defineComponent({
     const ssr = computed(() => Boolean(optionsStore.searchResultOptions.ssr));
     onMounted(() => __async(this, null, function* () {
       try {
-        console.log("SearchResultsProductCards");
-        console.log("product: => ", props.products);
-        console.log("product3: => ", Object.values(props.products));
-        const test = Object.values(props.products).map((s) => s.id);
-        console.log("test3: => ", test);
         const response = yield fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${test.join()}`);
         if (!response.ok) {
           throw new Error("Failed to fetch data");
@@ -7207,7 +7205,7 @@ const _sfc_main$l = /* @__PURE__ */ defineComponent({
     }
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", null, [
-        loading.value ? (openBlock(), createElementBlock("div", _hoisted_1$k, "Loading...")) : createCommentVNode("", true),
+        loading.value ? (openBlock(), createElementBlock("div", _hoisted_1$k)) : createCommentVNode("", true),
         error.value ? (openBlock(), createElementBlock("div", _hoisted_2$g, toDisplayString(error.value), 1)) : createCommentVNode("", true),
         !loading.value && !error.value ? (openBlock(), createElementBlock("div", {
           key: 2,
