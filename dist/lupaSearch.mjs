@@ -7184,6 +7184,9 @@ const _sfc_main$l = /* @__PURE__ */ defineComponent({
         console.log("SearchResultsProductCards");
         console.log("props: =>", { props });
         console.log("product: => ", props.products);
+        console.log("product2: => ", Object.entries(props.products));
+        console.log("product3: => ", Object.values(props.products));
+        console.log("product4: => ", yield props.products);
         const response = yield fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=1027573`);
         if (!response.ok) {
           throw new Error("Failed to fetch data");
