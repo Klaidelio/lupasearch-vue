@@ -20,12 +20,13 @@ const ssr = computed(() => Boolean(optionsStore.searchResultOptions.ssr))
 onMounted(async () => {
   try {
     console.log('SearchResultsProductCards')
-    console.log("props: =>", {props})
     console.log("product: => ", props.products)
-    console.log("product2: => ", Object.entries(props.products))
     console.log("product3: => ", Object.values(props.products))
-    console.log("product4: => ", await props.products)
-    const response = await fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=1027573`)
+    // @ts-ignore
+    const test = Object.values(props.products).map(s => s.id)
+    // @ts-ignore
+    console.log("test3: => ", test)
+    const response = await fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${test.join()}`)
     if (!response.ok) {
       throw new Error('Failed to fetch data')
     }
