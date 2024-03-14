@@ -155,9 +155,11 @@ const goToFirstPage = (): void => {
     <AdditionalPanels :options="options" location="top" :sdkOptions="options.options" />
     <template v-if="hasResults">
       <SearchResultsToolbar class="lupa-toolbar-top" :options="options" pagination-location="top" />
-      <SearchResultsProductCards
-        :products="searchResult.items"
-      />
+      <div id="lupa-products" class="lupa-products" data-cy="lupa-products">
+        <SearchResultsProductCards
+          :products="searchResult.items"
+        />
+      </div>
       <!-- cia -->
       <!-- <div class="lupa-products" data-cy="lupa-products">
         <template v-if="$slots.productCard">
