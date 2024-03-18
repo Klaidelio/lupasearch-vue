@@ -3202,7 +3202,7 @@ const useSearchBoxStore = defineStore("searchBox", () => {
   };
 });
 const _hoisted_1$_ = { id: "lupa-search-box-input-container" };
-const _hoisted_2$J = { class: "lupa-input-clear" };
+const _hoisted_2$I = { class: "lupa-input-clear" };
 const _hoisted_3$v = { id: "lupa-search-box-input" };
 const _hoisted_4$n = ["value"];
 const _hoisted_5$e = ["aria-label", "placeholder"];
@@ -3293,7 +3293,7 @@ const _sfc_main$14 = /* @__PURE__ */ vue.defineComponent({
     __expose({ focus });
     return (_ctx, _cache) => {
       return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$_, [
-        vue.createElementVNode("div", _hoisted_2$J, [
+        vue.createElementVNode("div", _hoisted_2$I, [
           vue.createElementVNode("div", {
             class: vue.normalizeClass(["lupa-input-clear-content", { "lupa-input-clear-filled": inputValue.value }]),
             onClick: clear
@@ -3368,7 +3368,7 @@ const _sfc_main$13 = /* @__PURE__ */ vue.defineComponent({
   }
 });
 const _hoisted_1$Z = { class: "lupa-search-box-history-item" };
-const _hoisted_2$I = { class: "lupa-search-box-history-item-content" };
+const _hoisted_2$H = { class: "lupa-search-box-history-item-content" };
 const _sfc_main$12 = /* @__PURE__ */ vue.defineComponent({
   __name: "SearchBoxHistoryItem",
   props: {
@@ -3387,7 +3387,7 @@ const _sfc_main$12 = /* @__PURE__ */ vue.defineComponent({
     };
     return (_ctx, _cache) => {
       return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$Z, [
-        vue.createElementVNode("div", _hoisted_2$I, [
+        vue.createElementVNode("div", _hoisted_2$H, [
           vue.createElementVNode("div", {
             class: vue.normalizeClass(["lupa-search-box-history-item-text", { "lupa-search-box-history-item-highlighted": _ctx.highlighted }]),
             onClick: click2
@@ -3478,7 +3478,7 @@ const _sfc_main$10 = /* @__PURE__ */ vue.defineComponent({
   }
 });
 const _hoisted_1$W = ["innerHTML"];
-const _hoisted_2$H = {
+const _hoisted_2$G = {
   key: 1,
   "data-cy": "lupa-suggestion-value",
   class: "lupa-suggestion-value"
@@ -3533,7 +3533,7 @@ const _sfc_main$$ = /* @__PURE__ */ vue.defineComponent({
           class: "lupa-suggestion-value",
           "data-cy": "lupa-suggestion-value",
           innerHTML: _ctx.suggestion.displayHighlight
-        }, null, 8, _hoisted_1$W)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$H, vue.toDisplayString(_ctx.suggestion.display), 1)),
+        }, null, 8, _hoisted_1$W)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$G, vue.toDisplayString(_ctx.suggestion.display), 1)),
         _ctx.suggestion.facet ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$u, [
           vue.createElementVNode("span", _hoisted_4$m, vue.toDisplayString(facetLabel.value), 1),
           vue.createElementVNode("span", _hoisted_5$d, vue.toDisplayString(_ctx.suggestion.facet.title), 1)
@@ -3764,8 +3764,7 @@ const joinUrlParts = (...parts) => {
   }
   return (_c = (_b = (_a = parts == null ? void 0 : parts.map((part) => part.replace(/(^\/+|\/+$)/g, ""))) == null ? void 0 : _a.filter((part) => part !== "")) == null ? void 0 : _b.join("/")) != null ? _c : "";
 };
-const _hoisted_1$U = /* @__PURE__ */ vue.createElementVNode("div", null, "Testas Paveiksliukas", -1);
-const _hoisted_2$G = ["src"];
+const _hoisted_1$U = ["src"];
 const _sfc_main$Y = /* @__PURE__ */ vue.defineComponent({
   __name: "ProductImage",
   props: {
@@ -3813,17 +3812,14 @@ const _sfc_main$Y = /* @__PURE__ */ vue.defineComponent({
     });
     return (_ctx, _cache) => {
       var _a, _b;
-      return vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
-        _hoisted_1$U,
-        vue.createElementVNode("div", {
-          class: vue.normalizeClass((_a = _ctx.wrapperClass) != null ? _a : "")
-        }, [
-          vue.createElementVNode("img", vue.mergeProps({
-            class: (_b = _ctx.imageClass) != null ? _b : "",
-            src: finalUrl.value
-          }, { alt: imageAlt.value ? imageAlt.value : void 0 }, { onError: replaceWithPlaceholder }), null, 16, _hoisted_2$G)
-        ], 2)
-      ], 64);
+      return vue.openBlock(), vue.createElementBlock("div", {
+        class: vue.normalizeClass((_a = _ctx.wrapperClass) != null ? _a : "")
+      }, [
+        vue.createElementVNode("img", vue.mergeProps({
+          class: (_b = _ctx.imageClass) != null ? _b : "",
+          src: finalUrl.value
+        }, { alt: imageAlt.value ? imageAlt.value : void 0 }, { onError: replaceWithPlaceholder }), null, 16, _hoisted_1$U)
+      ], 2);
     };
   }
 });
