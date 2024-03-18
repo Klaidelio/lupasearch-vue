@@ -58,7 +58,6 @@ const imageAlt = computed(() => {
 })
 </script>
 <template>
-  <div>Testas Paveiksliukas</div>
   <div :class="wrapperClass ?? ''">
     <img
       :class="imageClass ?? ''"
