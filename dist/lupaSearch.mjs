@@ -7181,12 +7181,11 @@ const _sfc_main$l = /* @__PURE__ */ defineComponent({
     onMounted(() => __async(this, null, function* () {
       try {
         const product_ids = Object.values(props.products).map(({ id }) => id);
-        const response = yield fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${product_ids.join()}`);
+        const response = yield fetch(`https://bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${product_ids.join()}`);
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
         const json = yield response.json();
-        console.log("Response json: ", json);
         rawHtml.value = json.html;
       } catch (err) {
         error.value = err.message;
@@ -7234,12 +7233,11 @@ const _sfc_main$k = /* @__PURE__ */ defineComponent({
     onMounted(() => __async(this, null, function* () {
       try {
         console.log("product: => ", props.product);
-        const response = yield fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=1027573`);
+        const response = yield fetch(`https://bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=1027573`);
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
         const json = yield response.json();
-        console.log("Response json: ", json);
         rawHtml.value = json.html;
       } catch (err) {
         error.value = err.message;
@@ -7889,7 +7887,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
         (_d = (_c = props.options.callbacks) == null ? void 0 : _c.onSearchResults) == null ? void 0 : _d.call(_c, { queryKey, hasResults: hasResults2, params: paramStore.params, html: "" });
         return;
       }
-      const response = yield fetch(`https://stg.bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${results.items.map(({ id }) => id).join()}`);
+      const response = yield fetch(`https://bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${results.items.map(({ id }) => id).join()}`);
       const json = yield response.json();
       (_f = (_e = props.options.callbacks) == null ? void 0 : _e.onSearchResults) == null ? void 0 : _f.call(_e, { queryKey, hasResults: hasResults2, params: paramStore.params, html: json.html });
       trackItemListView(props.options.labels.htmlTitleTemplate, results.items);
