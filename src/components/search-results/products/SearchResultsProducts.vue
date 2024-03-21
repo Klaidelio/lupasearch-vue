@@ -8,10 +8,8 @@ import type {
   SearchResultsSimilarQueriesLabels,
   SearchResultsSimilarResultsLabels
 } from '@/types/search-results/SearchResultsOptions'
-import type { Document } from '@getlupa/client-sdk/Types'
 import type { SearchResultsProductCardOptions } from '@/types/search-results/SearchResultsProductCardOptions'
 import { pick } from '@/utils/picker.utils'
-import { getProductKey } from '@/utils/string.utils'
 import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
 import { QUERY_PARAMS } from '@/constants/queryParams.const'
@@ -23,7 +21,6 @@ import SearchResultsProductCards from './product-card/SearchResultsProductCards.
 import SearchResultsSimilarQueries from './similar-queries/SearchResultsSimilarQueries.vue'
 import AdditionalPanels from '../additional-panels/AdditionalPanels.vue'
 import Spinner from '@/components/common/Spinner.vue'
-import { useOptionsStore } from '@/stores/options'
 import SearchResultsSimilarResults from './similar-results/SearchResultsSimilarResults.vue'
 
 const props = defineProps<{
@@ -33,7 +30,6 @@ const props = defineProps<{
 
 const searchResultStore = useSearchResultStore()
 const paramStore = useParamsStore()
-const optionsStore = useOptionsStore()
 
 const {
   hasResults,
@@ -123,10 +119,6 @@ const hasSimilarQueries = computed(() => Boolean(searchResult.value.similarQueri
 
 const hasSimilarResults = computed(() => Boolean(searchResult.value.similarResults?.items?.length))
 
-const getProductKeyAction = (index: number, product: Document): string => {
-  return getProductKey(`${index}`, product, props.options.idKey)
-}
-
 const goToFirstPage = (): void => {
   paramStore.appendParams({
     params: [{ name: QUERY_PARAMS.PAGE, value: '1' }]
@@ -160,7 +152,6 @@ const goToFirstPage = (): void => {
           :products="searchResult.items"
         />
       </div>
-      <!-- cia -->
       <!-- <div class="lupa-products" data-cy="lupa-products">
         <template v-if="$slots.productCard">
           <slot
