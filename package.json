@@ -1,6 +1,6 @@
 {
   "name": "@getlupa/vue",
-  "version": "0.8.5",
+  "version": "0.8.7",
   "main": "dist/lupaSearch.mjs",
   "module": "dist/lupaSearch.mjs",
   "types": "dist/src/index.d.ts",
@@ -42,6 +42,7 @@
     "@vue/eslint-config-typescript": "^11.0.3",
     "@vue/test-utils": "^2.4.0",
     "@vue/tsconfig": "^0.4.0",
+    "@vueform/slider": "^2.1.7",
     "eslint": "^8.39.0",
     "eslint-plugin-vue": "^9.11.0",
     "happy-dom": "^9.20.3",
