@@ -25,7 +25,7 @@ const ssr = computed(() => Boolean(optionsStore.searchResultOptions.ssr))
 onMounted(async () => {
   try {
     console.log("product: => ", props.product)
-    const response = await fetch(`https://bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=1027573`)
+    const response = await fetch(window.location.origin + `/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=1027573`)
     if (!response.ok) {
       throw new Error('Failed to fetch data')
     }

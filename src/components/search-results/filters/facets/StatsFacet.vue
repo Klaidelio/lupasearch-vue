@@ -243,7 +243,7 @@ const handleDragging = (value: number[]): void => {
       </div>
     </div>
     <div class="lupa-stats-slider-wrapper" v-if="isSliderVisible">
-      <!-- <Slider
+      <Slider
         class="slider"
         :tooltips="false"
         :min="facetMin"
@@ -255,7 +255,7 @@ const handleDragging = (value: number[]): void => {
         @slide="handleDragging"
         @end="handleChange"
       >
-      </Slider> -->
+      </Slider>
     </div>
   </div>
 </template>

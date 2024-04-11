@@ -21,7 +21,7 @@ onMounted(async () => {
   try {
     // @ts-ignore
     const product_ids = Object.values(props.products).map(({id}) => id)
-    const response = await fetch(`https://bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${product_ids.join()}`)
+    const response = await fetch(window.location.origin + `/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${product_ids.join()}`)
     if (!response.ok) {
       throw new Error('Failed to fetch data')
     }

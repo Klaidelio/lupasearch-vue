@@ -130,7 +130,7 @@ const handleResults = async ({
     props.options.callbacks?.onSearchResults?.({ queryKey, hasResults, params: paramStore.params, html: "" })
     return
   }
-  const response = await fetch(`https://bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${results.items.map(({ id }) => id).join()}`)
+  const response = await fetch(window.location.origin + `/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${results.items.map(({ id }) => id).join()}`)
   // if (response.ok) {
   // }
   const json = await response.json()

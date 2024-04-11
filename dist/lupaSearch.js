@@ -5948,13 +5948,13 @@ const _sfc_main$B = /* @__PURE__ */ vue.defineComponent({
     const isIntegerRange = vue.computed(() => {
       return Number.isInteger(currentMinValue.value) && Number.isInteger(currentMaxValue.value);
     });
-    vue.computed(() => {
+    const interval = vue.computed(() => {
       return isIntegerRange.value ? 1 : -1;
     });
     const sliderInputFormat = vue.computed(() => {
       return isPrice.value ? `[0-9]+([${separator.value}][0-9]{1,2})?` : void 0;
     });
-    vue.computed(() => {
+    const sliderAria = vue.computed(() => {
       var _a, _b, _c, _d, _e, _f;
       return {
         "aria-label": ((_b = (_a = props.options.stats) == null ? void 0 : _a.labels) == null ? void 0 : _b.sliderDotAriaLabel) ? `${(_d = (_c = props.options.stats) == null ? void 0 : _c.labels) == null ? void 0 : _d.sliderDotAriaLabel} - ${(_e = props.facet) == null ? void 0 : _e.label}` : `Range slider control dot for ${(_f = props.facet) == null ? void 0 : _f.label}`
@@ -5990,7 +5990,11 @@ const _sfc_main$B = /* @__PURE__ */ vue.defineComponent({
         type: "range"
       });
     };
+    const handleDragging = (value) => {
+      innerSliderRange.value = value;
+    };
     return (_ctx, _cache) => {
+      const _component_Slider = vue.resolveComponent("Slider");
       return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$A, [
         !isInputVisible.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$q, vue.toDisplayString(statsSummary.value), 1)) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$j, [
           vue.createElementVNode("div", null, [
@@ -6039,7 +6043,21 @@ const _sfc_main$B = /* @__PURE__ */ vue.defineComponent({
             ])
           ])
         ])),
-        isSliderVisible.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_13)) : vue.createCommentVNode("", true)
+        isSliderVisible.value ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_13, [
+          vue.createVNode(_component_Slider, {
+            class: "slider",
+            tooltips: false,
+            min: facetMin.value,
+            max: facetMax.value,
+            lazy: true,
+            step: interval.value,
+            aria: sliderAria.value,
+            modelValue: sliderRange.value,
+            "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => sliderRange.value = $event),
+            onSlide: handleDragging,
+            onEnd: handleChange
+          }, null, 8, ["min", "max", "step", "aria", "modelValue"])
+        ])) : vue.createCommentVNode("", true)
       ]);
     };
   }
@@ -7183,7 +7201,7 @@ const _sfc_main$l = /* @__PURE__ */ vue.defineComponent({
     vue.onMounted(() => __async(this, null, function* () {
       try {
         const product_ids = Object.values(props.products).map(({ id }) => id);
-        const response = yield fetch(`https://bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${product_ids.join()}`);
+        const response = yield fetch(window.location.origin + `/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${product_ids.join()}`);
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
@@ -7235,7 +7253,7 @@ const _sfc_main$k = /* @__PURE__ */ vue.defineComponent({
     vue.onMounted(() => __async(this, null, function* () {
       try {
         console.log("product: => ", props.product);
-        const response = yield fetch(`https://bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=1027573`);
+        const response = yield fetch(window.location.origin + `/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=1027573`);
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
@@ -7881,7 +7899,7 @@ const _sfc_main$c = /* @__PURE__ */ vue.defineComponent({
         (_d = (_c = props.options.callbacks) == null ? void 0 : _c.onSearchResults) == null ? void 0 : _d.call(_c, { queryKey, hasResults: hasResults2, params: paramStore.params, html: "" });
         return;
       }
-      const response = yield fetch(`https://bigbox.lt/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${results.items.map(({ id }) => id).join()}`);
+      const response = yield fetch(window.location.origin + `/module/mijoracategoryproducts/ajax?action=getFilteredProducts&ajax=1&params=ids=${results.items.map(({ id }) => id).join()}`);
       const json = yield response.json();
       (_f = (_e = props.options.callbacks) == null ? void 0 : _e.onSearchResults) == null ? void 0 : _f.call(_e, { queryKey, hasResults: hasResults2, params: paramStore.params, html: json.html });
       trackItemListView(props.options.labels.htmlTitleTemplate, results.items);
